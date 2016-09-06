@@ -1,0 +1,80 @@
+@import './bourbon/bourbon';
+// http://bourbon.io/
+@import './variables';
+// colors, fonts etc...
+@import './layout';
+// responsive grid and media queries
+@import './images'; // image urls
+
+/* --------------------------------
+
+Main content style
+
+-------------------------------- */
+
+.cd-main-content {
+
+  // furtive:
+  @import "./furtive/all";
+
+  // overrides:
+  font-family: 'Roboto', sans-serif;
+
+  .media-figure {
+
+    img {
+      -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &.small {
+      width: 200px;
+      max-height: 200px;
+    }
+
+    &.medium {
+      width: 300px;
+      max-height: 300px;
+    }
+
+    &.large {
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  p, .p {
+    font-size: 1.8rem;
+  }
+
+  ol li {
+    font-size: 1.8rem;
+
+    list-style-type: decimal;
+    margin-left: 1.8rem;
+  }
+
+  ul {
+    font-size: 1.8rem;
+
+    li {
+      list-style-type: disc;
+      margin-left: 1.8rem;
+    }
+    ul li {
+      list-style-type: circle;
+      margin-left: 2.8rem;
+    }
+  }
+
+  // custom:
+  div.spacer {
+    margin: 0;
+    padding: 0;
+    height: 1rem;
+  }
+  div.container {
+    margin: 0;
+    padding: 6rem;
+  }
+}

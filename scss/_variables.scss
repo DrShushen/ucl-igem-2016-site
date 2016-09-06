@@ -1,0 +1,110 @@
+// --- colors, general ---
+
+$color-grey-very-dark: #1b1d1e; // grey dark
+$color-grey-dark: #2e3233; // grey dark
+$color-grey-less-dark: #454545; // grey less dark
+$color-grey-medium: #7b7b7b; // grey medium
+$color-grey-light: #e2e3df; // grey light
+$color-blue-base: #284cb9; // blue base colour
+$color-blue-I: #004573; // blue I
+$color-blue-II: #1d3c61; // blue II
+$color-blue-III: #43ceff; // blue III
+$color-blue-IV: #0100dd; // blue IV
+$color-blue-V: #5591d3; // blue V
+$color-blue-VI: #004574; // blue VI
+$color-white: #ffffff; // white
+$color-black: #000000; // black
+
+
+
+// --- large screen nav colors ---
+
+$color-nav-background: #004574; // blue VI
+$color-nav-graphical: #e2e3df; // grey light
+
+$color-nav-link: #ffffff; // white
+$color-nav-link-hover: #c3c4c0; // grey light-medium
+$color-nav-link-active: #ff9c00; // orange
+
+$color-nav-group-link: #ffffff; // white
+$color-nav-group-link-hover: #ff9c00; // orange
+
+$color-nav-panel-link: #ffffff; // white
+$color-nav-panel-description: #c3c4c0; // grey light-medium
+
+$color-nav-back: #c3c4c0; // grey light-medium
+$color-nav-back-hover: #7b7b7b; // grey medium
+
+$color-nav-see-all: #c3c4c0; // grey light-medium
+$color-nav-see-all-hover: #7b7b7b; // grey medium
+
+$color-nav-bottom-panel: #004574; // blue VI
+$color-nav-bottom-panel-hover: #c3c4c0; // grey light-medium
+
+
+
+// --- function buttons colors ---
+
+$color-search-trigger: #ffffff; // white
+$color-nav-trigger: #ffffff; // white
+
+
+
+// --- main content colors ---
+$color-main-content-bgd: #e7f0f9; // very subtle blue
+
+
+
+// --- fonts ---
+
+$primary-font: sans-serif;
+
+
+
+// --- header size ---
+
+// Adaptation to varied logo sizes
+$logo-height-int: 45; /* change this to actual logo height */
+$original-height-int: 23;
+$addition-factor: ($logo-height-int - $original-height-int)/2;
+$subtraction-factor: -1*$addition-factor/2;
+// - - -
+
+$header-height-S: 50px + $addition-factor;
+$header-height-L: 80px + $addition-factor;
+
+
+
+// --- Navigation size ---
+
+$nav-width-S: 260px;
+
+
+
+// --- Search size ---
+
+$search-height-S: 50px;
+$search-height-L: 120px;
+
+
+
+// --- Navigation bottom bar size ---
+
+ $nav-bottom-bar-height: 60px;
+
+
+
+// --- Z-index ---
+
+$below-content: 1;
+$content: 2;
+$above-content: 3;
+
+
+
+// --- Footer parameters ---
+$footer-left-width: 30%;
+$footer-center-width: 46%;
+$footer-right-width: 22%;
+
+$M_Footer: 880px;
