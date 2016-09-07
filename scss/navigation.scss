@@ -223,11 +223,20 @@ Main components
 
   .img {
     display: block;
-    background-image: $logo;
+    background: $logo no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
     /* logo dimensions */
     width: 250px;
     height: 45px;
+    @media only screen and (max-width: 400px) {
+      background-size: 70% 70%;
+    }
+    @media only screen and (max-width: 350px) {
+      background-size: 40% 40%;
+    }
   }
+
 
   @include MQ(maxL) {
     .nav-on-left & {

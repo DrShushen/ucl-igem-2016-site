@@ -201,10 +201,18 @@ Main components
   left: 5%; }
   .cd-logo .img {
     display: block;
-    background-image: url("../img/logo.png");
+    background: url("../img/logo.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
     /* logo dimensions */
     width: 250px;
     height: 45px; }
+    @media only screen and (max-width: 400px) {
+      .cd-logo .img {
+        background-size: 70% 70%; } }
+    @media only screen and (max-width: 350px) {
+      .cd-logo .img {
+        background-size: 40% 40%; } }
   @media only screen and (max-width: 1449px) {
     .nav-on-left .cd-logo {
       left: auto;
