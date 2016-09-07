@@ -6,7 +6,9 @@
 ---
 
 Just as a rough plan of what needs to be done:
-1. (ongoing) browser / device optimisation, I think it's not well adapted for tablet screens yet.
+1. Fix the issues on safary(?) with transitions:
+  * Remove the transition on hamburger icon middle line
+  * The animation on top bar not working again
 2. (next task) make the landing page with the carousel.
 3. Put it all together to deploy on the wiki.
 4. Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.

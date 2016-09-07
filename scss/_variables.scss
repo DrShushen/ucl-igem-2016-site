@@ -51,13 +51,14 @@ $color-nav-trigger: #ffffff; // white
 
 
 // --- Main content colors ---
+
 $color-main-content-bgd: #e7f0f9; // very subtle blue
 
 
 
 // --- Fonts ---
 
-$primary-font: sans-serif;
+$menu-font: 'Open Sans', sans-serif;
 
 
 
@@ -84,34 +85,26 @@ $logo-move-left-adjust: -1*$logo-width/2;
 
 
 // --- Header size ---
-$header-height-S: 60px + $addition-factor;
-$header-height-L: 80px + $addition-factor;
+
+$header-height-S: 60px + $addition-factor; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
+$header-height-L: 80px + $addition-factor; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
 
 
-
-// --- Header (nav bar) animation ---
-
-// Timing
-$htrtl: 0.3s; // Header transition time long
-$htrtm: 0.15s; // Header transition time medium
-$htrts: 0.1s; // Header transition time short
-
-// Position changes
-$shrink-header-height-S-diff: 12px;
-$shrink-header-height-L-diff: 32px;
-$shrink-header-height-S: $header_height_S - $shrink-header-height-S-diff;
-$shrink-header-height-L: $header_height_L - $shrink-header-height-L-diff;
-
-$nav-items-y-new: $logo-y-L-adj - $shrink-header-height-L-diff;
-
-$logo-replacer-y: (-1*$logo-height-int - 15) + 0px;
-$logo-replacer-y-new-S: ($shrink-header-height-S - $logo-height-int)/2;
-$logo-replacer-y-new-L: ($shrink-header-height-L - $logo-height-int)/2;
 
 // --- Navigation size ---
 
 $nav-width-S: 260px;
 
+
+
+/// --- Navigation other settings ---
+
+$nav-menu-links-offset: 80px;
+$nav-menu-link-gap: 12px;
+$nav-menu-buttons-offset: $nav-menu-link-gap * 2;
+
+$nav-menu-buttons-top-L: 18px;
+$nav-menu-buttons-top-S: $nav-menu-buttons-top-L - ($header-height-L - $header-height-S)/2;
 
 
 // --- Search size ---
@@ -125,6 +118,31 @@ $search-height-L: 100px;
 
 $nav-bottom-bar-height: 60px;
 
+
+
+// --- Header (nav bar) animation ---
+
+// Timing
+$htrtl: 0.45s; // Header transition time long
+$htrtm: 0.15s; // Header transition time medium
+$htrts: 0.1s; // Header transition time short
+
+// Position changes
+$shrink-header-height-S-diff: 12px;
+$shrink-header-height-L-diff: 32px;
+$shrink-header-height-S: $header_height_S - $shrink-header-height-S-diff;
+$shrink-header-height-L: $header_height_L - $shrink-header-height-L-diff;
+
+$logo-y-new: $logo-y-L-adj - $shrink-header-height-L-diff;
+
+$logo-replacer-y: (-1*$logo-height-int - 15) + 0px;
+$logo-replacer-y-new-S: ($shrink-header-height-S - $logo-height-int)/2;
+$logo-replacer-y-new-L: ($shrink-header-height-L - $logo-height-int)/2;
+
+$nav-menu-buttons-top-L-new: $nav-menu-buttons-top-L - $shrink-header-height-L-diff;
+$nav-menu-buttons-top-L-new: $nav-menu-buttons-top-S - $shrink-header-height-S-diff;
+
+$nav-menu-links-y-new: 0px - $shrink-header-height-L-diff;
 
 
 // --- Z-index ---

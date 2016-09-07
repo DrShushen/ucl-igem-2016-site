@@ -5,6 +5,8 @@
 @import './layout';
 // responsive grid and media queries
 @import './images'; // image urls
+// fonts
+@import './fonts';
 
 /* --------------------------------
 
@@ -39,9 +41,10 @@ Navigation shrinking effect
   .cd-nav, .cd-header-buttons {
     -o-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease; -moz-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease;
     -webkit-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease; transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease;
-    #cd-primary-nav {
+    .cd-primary-nav {
       -o-transition: top $htrtl $htrts ease; -moz-transition: top $htrtl $htrts ease;
       -webkit-transition: top $htrtl $htrts ease; transition: top $htrtl $htrts ease;
+      // height: IS INHERITED.
       position: absolute;
     }
   }
@@ -56,7 +59,6 @@ Navigation shrinking effect
     left: $logo-move-left-adjust;
     top: $logo-replacer-y;
     opacity: 0!important;
-    visibility: hidden;
   }
 }
 
@@ -74,20 +76,23 @@ Navigation shrinking effect
   .cd-nav, .cd-header-buttons {
     -o-transition: opacity $htrtl ease, top $htrtl ease; -moz-transition: opacity $htrtl ease, top $htrtl ease;
     -webkit-transition: opacity $htrtl ease, top $htrtl ease; transition: opacity $htrtl ease, top $htrtl ease;
-    top: $nav-items-y-new;//-10px;
+    top: $logo-y-new;
     opacity: 0;
-    visibility: hidden;
-    #cd-primary-nav {
+    .cd-primary-nav {
+      li > a {
+        -o-transition: height 0s $htrtl ease; -moz-transition: height 0s $htrtl ease;
+        -webkit-transition: height 0s $htrtl ease; transition: height 0s $htrtl ease;
+        height: $shrink-header-height-S;
+      }
       -o-transition: top $htrtl ease; -moz-transition: top $htrtl ease;
       -webkit-transition: top $htrtl ease; transition: top $htrtl ease;
-      top: -30px;
-      visibility: hidden;
+      top: $nav-menu-links-y-new;
     }
   }
   .cd-logo {
     -o-transition: all $htrtl ease; -moz-transition: all $htrtl ease;
     -webkit-transition: all $htrtl ease; transition: all $htrtl ease;
-    top: $nav-items-y-new;//-10px;
+    top: $logo-y-new;
     opacity: 0;
     visibility: hidden;
   }
@@ -120,7 +125,7 @@ html {
 body {
   font: {
     size: 1.6rem;
-    family: $primary-font; // variables inside partials > _variables.scss
+    family: $menu-font; // variables inside partials > _variables.scss
   }
   color: $color-grey-dark;
   background-color: $color-white;
@@ -143,7 +148,7 @@ img {
 }
 
 input {
-  font-family: $primary-font;
+  font-family: $menu-font;
   font-size: 1.6rem;
 }
 
@@ -174,6 +179,9 @@ Main components
 .cd-main-content, .cd-main-header {
   @include transition(transform .3s);
   // Workaround to reconcile with my shrinking menu.
+  -o-transition: transform .3s, height $htrtl!important;
+  -moz-transition: transform .3s, height $htrtl!important;
+  -webkit-transition: transform .3s, height $htrtl!important;
   transition: transform .3s, height $htrtl!important;
 
   @include MQ(maxL) {
@@ -254,7 +262,7 @@ Main components
 .cd-header-buttons {
   position: absolute;
   display: inline-block;
-  top: 3px;
+  top: $nav-menu-buttons-top-S;
   right: 5%;
 
   li {
@@ -273,8 +281,8 @@ Main components
   }
 
   @include MQ(L) {
-    top: 18px;
-    right: 4em;
+    top: $nav-menu-buttons-top-L;
+    right: $nav-menu-buttons-offset;
   }
 }
 
@@ -797,7 +805,7 @@ Main components
 
   .cd-primary-nav {
     position: static;
-    padding: 0 150px 0 0;
+    padding: 0 $nav-menu-links-offset 0 0;
     height: auto;
     width: auto;
     float: right;
@@ -841,7 +849,7 @@ Main components
 
     > li {
       float: left;
-      margin-left: 1.5em;
+      margin-left: $nav-menu-link-gap;
     }
 
     > li > a {
@@ -884,15 +892,17 @@ Main components
       box-shadow: inset 0 1px 0 $color-nav-graphical, 0 3px 6px rgba(#000, .05);
       @include transform(translateX(0));
       @include clearfix;
-      -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+      -o-transition: opacity .3s 0s, visibility 0s 0s;
       -moz-transition: opacity .3s 0s, visibility 0s 0s;
+      -webkit-transition: opacity .3s 0s, visibility 0s 0s;
       transition: opacity .3s 0s, visibility 0s 0s;
 
       &.is-hidden {
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+        -o-transition: opacity .3s 0s, visibility 0s .3s;
         -moz-transition: opacity .3s 0s, visibility 0s .3s;
+        -webkit-transition: opacity .3s 0s, visibility 0s .3s;
         transition: opacity .3s 0s, visibility 0s .3s;
       }
 
@@ -1256,8 +1266,9 @@ Main components
   z-index: $above-content;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -o-transition: opacity .3s 0s, visibility 0s .3s;
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
 
   form {
@@ -1287,8 +1298,9 @@ Main components
   &.is-visible {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -o-transition: opacity .3s 0s, visibility 0s 0s;
     -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
     transition: opacity .3s 0s, visibility 0s 0s;
   }
 
@@ -1375,7 +1387,7 @@ support for no js
     display: inline-block;
     width: auto;
     top: 0;
-    right: 150px;
+    right: $nav-menu-links-offset;
     padding: 0;
   }
 

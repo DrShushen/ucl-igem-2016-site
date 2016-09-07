@@ -108,7 +108,7 @@ Footer style
     .footer-distributed .footer-right div p {
       display: inline-block;
       width: 80%; }
-    @media only screen and (max-width: 1450px) {
+    @media only screen and (max-width: 1270px) {
       .footer-distributed .footer-right div {
         text-align: center; }
         .footer-distributed .footer-right div a {

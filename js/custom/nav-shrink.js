@@ -51,7 +51,7 @@ $('.cd-overlay').click(function() {
     var $addition_factor = ( $logo_height_int -  $original_height_int)/2;
     var $subtraction_factor = -1* $addition_factor/2;
 
-    navShrinkParams.header_height_S = 50 +  $addition_factor;
+    navShrinkParams.header_height_S = 60 +  $addition_factor;
     navShrinkParams.header_height_L = 80 +  $addition_factor;
 
 })();
