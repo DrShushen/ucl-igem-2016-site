@@ -21,7 +21,7 @@ Footer style
 
 .footer-distributed {
   background-color: $color-grey-dark;
-  box-shadow: 0 1px 1px 0 $color-grey-light 0.12;
+  box-shadow: 0 1px 1px 0 $color-grey-light;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
@@ -33,13 +33,14 @@ Footer style
   /* --- Footer left --- */
 
   .footer-left {
+    overflow: hidden;
     width: $footer-left-width;
   }
 
   /* The company logo */
   h3 {
     color: $color-white;
-    font: normal 32px 'Montserrat', bold;
+    font: normal 30px 'Montserrat', bold;
     margin: 0;
 
     span {
@@ -73,6 +74,10 @@ Footer style
 
   .footer-center {
     width: $footer-center-width;
+
+    .section > .col {
+      padding-left: 0.1%;
+    };
 
     div span {
       color: $color-grey-light;
@@ -147,6 +152,31 @@ Footer style
 
   .footer-right {
     width: $footer-right-width;
+
+    div {
+      a {
+        display: inline-block;
+        width: 20%;
+      }
+      p {
+        display: inline-block;
+        width: 80%
+      }
+    }
+
+    @media only screen and (max-width: $L) {
+      div {
+        text-align: center;
+        a {
+          display: block;
+          width: 100%;
+        }
+        .p {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
 
     a.circular {
       /* nothing */

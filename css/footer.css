@@ -32,10 +32,11 @@ Footer style
   /*  GO FULL WIDTH BELOW 480 PIXELS */
   /* --- Footer right --- */ }
   .footer-distributed .footer-left {
+    overflow: hidden;
     width: 30%; }
   .footer-distributed h3 {
     color: #ffffff;
-    font: normal 32px 'Montserrat', bold;
+    font: normal 30px 'Montserrat', bold;
     margin: 0; }
     .footer-distributed h3 span {
       color: #5591d3; }
@@ -55,6 +56,8 @@ Footer style
     margin: 0; }
   .footer-distributed .footer-center {
     width: 46%; }
+    .footer-distributed .footer-center .section > .col {
+      padding-left: 0.1%; }
     .footer-distributed .footer-center div span {
       color: #e2e3df;
       font-size: 16px;
@@ -99,6 +102,21 @@ Footer style
       width: 100%; } }
   .footer-distributed .footer-right {
     width: 22%; }
+    .footer-distributed .footer-right div a {
+      display: inline-block;
+      width: 20%; }
+    .footer-distributed .footer-right div p {
+      display: inline-block;
+      width: 80%; }
+    @media only screen and (max-width: 1450px) {
+      .footer-distributed .footer-right div {
+        text-align: center; }
+        .footer-distributed .footer-right div a {
+          display: block;
+          width: 100%; }
+        .footer-distributed .footer-right div .p {
+          display: block;
+          width: 100%; } }
     .footer-distributed .footer-right a.circular {
       /* nothing */ }
     .footer-distributed .footer-right i.circular {
