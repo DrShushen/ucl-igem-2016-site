@@ -1,4 +1,4 @@
-// --- colors, general ---
+// --- Colors, general ---
 
 $color-grey-very-dark: #1b1d1e; // grey dark
 $color-grey-dark: #2e3233; // grey dark
@@ -17,7 +17,7 @@ $color-black: #000000; // black
 
 
 
-// --- large screen nav colors ---
+// --- Large screen nav colors ---
 
 $color-nav-background: #004574; // blue VI
 $color-nav-graphical: #e2e3df; // grey light
@@ -43,37 +43,70 @@ $color-nav-bottom-panel-hover: #c3c4c0; // grey light-medium
 
 
 
-// --- function buttons colors ---
+// --- Function buttons colors ---
 
 $color-search-trigger: #ffffff; // white
 $color-nav-trigger: #ffffff; // white
 
 
 
-// --- main content colors ---
+// --- Main content colors ---
 $color-main-content-bgd: #e7f0f9; // very subtle blue
 
 
 
-// --- fonts ---
+// --- Fonts ---
 
 $primary-font: sans-serif;
 
 
 
-// --- header size ---
+// --- Logo ---
+
+$logo-y-S: 18px;
+$logo-y-L: 26px;
+
 
 // Adaptation to varied logo sizes
 $logo-height-int: 45; /* change this to actual logo height */
 $original-height-int: 23;
 $addition-factor: ($logo-height-int - $original-height-int)/2;
 $subtraction-factor: -1*$addition-factor/2;
-// - - -
+$nav-items-y-adj: 0px - $subtraction-factor;
 
-$header-height-S: 50px + $addition-factor;
+$logo-y-S-adj: $logo-y-S + $subtraction-factor;
+$logo-y-L-adj: $logo-y-L + $subtraction-factor;
+
+// Logo width
+$logo-width: 250px;
+$logo-move-left-adjust: -1*$logo-width/2;
+
+
+
+// --- Header size ---
+$header-height-S: 60px + $addition-factor;
 $header-height-L: 80px + $addition-factor;
 
 
+
+// --- Header (nav bar) animation ---
+
+// Timing
+$htrtl: 0.3s; // Header transition time long
+$htrtm: 0.15s; // Header transition time medium
+$htrts: 0.1s; // Header transition time short
+
+// Position changes
+$shrink-header-height-S-diff: 12px;
+$shrink-header-height-L-diff: 32px;
+$shrink-header-height-S: $header_height_S - $shrink-header-height-S-diff;
+$shrink-header-height-L: $header_height_L - $shrink-header-height-L-diff;
+
+$nav-items-y-new: $logo-y-L-adj - $shrink-header-height-L-diff;
+
+$logo-replacer-y: (-1*$logo-height-int - 15) + 0px;
+$logo-replacer-y-new-S: ($shrink-header-height-S - $logo-height-int)/2;
+$logo-replacer-y-new-L: ($shrink-header-height-L - $logo-height-int)/2;
 
 // --- Navigation size ---
 
@@ -84,13 +117,13 @@ $nav-width-S: 260px;
 // --- Search size ---
 
 $search-height-S: 50px;
-$search-height-L: 120px;
+$search-height-L: 100px;
 
 
 
 // --- Navigation bottom bar size ---
 
- $nav-bottom-bar-height: 60px;
+$nav-bottom-bar-height: 60px;
 
 
 

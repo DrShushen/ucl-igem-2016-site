@@ -1,4 +1,98 @@
 /* change this to actual logo height */
+/* --------------------------------
+
+Navigation shrinking effect
+
+-------------------------------- */
+.cd-main-header {
+  position: fixed;
+  width: 100%; }
+
+.cd-search {
+  position: fixed; }
+
+.cd-main-content {
+  padding-top: 71px; }
+  @media only screen and (min-width: 1450px) {
+    .cd-main-content {
+      padding-top: 91px; } }
+
+.cd-main-header {
+  -o-transition: height 0.3s 0.1s ease !important;
+  -moz-transition: height 0.3s 0.1s ease !important;
+  -webkit-transition: height 0.3s 0.1s ease !important;
+  transition: height 0.3s 0.1s ease !important; }
+  .cd-main-header .cd-nav, .cd-main-header .cd-header-buttons {
+    -o-transition: opacity 0.3s 0.1s ease, top 0.3s 0.1s ease;
+    -moz-transition: opacity 0.3s 0.1s ease, top 0.3s 0.1s ease;
+    -webkit-transition: opacity 0.3s 0.1s ease, top 0.3s 0.1s ease;
+    transition: opacity 0.3s 0.1s ease, top 0.3s 0.1s ease; }
+    .cd-main-header .cd-nav #cd-primary-nav, .cd-main-header .cd-header-buttons #cd-primary-nav {
+      -o-transition: top 0.3s 0.1s ease;
+      -moz-transition: top 0.3s 0.1s ease;
+      -webkit-transition: top 0.3s 0.1s ease;
+      transition: top 0.3s 0.1s ease;
+      position: absolute; }
+  .cd-main-header .cd-logo {
+    -o-transition: all 0.3s 0.1s ease;
+    -moz-transition: all 0.3s 0.1s ease;
+    -webkit-transition: all 0.3s 0.1s ease;
+    transition: all 0.3s 0.1s ease; }
+  .cd-main-header .cd-logo.logo-replacer {
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 50%;
+    left: -125px;
+    top: -60px;
+    opacity: 0 !important;
+    visibility: hidden; }
+
+.cd-main-header.shrink {
+  -o-transition: height 0.3s ease !important;
+  -moz-transition: height 0.3s ease !important;
+  -webkit-transition: height 0.3s ease !important;
+  transition: height 0.3s ease !important;
+  height: 59px; }
+  @media only screen and (min-width: 1450px) {
+    .cd-main-header.shrink {
+      height: 59px; } }
+  .cd-main-header.shrink .cd-nav, .cd-main-header.shrink .cd-header-buttons {
+    -o-transition: opacity 0.3s ease, top 0.3s ease;
+    -moz-transition: opacity 0.3s ease, top 0.3s ease;
+    -webkit-transition: opacity 0.3s ease, top 0.3s ease;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    top: -11.5px;
+    opacity: 0;
+    visibility: hidden; }
+    .cd-main-header.shrink .cd-nav #cd-primary-nav, .cd-main-header.shrink .cd-header-buttons #cd-primary-nav {
+      -o-transition: top 0.3s ease;
+      -moz-transition: top 0.3s ease;
+      -webkit-transition: top 0.3s ease;
+      transition: top 0.3s ease;
+      top: -30px;
+      visibility: hidden; }
+  .cd-main-header.shrink .cd-logo {
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    top: -11.5px;
+    opacity: 0;
+    visibility: hidden; }
+  .cd-main-header.shrink .cd-logo.logo-replacer {
+    -o-transition: all 0.3s 0.15s ease;
+    -moz-transition: all 0.3s 0.15s ease;
+    -webkit-transition: all 0.3s 0.15s ease;
+    transition: all 0.3s 0.15s ease;
+    top: 7px;
+    opacity: 1 !important;
+    visibility: visible; }
+    @media only screen and (min-width: 1450px) {
+      .cd-main-header.shrink .cd-logo.logo-replacer {
+        top: 7px; } }
+
 /* -------------------------------- 
 
 Navigation style
@@ -15,7 +109,7 @@ body {
   font-family: sans-serif;
   color: #2e3233;
   background-color: #ffffff; }
-  @media only screen and (max-width: 1169px) {
+  @media only screen and (max-width: 1449px) {
     body.nav-on-left.overflow-hidden {
       overflow: hidden; } }
 
@@ -56,11 +150,11 @@ Main components
   will-change: transform; }
 
 .cd-main-content, .cd-main-header {
-  position: relative;
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s; }
-  @media only screen and (max-width: 1169px) {
+  transition: transform 0.3s;
+  transition: transform 0.3s, height 0.3s !important; }
+  @media only screen and (max-width: 1449px) {
     .cd-main-content.nav-is-visible, .cd-main-header.nav-is-visible {
       -webkit-transform: translateX(-260px);
       -moz-transform: translateX(-260px);
@@ -75,13 +169,16 @@ Main components
       transform: translateX(260px); } }
 
 .cd-main-content {
+  position: relative; }
+
+.cd-main-content {
   background: #e7f0f9;
   min-height: 60vh;
   /* Evgeny-modified */
   z-index: 2; }
 
 .cd-main-header {
-  height: 61px;
+  height: 71px;
   background: #004574;
   z-index: 3; }
   .nav-is-fixed .cd-main-header {
@@ -90,7 +187,7 @@ Main components
     top: 0;
     left: 0;
     width: 100%; }
-  @media only screen and (min-width: 1170px) {
+  @media only screen and (min-width: 1450px) {
     .cd-main-header {
       height: 91px; }
       .cd-main-header::after {
@@ -100,7 +197,7 @@ Main components
 
 .cd-logo {
   position: absolute;
-  top: 6.5px;
+  top: 12.5px;
   left: 5%; }
   .cd-logo .img {
     display: block;
@@ -108,11 +205,11 @@ Main components
     /* logo dimensions */
     width: 250px;
     height: 45px; }
-  @media only screen and (max-width: 1169px) {
+  @media only screen and (max-width: 1449px) {
     .nav-on-left .cd-logo {
       left: auto;
       right: 5%; } }
-  @media only screen and (min-width: 1170px) {
+  @media only screen and (min-width: 1450px) {
     .cd-logo {
       top: 20.5px;
       left: 4em; } }
@@ -124,13 +221,13 @@ Main components
   right: 5%; }
   .cd-header-buttons li {
     display: inline-block; }
-  @media only screen and (max-width: 1169px) {
+  @media only screen and (max-width: 1449px) {
     .nav-on-left .cd-header-buttons {
       right: auto;
       left: 5%; }
       .nav-on-left .cd-header-buttons li {
         float: right; } }
-  @media only screen and (min-width: 1170px) {
+  @media only screen and (min-width: 1450px) {
     .cd-header-buttons {
       top: 18px;
       right: 4em; } }
@@ -307,7 +404,7 @@ Main components
     -ms-transform: translateX(4px) translateY(2px) rotate(-45deg);
     -o-transform: translateX(4px) translateY(2px) rotate(-45deg);
     transform: translateX(4px) translateY(2px) rotate(-45deg); }
-  @media only screen and (min-width: 1170px) {
+  @media only screen and (min-width: 1450px) {
     .cd-nav-trigger {
       display: none; } }
 
@@ -377,7 +474,7 @@ Main components
     transform: translateX(-100%);
     opacity: 0; }
 
-@media only screen and (max-width: 1169px) {
+@media only screen and (max-width: 1449px) {
   .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
     right: auto;
     left: 0; } }
@@ -521,7 +618,7 @@ Main components
       font-size: 1.3rem;
       /* hide description on small devices */
       display: none; }
-  @media only screen and (max-width: 1169px) {
+  @media only screen and (max-width: 1449px) {
     .cd-primary-nav {
       /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
       visibility: hidden;
@@ -534,7 +631,7 @@ Main components
         -moz-transition: visibility 0s 0s;
         transition: visibility 0s 0s; } }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1450px) {
   .cd-primary-nav {
     position: static;
     padding: 0 150px 0 0;
@@ -584,7 +681,7 @@ Main components
         opacity: 1; }
     .cd-primary-nav > li {
       float: left;
-      margin-left: 3em; }
+      margin-left: 1.5em; }
     .cd-primary-nav > li > a {
       /* main navigation buttons style */
       position: relative;
@@ -783,18 +880,20 @@ Main components
         -webkit-transition: background 0.2s;
         -moz-transition: background 0.2s;
         transition: background 0.2s; }
-    .cd-primary-nav .cd-nav-icons li {
-      /* set here number of columns - use width percentage */
-      width: 32%;
-      float: left;
-      margin: 0 2% 20px 0; }
-      .cd-primary-nav .cd-nav-icons li:nth-child(3n+2) {
-        /* +2 because we have two additional list items with display:none */
-        margin-right: 0; }
-    .cd-primary-nav .cd-nav-icons .cd-nav-item {
-      padding: 24px 0 0 85px; }
-      .cd-primary-nav .cd-nav-icons .cd-nav-item::before {
-        left: 25px; }
+    .cd-primary-nav .cd-nav-icons {
+      background-color: #004573 !important; }
+      .cd-primary-nav .cd-nav-icons li {
+        /* set here number of columns - use width percentage */
+        width: 32%;
+        float: left;
+        margin: 0 2% 20px 0; }
+        .cd-primary-nav .cd-nav-icons li:nth-child(3n+2) {
+          /* +2 because we have two additional list items with display:none */
+          margin-right: 0; }
+      .cd-primary-nav .cd-nav-icons .cd-nav-item {
+        padding: 24px 0 0 85px; }
+        .cd-primary-nav .cd-nav-icons .cd-nav-item::before {
+          left: 25px; }
     .cd-primary-nav .cd-nav-iconless li {
       /* set here number of columns - use width percentage */
       width: 32%;
@@ -831,7 +930,7 @@ Main components
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-  @media only screen and (min-width: 1170px) {
+  @media only screen and (min-width: 1450px) {
     .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
       background: #aaaba6; }
     .has-children > a:hover::before, .has-children > a:hover::after, .go-back a:hover::before, .go-back a:hover::after {
@@ -859,7 +958,7 @@ Main components
     -o-transform-origin: 1px 50%;
     transform-origin: 1px 50%; }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1450px) {
   .has-children > a::before, .has-children > a::after {
     right: 15%; }
 
@@ -908,10 +1007,9 @@ Main components
     .cd-primary-nav .go-back a::before, .cd-primary-nav .go-back a::after {
       left: 1px; } }
 .cd-search {
-  position: absolute;
   height: 50px;
   width: 100%;
-  top: 61px;
+  top: 71px;
   left: 0;
   z-index: 3;
   opacity: 0;
@@ -953,9 +1051,9 @@ Main components
     transition: opacity .3s 0s, visibility 0s 0s; }
   .nav-is-fixed .cd-search {
     position: fixed; }
-  @media only screen and (min-width: 1170px) {
+  @media only screen and (min-width: 1450px) {
     .cd-search {
-      height: 120px;
+      height: 100px;
       top: 91px; }
       .cd-search input {
         padding: 0 2em;
@@ -970,7 +1068,6 @@ Main components
   width: 100%;
   top: 0;
   left: 0;
-  cursor: pointer;
   background-color: rgba(40, 76, 185, 0.8);
   visibility: hidden;
   opacity: 0;
@@ -985,7 +1082,7 @@ Main components
     -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s;
     -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s;
     transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s; }
-  @media only screen and (max-width: 1169px) {
+  @media only screen and (max-width: 1449px) {
     .cd-overlay.is-visible {
       -webkit-transform: translateX(-260px);
       -moz-transform: translateX(-260px);
@@ -1019,12 +1116,11 @@ support for no js
   z-index: 2; }
 
 .no-js .cd-search {
-  position: relative;
   top: 0;
   opacity: 1;
   visibility: visible; }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1450px) {
   .no-js .cd-primary-nav {
     position: absolute;
     z-index: 3;

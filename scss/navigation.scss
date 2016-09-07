@@ -6,6 +6,103 @@
 // responsive grid and media queries
 @import './images'; // image urls
 
+/* --------------------------------
+
+Navigation shrinking effect
+
+-------------------------------- */
+
+// Fix the nav bar and the search bar.
+.cd-main-header {
+  // "Fixing" the nav bar.
+  position: fixed;
+  width: 100%;
+}
+.cd-search {
+  position: fixed;
+}
+
+// Compensation for now "fixed" top bar.
+.cd-main-content {
+  padding-top: $header-height-S;
+  @include MQ(L) {
+    padding-top: $header-height-L;
+  }
+}
+
+// Non-shrunk state.
+.cd-main-header {
+  // Nav bar.
+  -o-transition: height $htrtl $htrts ease!important; -moz-transition: height $htrtl $htrts ease!important;
+  -webkit-transition: height $htrtl $htrts ease!important; transition: height $htrtl $htrts ease!important;
+  // Elements within.
+  .cd-nav, .cd-header-buttons {
+    -o-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease; -moz-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease;
+    -webkit-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease; transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease;
+    #cd-primary-nav {
+      -o-transition: top $htrtl $htrts ease; -moz-transition: top $htrtl $htrts ease;
+      -webkit-transition: top $htrtl $htrts ease; transition: top $htrtl $htrts ease;
+      position: absolute;
+    }
+  }
+  .cd-logo {
+    -o-transition: all $htrtl $htrts ease; -moz-transition: all $htrtl $htrts ease;
+    -webkit-transition: all $htrtl $htrts ease; transition: all $htrtl $htrts ease;
+  }
+  .cd-logo.logo-replacer {
+    -o-transition: all $htrtl ease; -moz-transition: all $htrtl ease;
+    -webkit-transition: all $htrtl ease; transition: all $htrtl ease;
+    margin-left: 50%;
+    left: $logo-move-left-adjust;
+    top: $logo-replacer-y;
+    opacity: 0!important;
+    visibility: hidden;
+  }
+}
+
+// Shrunk state.
+.cd-main-header.shrink {
+  // Stop links:
+  // Nav bar.
+  -o-transition: height $htrtl ease!important; -moz-transition: height $htrtl ease!important;
+  -webkit-transition: height $htrtl ease!important; transition: height $htrtl ease!important;
+  height: $shrink-header-height-S;
+  @include MQ(L) {
+    height: $shrink-header-height-L;
+  }
+  // Elements within.
+  .cd-nav, .cd-header-buttons {
+    -o-transition: opacity $htrtl ease, top $htrtl ease; -moz-transition: opacity $htrtl ease, top $htrtl ease;
+    -webkit-transition: opacity $htrtl ease, top $htrtl ease; transition: opacity $htrtl ease, top $htrtl ease;
+    top: $nav-items-y-new;//-10px;
+    opacity: 0;
+    visibility: hidden;
+    #cd-primary-nav {
+      -o-transition: top $htrtl ease; -moz-transition: top $htrtl ease;
+      -webkit-transition: top $htrtl ease; transition: top $htrtl ease;
+      top: -30px;
+      visibility: hidden;
+    }
+  }
+  .cd-logo {
+    -o-transition: all $htrtl ease; -moz-transition: all $htrtl ease;
+    -webkit-transition: all $htrtl ease; transition: all $htrtl ease;
+    top: $nav-items-y-new;//-10px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .cd-logo.logo-replacer {
+    -o-transition: all $htrtl $htrtm ease; -moz-transition: all $htrtl $htrtm ease;
+    -webkit-transition: all $htrtl $htrtm ease; transition: all $htrtl $htrtm ease;
+    top: $logo-replacer-y-new-S;
+    opacity: 1!important;
+    visibility: visible;
+    @include MQ(L) {
+        top: $logo-replacer-y-new-L;
+    }
+  }
+}
+
 /* -------------------------------- 
 
 Navigation style
@@ -75,8 +172,9 @@ Main components
 }
 
 .cd-main-content, .cd-main-header {
-  position: relative;
   @include transition(transform .3s);
+  // Workaround to reconcile with my shrinking menu.
+  transition: transform .3s, height $htrtl!important;
 
   @include MQ(maxL) {
     &.nav-is-visible {
@@ -87,6 +185,10 @@ Main components
       @include transform(translateX($nav-width-S));
     }
   }
+}
+
+.cd-main-content {
+  position: relative;
 }
 
 .cd-main-content {
@@ -116,7 +218,7 @@ Main components
 
 .cd-logo {
   position: absolute;
-  top: 12px + $subtraction-factor;
+  top: $logo-y-S-adj;
   left: 5%;
 
   .img {
@@ -135,7 +237,7 @@ Main components
   }
 
   @include MQ(L) {
-    top: 26px + $subtraction-factor;
+    top: $logo-y-L-adj;
     left: 4em;
   }
 }
@@ -181,7 +283,7 @@ Main components
 
 .cd-search-trigger {
 
-  top: 0px - $subtraction-factor;
+  top: $nav-items-y-adj;
 
   &::before, &::after {
     /* search icon */
@@ -274,7 +376,7 @@ Main components
 
 .cd-nav-trigger {
 
-  top: 0px - $subtraction-factor;
+  top: $nav-items-y-adj;
 
   span, span::before, span::after {
     /* hamburger icon in CSS */
@@ -730,7 +832,7 @@ Main components
 
     > li {
       float: left;
-      margin-left: 3em;
+      margin-left: 1.5em;
     }
 
     > li > a {
@@ -980,6 +1082,10 @@ Main components
     }
 
     .cd-nav-icons {
+
+      // Bug fix (theme's native bug).
+      background-color: $color-blue-I!important;
+
       li {
         /* set here number of columns - use width percentage */
         @include column(.32);
@@ -1133,7 +1239,7 @@ Main components
 }
 
 .cd-search {
-  position: absolute;
+  //position: absolute; - changed to fixed with fixed menu
   height: $search-height-S;
   width: 100%;
   top: $header-height-S;
@@ -1205,7 +1311,7 @@ Main components
   width: 100%;
   top: 0;
   left: 0;
-  cursor: pointer;
+  //cursor: pointer; - disabled this due to personal preference.
   background-color: rgba($color-blue-base, .8);
   visibility: hidden;
   opacity: 0;
@@ -1247,7 +1353,7 @@ support for no js
 }
 
 .no-js .cd-search {
-  position: relative;
+  //position: relative; - changed to fixed with fixed menu
   top: 0;
   opacity: 1;
   visibility: visible;

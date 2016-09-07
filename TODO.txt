@@ -1,6 +1,12 @@
 * All remote libraries from one place, e.g. cdnjs
-* Change colour scheme - DONE?
-* Make the lopue and hamburger white.
 * Nicer slider?
 * Make the nav bar "float" at the top.
 * Fix the selected status for "no children" items.
+
+---
+
+Just as a rough plan of what needs to be done:
+1. (ongoing) browser / device optimisation, I think it's not well adapted for tablet screens yet.
+2. (next task) make the landing page with the carousel.
+3. Put it all together to deploy on the wiki.
+4. Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
