@@ -1,60 +1,33 @@
-doctype html
-html.no-js(lang='en')
+include ../_shared/shared
 
-    // HEAD:
-    head
-        // Meta
-        meta(charset='UTF-8')
-        meta(name='keywords', content='iGEM, UCL, 2016, BioSynthAge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        title UCL iGEM 2016 | BioSynthAge
-        // ---
-
-        // Favicon
-        link(rel='apple-touch-icon', sizes='57x57', href='./img/favicon/apple-icon-57x57.png')
-        link(rel='apple-touch-icon', sizes='60x60', href='./img/favicon/apple-icon-60x60.png')
-        link(rel='apple-touch-icon', sizes='72x72', href='./img/favicon/apple-icon-72x72.png')
-        link(rel='apple-touch-icon', sizes='76x76', href='./img/favicon/apple-icon-76x76.png')
-        link(rel='apple-touch-icon', sizes='114x114', href='./img/favicon/apple-icon-114x114.png')
-        link(rel='apple-touch-icon', sizes='120x120', href='./img/favicon/apple-icon-120x120.png')
-        link(rel='apple-touch-icon', sizes='144x144', href='./img/favicon/apple-icon-144x144.png')
-        link(rel='apple-touch-icon', sizes='152x152', href='./img/favicon/apple-icon-152x152.png')
-        link(rel='apple-touch-icon', sizes='180x180', href='./img/favicon/apple-icon-180x180.png')
-        link(rel='icon', type='image/png', sizes='192x192', href='./img/favicon/android-icon-192x192.png')
-        link(rel='icon', type='image/png', sizes='32x32', href='./img/favicon/favicon-32x32.png')
-        link(rel='icon', type='image/png', sizes='96x96', href='./img/favicon/favicon-96x96.png')
-        link(rel='icon', type='image/png', sizes='16x16', href='./img/favicon/favicon-16x16.png')
-        link(rel='manifest', href='./img/favicon/manifest.json')
-        meta(name='msapplication-TileColor', content='#ffffff')
-        meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
-        meta(name='theme-color', content='#ffffff')
-        // ---
-
-        // Fonts ---
+head
+    block fonts
+        // Fonts
         // Footer's fonts:
-        link(rel='stylesheet', href='css/font-awesome.min.css')
-        link(rel='stylesheet', href='css/font-montserrat.css')
+        link(rel='stylesheet', href='./css/font-awesome.min.css')
+        link(rel='stylesheet', href='./css/font-montserrat.css')
         // [Hosted alternatives]:
             link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
             link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat|Roboto')
         // ---
 
+    block stylesheets
         // STYLESHEETS
-        link(rel='stylesheet', href='css/reset.css')
-        link(rel='stylesheet', href='css/menu.css')
-        link(rel='stylesheet', href='css/footer.css')
-        link(rel='stylesheet', href='css/main-content.css')
+        link(rel='stylesheet', href='./css/reset.css')
+        link(rel='stylesheet', href='./css/menu.css')
+        link(rel='stylesheet', href='./css/footer.css')
+        link(rel='stylesheet', href='./css/main-content.css')
         // ---
 
+    block scripts
         // HEADER SCRIPTS - See more scripts in the end of body
         // jQuery, a jQuery mobile compatible latest version.
-        script(src='js/jquery-2.1.4.min.js')
+        script(src='../_shared/js/jquery-2.1.4.min.js')
         // jQuery mobile 1.4.5 with theme-less CSS.
-        link(rel='stylesheet', href='css/jquery-mobile/jquery.mobile.structure-1.4.5.min.css')
-        script(src='js/jquery.mobile.min.js')
+        link(rel='stylesheet', href='./css/jquery-mobile/jquery.mobile.structure-1.4.5.min.css')
+        script(src='./js/jquery.mobile.min.js')
         // Modernizr is allowed in the head, as it's a library.
-        script(src='js/modernizr.min.js')
+        script(src='./js/modernizr.min.js')
         // [Hosted alternatives]:
             script(src='https://code.jquery.com/jquery-2.1.4.min.js')
             link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css');
@@ -64,8 +37,10 @@ html.no-js(lang='en')
 
 
 
-    // BODY:
-    body
+
+body
+
+    block content
 
         // Header.
         header.cd-main-header
@@ -431,6 +406,8 @@ html.no-js(lang='en')
 
 
 
+
+    block end-of-body-scripts
         // END OF BODY SCRIPTS
-        script(src='js/custom/menu.js')
-        script(src='js/custom/nav-shrink.js')
+        script(src='./js/custom/menu.js')
+        script(src='./js/custom/nav-shrink.js')

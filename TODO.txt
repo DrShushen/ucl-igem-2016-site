@@ -1,14 +1,4 @@
-* All remote libraries from one place, e.g. cdnjs
-* Nicer slider?
-* Make the nav bar "float" at the top.
-* Fix the selected status for "no children" items.
-
----
-
-Just as a rough plan of what needs to be done:
-1. Fix the issues on safary(?) with transitions:
-  * Remove the transition on hamburger icon middle line
-  * The animation on top bar not working again
-2. (next task) make the landing page with the carousel.
-3. Put it all together to deploy on the áwiki.
-4. Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
+TODO:
+* Make the landing page with the carousel.
+* Put it all together to deploy on the wiki.
+* Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
