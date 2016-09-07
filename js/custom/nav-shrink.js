@@ -1,16 +1,12 @@
 var navShrinkParams = {};
+var navShrinkHeader = $('header');
 
+// Two listeners, due to jQuery issues.
+$(document).on('scroll', function() {
+    toggleNavShrink();
+});
 $(window).scroll(function() {
-
-    if (!($('.cd-overlay').hasClass('is-visible'))) { // Only act if nav menu is not open.
-        var header = $('header');
-        if ($(document).scrollTop() > navShrinkParams.currentHeaderHeight) {
-            if (!header.hasClass('shrink')) header.addClass('shrink');
-        } else {
-            if (header.hasClass('shrink')) header.removeClass('shrink');
-        }
-    }
-
+    toggleNavShrink();
 });
 
 $(window).load(function() {
@@ -21,15 +17,15 @@ $(window).resize(function() {
     navShrinkSetVars();
 });
 
-$('header').mouseenter(function() {
+navShrinkHeader.mouseenter(function() {
     headerUnShrink();
 });
 
-$('header').click(function() {
+navShrinkHeader.click(function() {
     headerUnShrink();
 });
 
-$('header').mouseleave(function() {
+navShrinkHeader.mouseleave(function() {
     if (!($('.cd-overlay').hasClass('is-visible'))) { // Nav menu not open
         headerShrink();
     }
@@ -56,7 +52,21 @@ $('.cd-overlay').click(function() {
 
 })();
 
-// Helpers
+// Helpers:
+
+function toggleNavShrink() {
+
+    if (!($('.cd-overlay').hasClass('is-visible'))) { // Only act if nav menu is not open.
+        var header = $('header');
+        if ($(document).scrollTop() > navShrinkParams.currentHeaderHeight) {
+            if (!header.hasClass('shrink')) header.addClass('shrink');
+        } else {
+            if (header.hasClass('shrink')) header.removeClass('shrink');
+        }
+    }
+
+}
+
 function navShrinkSetVars() {
     // Case: big nav
     if ($("header").has(".cd-nav").length) {
