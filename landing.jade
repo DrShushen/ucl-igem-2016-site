@@ -50,9 +50,9 @@ body
 
         // Compulsory fullPage id
         #fullpage
-            .section.sec1(data-anchor="landing-section1")
+            .section.sec1.non-footer(data-anchor="landing-section1")
                 | Section 1
-            .section.sec2(data-anchor="landing-section2")
+            .section.sec2.non-footer(data-anchor="landing-section2")
                 | Section 2
                 .slide(data-anchor="landing-section2-slide1")
                     | Slide 1
@@ -60,9 +60,9 @@ body
                     | Slide 2
                 .slide(data-anchor="landing-section2-slide3")
                     | Slide 3
-            .section.sec3(data-anchor="landing-section3")
+            .section.sec3.non-footer(data-anchor="landing-section3")
                 | Section 3
-            .section.sec4.fp-auto-height(data-anchor="landing-section4")
+            .section.sec4.fp-auto-height.is-footer(data-anchor="landing-section4")
                 include _shared/_footer
 
 

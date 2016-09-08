@@ -28,62 +28,58 @@ Within fullScreen.js area of operation.
 
 body > #fullpage {
 
-  // --- General ---
+    // --- Sections ---
 
-  font-family: $fullPage-primary-font;
-  color: $color-grey-medium;
+    .section {
 
-  .wrap{
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px; /////////////////////////////
-    position: relative;
-  }
+      &.non-footer {
 
-  h1{
-    font-size: 6em;
-  }
+        text-align: center;
 
-  p{
-    font-size: 2em;
-  }
+        font-family: $fullPage-primary-font;
+        color: $color-grey-medium;
 
-  .intro p{
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1.5em;
-  }
+        .wrap {
+          margin-left: auto;
+          margin-right: auto;
+          width: 960px;
+          position: relative;
+        }
 
-  .section{
-    text-align: center;
-  }
+        h1 {
+          font-size: 6em;
+        }
 
-  // ----
+        p {
+          font-size: 2em;
+        }
 
+        .intro p {
+          width: 50%;
+          margin: 0 auto;
+          font-size: 1.5em;
+        }
 
+      }
 
-  // --- Sections ---
+      &.sec1 {
+        background-color: $color-sec1-bgd;
+      }
 
-  .section {
+      &.sec2 {
+        background-color: $color-sec2-bgd;
+      }
 
-    &.sec1 {
-      background-color: $color-sec1-bgd;
+      &.sec3 {
+        background-color: $color-sec3-bgd;
+      }
+
+      &.sec4 {
+        background-color: $color-sec4-bgd;
+      }
+
     }
 
-    &.sec2 {
-      background-color: $color-sec2-bgd;
-    }
-
-    &.sec3 {
-      background-color: $color-sec3-bgd;
-    }
-
-    &.sec4 {
-      background-color: $color-sec4-bgd;
-    }
-
-  }
-
-  // ----
+    // ----
 
 }
