@@ -1,0 +1,89 @@
+// shared variables
+@import '../../_shared/scss/variables';
+// variables
+@import './variables';
+
+// shared layout
+@import '../../_shared/scss/layout';
+// layout
+@import './layout';
+
+// shared image urls
+@import '../../_shared/scss/images';
+// image urls
+@import './images';
+
+// fonts
+//
+
+
+
+
+
+/* --------------------------------
+
+Within fullScreen.js area of operation.
+
+-------------------------------- */
+
+body > #fullpage {
+
+  // --- General ---
+
+  font-family: $fullPage-primary-font;
+  color: $color-grey-medium;
+
+  .wrap{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px; /////////////////////////////
+    position: relative;
+  }
+
+  h1{
+    font-size: 6em;
+  }
+
+  p{
+    font-size: 2em;
+  }
+
+  .intro p{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
+
+  .section{
+    text-align: center;
+  }
+
+  // ----
+
+
+
+  // --- Sections ---
+
+  .section {
+
+    &.sec1 {
+      background-color: $color-sec1-bgd;
+    }
+
+    &.sec2 {
+      background-color: $color-sec2-bgd;
+    }
+
+    &.sec3 {
+      background-color: $color-sec3-bgd;
+    }
+
+    &.sec4 {
+      background-color: $color-sec4-bgd;
+    }
+
+  }
+
+  // ----
+
+}

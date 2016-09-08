@@ -1,0 +1,4 @@
+1. Render Scss & Jade in:
+    1.1. In _shared
+    1.2. In all sub-folders
+2. Git (don't forget to "add").

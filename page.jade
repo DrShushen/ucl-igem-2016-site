@@ -1,0 +1,342 @@
+include _shared/_shared
+
+head
+    block fonts
+        // Fonts
+        // Shared fonts:
+        link(rel='stylesheet', href='./_shared/css/fonts.css')
+        link(rel='stylesheet', href='./_shared/css/font-awesome.min.css')
+        link(rel='stylesheet', href='./_shared/css/font-montserrat.css')
+        // [Hosted alternatives]:
+            link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+            link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat|Roboto')
+        // ---
+
+    block stylesheets
+        // STYLESHEETS
+        // Shared.
+        link(rel='stylesheet', href='./_shared/css/footer.css')
+        // Local:
+        link(rel='stylesheet', href='./page/css/reset.css')
+        link(rel='stylesheet', href='./page/css/menu.css')
+        link(rel='stylesheet', href='./page/css/main-content.css')
+        // ---
+
+    block scripts
+        // HEADER SCRIPTS - See more scripts in the end of body
+        // jQuery, a jQuery mobile compatible latest version.
+        script(src='./_shared/js/jquery-2.1.4.min.js')
+        // jQuery mobile 1.4.5 with theme-less CSS.
+        link(rel='stylesheet', href='./page/css/jquery-mobile/jquery.mobile.structure-1.4.5.min.css')
+        script(src='./page/js/jquery.mobile.min.js')
+        // Modernizr is allowed in the head, as it's a library.
+        script(src='./page/js/modernizr.min.js')
+        // [Hosted alternatives]:
+            script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+            link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css');
+            script(src='http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+
+
+
+
+
+body
+
+    block content
+
+        // Header.
+        header.cd-main-header
+            a.cd-logo(href='#')
+                .img
+            a.cd-logo.logo-replacer(href='#')
+                .img
+            ul.cd-header-buttons
+                li
+                    a.cd-search-trigger(href='#cd-search')
+                        | Search
+                        span
+                li
+                    a.cd-nav-trigger(href='#cd-primary-nav')
+                        | Menu
+                        span
+        // ---
+
+
+
+
+        // Content.
+        main.cd-main-content
+            .container
+                // ACTUAL CONTENT
+                .grd.p0.m0
+                    .grd-row
+                        .grd-row-col-1-6
+                            .media
+                                .media-figure
+                                    img(src='./page/img/sample-content/ucl.jpg', alt='UCL', style='height: 300px')
+                        .grd-row-col-5-6
+                            .media
+                                .media-body
+                                    h2.m0.p0 Image with text
+                                    p.m0.p0
+                                        | Lorem ipsum dolor sit amet, nonumy commune te nam, quod erant tation et qui. Malis civibus perfecto
+                                        | usu te. Adhuc idque delenit quo an, duo ad modo omittam deterruisset. Id per duis inimicus aliquando,
+                                        | vis ei solet postea definitionem, vim oporteat maiestatis ut. Ius sale consul delicata eu, cu dico
+                                        | cetero sit. Ullum vivendo dissentias eam eu.
+                .spacer
+                .grd.p0.m0
+                    .txt--center
+                        h2 Columns: you can organise elements on the page.
+                    .grd-row.my1
+                        .grd-row-col-1-6.bg--light-gray.py1
+                            p.m0.p1  Some text here.
+                        .grd-row-col-5-6.py1.bg--white
+                            p.m0.p1  Some more text here.
+                    .grd-row.my1
+                        .grd-row-col-3-6.bg--light-gray.py1
+                            p.m0.p1  Some text here.
+                        .grd-row-col-3-6.py1.bg--white
+                            p.m0.p1  Some text here.
+                    .grd-row.my1
+                        .grd-row-col-4-6.bg--light-gray.py1
+                            p.m0.p1  Some text here.
+                        .grd-row-col-2-6.py1.bg--white
+                            p.m0.p1  Some text here.
+                .spacer
+                .grd.p0.m0
+                    .txt--left
+                        h2 Here are some buttons:
+                    .grd-row.my0
+                        .grd-row-col-4-6.py0
+                            a.w100--s.my1.btn(href='#', title='Furtive button example') .btn
+                            a.w100--s.my1.btn--blue(href='#', title='Furtive button example') .btn--blue
+                            a.w100--s.my1.btn--green(href='#', title='Furtive button example') .btn--green
+                            a.w100--s.my1.btn--red(href='#', title='Furtive button example') .btn--red
+                            a.w100--s.my1.btn--gray(href='#', title='Furtive button example') .btn--gray
+                            a.w100--s.my1.btn--link(href='#', title='Furtive button example') .btn--link
+                        .grd-row-col-2-6.py0
+                .spacer
+                .grd.p0.m0
+                    .txt--left
+                        h2 Here are some lists:
+                    .grd-row.my0
+                        .grd-row-col-1-6.py0
+                            h3.muted Ordered
+                            ol
+                                li Apples
+                                li Bananas
+                                li Oranges
+        // ---
+
+
+
+
+        // Navigation.
+        .cd-overlay
+        nav.cd-nav
+            ul#cd-primary-nav.cd-primary-nav.is-fixed
+                li.has-children
+                    a(href='#') Project
+                    ul#category-project.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View Project
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 Description
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Design
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-3(href='#')
+                                h3 Notebook
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-4(href='#')
+                                h3 Glossary
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-5(href='#')
+                                h3 Achievements
+                                p Some more info goes here...
+                li.has-children
+                    a(href='#') Lab
+                    ul#category-lab.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View Lab
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 Overview
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Proof of Concept
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-3(href='#')
+                                h3 Demonstrate
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-4(href='#')
+                                h3 Hardware
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-5(href='#')
+                                h3 Lab-book
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-6(href='#')
+                                h3 Safety
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-7(href='#')
+                                h3 Scaling up
+                                p Some more info goes here...
+                li.has-children
+                    a(href='#') Parts
+                    ul#category-parts.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View Parts
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 Basic Parts
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Composite Parts
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-3(href='#')
+                                h3 Collection
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-4(href='#')
+                                h3 Measurement
+                                p Some more info goes here...
+                li.has-children
+                    a(href='#') Modelling
+                    ul#category-modelling.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View Modelling
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 Modelling 1
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Modelling 2
+                                p Some more info goes here...
+                li.has-children
+                    a(href='#') Human Practices
+                    ul#category-human-practices.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View Human Practices
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 Our Story
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Silver
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-3(href='#')
+                                h3 Gold
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-4(href='#')
+                                h3 Integrated Practices
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-5(href='#')
+                                h3 Engagement
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-6(href='#')
+                                h3 Blog
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-7(href='#')
+                                h3 Vlog
+                                p Some more info goes here...
+                li.has-children
+                    a(href='#') Entrepreneurship
+                    ul#category-entrepreneurship.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View Entrepreneurship
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 [Placeholder]
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Software
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-3(href='#')
+                                h3 AlphaBrick
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-4(href='#')
+                                h3 Dental
+                                p Some more info goes here...
+                li.has-children
+                    a(href='#') People
+                    ul#category-people.cd-nav-icons.is-hidden
+                        li.go-back
+                            a(href='#') Menu
+                        li.see-all
+                            a(href='#') View People
+                        li
+                            a.cd-nav-item.item-1(href='#')
+                                h3 Team
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-2(href='#')
+                                h3 Collaborations
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-3(href='#')
+                                h3 Sponsors
+                                p Some more info goes here...
+                        li
+                            a.cd-nav-item.item-4(href='#')
+                                h3 Attributions
+                                p Some more info goes here...
+        #cd-search.cd-search
+            form
+                input(type='search', data-role="none", placeholder='Search...')
+        // ---
+
+
+
+        block footer
+            // Footer
+            include _shared/_footer
+
+
+
+        // ---
+
+
+
+
+
+    block end-of-body-scripts
+        // END OF BODY SCRIPTS
+        script(src='./page/js/custom/menu.js')
+        script(src='./page/js/custom/nav-shrink.js')

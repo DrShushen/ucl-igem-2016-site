@@ -1,12 +1,21 @@
-@import './bourbon/bourbon';
 // http://bourbon.io/
+@import './bourbon/bourbon';
+
+// shared variables
+@import '../../_shared/scss/variables';
+// variables
 @import './variables';
-// colors, fonts etc...
-@import './layout';
-// responsive grid and media queries
-@import './images'; // image urls
+
+// shared layout
+@import '../../_shared/scss/layout';
+
+// shared image urls
+@import '../../_shared/scss/images';
+// image urls
+@import 'images';
+
 // fonts
-@import './fonts';
+//
 
 /* --------------------------------
 
@@ -231,9 +240,9 @@ Main components
 
   .img {
     display: block;
-    background: $logo no-repeat;
+    //background-image: $logo;
+    background: $logo no-repeat center;
     background-size: 100% 100%;
-    background-position: center;
     /* logo dimensions */
     width: 250px;
     height: 45px;
@@ -571,8 +580,7 @@ Main components
       margin-top: -20px;
       width: 40px;
       height: 40px;
-      background-repeat: no-repeat;
-      background-position: center center;
+      background: no-repeat center center;
       background-size: 40px 40px;
     }
 

@@ -1,10 +1,18 @@
-@import './bourbon/bourbon';
 // http://bourbon.io/
+@import './bourbon/bourbon';
+
+// shared variables
+@import '../../_shared/scss/variables';
+// variables
 @import './variables';
-// colors, fonts etc...
-@import './layout';
-// responsive grid and media queries
-@import './images'; // image urls
+
+// shared layout
+@import '../../_shared/scss/layout';
+
+// shared image urls
+@import '../../_shared/scss/images';
+// image urls
+@import 'images';
 
 /* --------------------------------
 

@@ -1,0 +1,66 @@
+// --- Colors, general ---
+
+$color-grey-very-dark: #1b1d1e; // grey very dark
+$color-grey-dark: #2e3233;      // grey dark
+$color-grey-less-dark: #454545; // grey less dark
+$color-grey-medium: #7b7b7b;    // grey medium
+$color-grey-light: #e2e3df;     // grey light
+$color-blue-base: #284cb9;      // blue base colour
+$color-blue-I: #004573;         // blue I
+$color-blue-II: #1d3c61;        // blue II
+$color-blue-III: #43ceff;       // blue III
+$color-blue-IV: #0100dd;        // blue IV
+$color-blue-V: #5591d3;         // blue V
+$color-blue-VI: #004574;        // blue VI
+$color-white: #ffffff;          // white
+$color-black: #000000;          // black
+
+
+
+// --- Main content colors ---
+
+$color-main-content-bgd: #e7f0f9; // very subtle blue
+
+
+
+// --- Font families ---
+
+//$menu-font: 'Open Sans', sans-serif;
+
+
+
+// --- Logo ---
+
+$logo-y-S: 18px;
+$logo-y-L: 26px;
+
+
+// Adaptation to varied logo sizes
+$logo-height-int: 45; /* change this to actual logo height */
+$original-height-int: 23;
+$addition-factor: ($logo-height-int - $original-height-int)/2;
+$subtraction-factor: -1*$addition-factor/2;
+$nav-items-y-adj: 0px - $subtraction-factor;
+
+$logo-y-S-adj: $logo-y-S + $subtraction-factor;
+$logo-y-L-adj: $logo-y-L + $subtraction-factor;
+
+// Logo width
+$logo-width: 250px;
+$logo-move-left-adjust: -1*$logo-width/2;
+
+
+
+// --- Header size ---
+
+$header-height-S: 60px + $addition-factor; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
+$header-height-L: 80px + $addition-factor; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
+
+
+
+// --- Footer parameters ---
+$footer-left-width: 30%;
+$footer-center-width: 46%;
+$footer-right-width: 22%;
+
+$M_Footer: 880px;

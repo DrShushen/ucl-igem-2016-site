@@ -1,0 +1,71 @@
+include _shared/_shared
+
+head
+    block fonts
+        // Fonts
+        // Shared fonts:
+        link(rel='stylesheet', href='./_shared/css/fonts.css')
+        link(rel='stylesheet', href='./_shared/css/font-awesome.min.css')
+        link(rel='stylesheet', href='./_shared/css/font-montserrat.css')
+        // ---
+
+    block stylesheets
+        // STYLESHEETS
+        // Shared --
+        link(rel='stylesheet', href='./_shared/css/footer.css')
+        // Local --
+        // Reset stylesheet for fullPage:
+        link(rel='stylesheet', href='./landing/css/reset-fullPage.css')
+        // fullPage's stylesheet:
+        link(rel='stylesheet', href='./landing/css/fullPage/jquery.fullPage.css')
+        // Custom:
+        link(rel='stylesheet', href='./landing/css/landing.css')
+        // [Hosted alternatives]:
+            link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.css')
+
+    block scripts
+        // HEADER SCRIPTS - See more scripts in the end of body
+        // jQuery
+        script(src='./_shared/js/jquery-2.1.4.min.js')
+        // fullPage's optional dependencies
+        // jQ UI v 1.12.0, may not need //script(src='./landing/js/jquery-ui.min.js')
+        script(src='./landing/js/jquery.easings.min.js')
+        script(src='./landing/js/scrolloverflow.min.js')
+        // fullPage
+        script(src='./landing/js/jquery.fullPage.min.js')
+        // [Hosted alternatives]:
+            script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+            script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/vendors/jquery.easings.min.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/vendors/scrolloverflow.min.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.js')
+
+
+
+
+
+body
+
+    block content
+
+        // Compulsory fullPage id
+        #fullpage
+            .section.sec1(data-anchor="landing-section1")
+                | Section 1
+            .section.sec2(data-anchor="landing-section2")
+                | Section 2
+                .slide(data-anchor="landing-section2-slide1")
+                    | Slide 1
+                .slide(data-anchor="landing-section2-slide2")
+                    | Slide 2
+                .slide(data-anchor="landing-section2-slide3")
+                    | Slide 3
+            .section.sec3(data-anchor="landing-section3")
+                | Section 3
+            .section.sec4.fp-auto-height(data-anchor="landing-section4")
+                include _shared/_footer
+
+
+    block end-of-body-scripts
+        // END OF BODY SCRIPTS
+        script(src='./landing/js/custom/landing.js')
