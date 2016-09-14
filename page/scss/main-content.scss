@@ -22,12 +22,10 @@ Main content style
 
 .cd-main-content {
 
-  // furtive:
-  //@import "./furtive/all";
-
   // overrides:
-  font-family: 'Roboto', sans-serif;
-
+  font-family: $main-content-font;
+  font-size: 1.6rem;
+  
   .media-figure {
 
     img {
@@ -49,25 +47,35 @@ Main content style
       width: 400px;
       max-height: 400px;
     }
+
   }
 
-  p, .p {
-    font-size: 1.8rem;
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
   }
 
   ol li {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     list-style-type: decimal;
-    margin-left: 1.8rem;
+    margin-left: 1.6rem;
   }
 
   ul {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     li {
       list-style-type: disc;
-      margin-left: 1.8rem;
+      margin-left: 1.6rem;
     }
     ul li {
       list-style-type: circle;
@@ -75,12 +83,6 @@ Main content style
     }
   }
 
-  // custom:
-  div.spacer {
-    margin: 0;
-    padding: 0;
-    height: 1rem;
-  }
   div.container {
     margin: 0;
     padding: 6rem;
