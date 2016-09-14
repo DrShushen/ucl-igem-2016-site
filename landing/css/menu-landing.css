@@ -1,0 +1,626 @@
+/* --------------------------------
+
+Navigation shrinking effect
+
+-------------------------------- */
+.cd-main-header {
+  position: fixed;
+  width: 100%; }
+
+.cd-search {
+  position: fixed; }
+
+/* -------------------------------- 
+
+Navigation style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #2e3233;
+  background-color: #ffffff; }
+  @media only screen and (max-width: 1269px) {
+    body.nav-on-left.overflow-hidden {
+      overflow: hidden; } }
+
+a {
+  color: #284cb9;
+  text-decoration: none; }
+
+img {
+  /* make images responsive */
+  max-width: 100%; }
+
+input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.2rem; }
+
+input[type="search"]::-ms-clear {
+  /* removes close icon - IE */
+  display: none; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+.cd-main-header {
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -o-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  height: 80px;
+  background: #004574;
+  z-index: 3; }
+  .nav-is-fixed .cd-main-header {
+    /* add .nav-is-fixed class to body if you want a fixed navigation on > 1170px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  @media only screen and (min-width: 1270px) {
+    .cd-main-header {
+      height: 80px; }
+      .cd-main-header::after {
+        clear: both;
+        content: "";
+        display: table; } }
+  @media only screen and (max-width: 1269px) {
+    .cd-main-header.nav-is-visible {
+      -webkit-transform: translateX(-250px);
+      -moz-transform: translateX(-250px);
+      -ms-transform: translateX(-250px);
+      -o-transform: translateX(-250px);
+      transform: translateX(-250px); }
+    .nav-on-left .cd-main-header.nav-is-visible {
+      -webkit-transform: translateX(250px);
+      -moz-transform: translateX(250px);
+      -ms-transform: translateX(250px);
+      -o-transform: translateX(250px);
+      transform: translateX(250px); } }
+
+.cd-logo {
+  position: absolute;
+  top: 17.5px;
+  left: 5%; }
+  .cd-logo .img {
+    display: block;
+    background: url("../../_shared/img/logos/logo.png") no-repeat center;
+    background-size: 100% 100%;
+    /* logo dimensions */
+    width: 250px;
+    height: 45px; }
+    @media only screen and (max-width: 400px) {
+      .cd-logo .img {
+        background-size: 70% 70%; } }
+    @media only screen and (max-width: 350px) {
+      .cd-logo .img {
+        background-size: 40% 40%; } }
+  @media only screen and (max-width: 1269px) {
+    .nav-on-left .cd-logo {
+      left: auto;
+      right: 5%; } }
+  @media only screen and (min-width: 1270px) {
+    .cd-logo {
+      top: 17.5px;
+      left: 4em; } }
+
+.cd-header-buttons {
+  position: absolute;
+  display: inline-block;
+  top: 18px;
+  right: 5%; }
+  .cd-header-buttons li {
+    display: inline-block; }
+  @media only screen and (max-width: 1269px) {
+    .nav-on-left .cd-header-buttons {
+      right: auto;
+      left: 5%; }
+      .nav-on-left .cd-header-buttons li {
+        float: right; } }
+  @media only screen and (min-width: 1270px) {
+    .cd-header-buttons {
+      top: 18px;
+      right: 24px; } }
+
+.cd-search-trigger, .cd-nav-trigger {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  white-space: nowrap;
+  /* hide text */
+  color: transparent;
+  z-index: 3; }
+
+.cd-search-trigger {
+  top: 0px; }
+  .cd-search-trigger::before, .cd-search-trigger::after {
+    /* search icon */
+    content: '';
+    position: absolute;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .cd-search-trigger::before {
+    /* lens */
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #ffffff; }
+  .cd-search-trigger::after {
+    /* handle */
+    height: 3px;
+    width: 8px;
+    background: #ffffff;
+    bottom: 14px;
+    right: 11px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .cd-search-trigger span {
+    /* container for the X icon */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; }
+  .cd-search-trigger span::before, .cd-search-trigger span::after {
+    /* close icon */
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 22px;
+    top: 50%;
+    margin-top: -2px;
+    left: 50%;
+    margin-left: -11px;
+    background: #ffffff;
+    opacity: 0;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s; }
+  .cd-search-trigger span::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .cd-search-trigger span::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .cd-search-trigger.search-is-visible::before, .cd-search-trigger.search-is-visible::after {
+    /* hide search icon */
+    opacity: 0; }
+  .cd-search-trigger.search-is-visible span::before, .cd-search-trigger.search-is-visible span::after {
+    /* show close icon */
+    opacity: 1; }
+  .cd-search-trigger.search-is-visible span::before {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .cd-search-trigger.search-is-visible span::after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.cd-nav-trigger {
+  top: 0px; }
+  .cd-nav-trigger span, .cd-nav-trigger span::before, .cd-nav-trigger span::after {
+    /* hamburger icon in CSS */
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 24px;
+    background: #ffffff; }
+  .cd-nav-trigger span {
+    /* line in the center */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -2px;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s; }
+  .cd-nav-trigger span::before, .cd-nav-trigger span::after {
+    /* other 2 lines */
+    content: '';
+    right: 0;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s; }
+  .cd-nav-trigger span::before {
+    /* menu icon top line */
+    top: -6px; }
+  .cd-nav-trigger span::after {
+    /* menu icon bottom line */
+    top: 6px; }
+  .cd-nav-trigger.nav-is-visible span {
+    /* hide line in the center */
+    background: rgba(255, 255, 255, 0); }
+  .cd-nav-trigger.nav-is-visible span::before, .cd-nav-trigger.nav-is-visible span::after {
+    /* keep visible other 2 lines */
+    background: white; }
+  .cd-nav-trigger.nav-is-visible span::before {
+    -webkit-transform: translateX(4px) translateY(-3px) rotate(45deg);
+    -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
+    -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
+    -o-transform: translateX(4px) translateY(-3px) rotate(45deg);
+    transform: translateX(4px) translateY(-3px) rotate(45deg); }
+  .cd-nav-trigger.nav-is-visible span::after {
+    -webkit-transform: translateX(4px) translateY(2px) rotate(-45deg);
+    -moz-transform: translateX(4px) translateY(2px) rotate(-45deg);
+    -ms-transform: translateX(4px) translateY(2px) rotate(-45deg);
+    -o-transform: translateX(4px) translateY(2px) rotate(-45deg);
+    transform: translateX(4px) translateY(2px) rotate(-45deg); }
+  @media only screen and (min-width: 1270px) {
+    .cd-nav-trigger {
+      display: none; } }
+
+.cd-search {
+  height: 80px;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  -o-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s; }
+  .cd-search form {
+    height: 100%;
+    width: 100%; }
+  .cd-search input {
+    border-radius: 0;
+    border: none;
+    background: #ffffff;
+    height: 100%;
+    width: 100%;
+    padding: 0 5%;
+    box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none; }
+    .cd-search input::-webkit-input-placeholder {
+      color: #c9cbc4; }
+    .cd-search input::-moz-placeholder {
+      color: #c9cbc4; }
+    .cd-search input:-moz-placeholder {
+      color: #c9cbc4; }
+    .cd-search input:-ms-input-placeholder {
+      color: #c9cbc4; }
+    .cd-search input:focus {
+      outline: none; }
+  .cd-search.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -o-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s; }
+  .nav-is-fixed .cd-search {
+    position: fixed; }
+  @media only screen and (min-width: 1270px) {
+    .cd-search {
+      height: 80px;
+      top: 80px; }
+      .cd-search input {
+        padding: 0 2em;
+        font-size: 2.2rem; } }
+
+.cd-overlay {
+  /* shadow layer visible when navigation is active */
+  position: fixed;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(40, 76, 185, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s; }
+  .cd-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s; }
+  @media only screen and (max-width: 1269px) {
+    .cd-overlay.is-visible.search-is-visible, .nav-on-left .cd-overlay.is-visible.search-is-visible {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0); } }
+
+.cd-primary-nav, .cd-primary-nav ul {
+  position: fixed;
+  top: 80px;
+  height: 100%;
+  width: 250px;
+  background: transparent;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu - */
+  overflow-x: hidden;
+  /* - end - */ }
+  .cd-primary-nav a, .cd-primary-nav ul a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform, opacity; }
+  .cd-primary-nav.is-small-screen, .cd-primary-nav ul.is-small-screen {
+    right: -250px;
+    -webkit-transition: right 0.3s 0s ease, visibility 0.3s 0s ease;
+    -moz-transition: right 0.3s 0s ease, visibility 0.3s 0s ease;
+    transition: right 0.3s 0s ease, visibility 0.3s 0s ease;
+    overflow: visible; }
+    .cd-primary-nav.is-small-screen a, .cd-primary-nav ul.is-small-screen a {
+      background: #004574;
+      width: 230px;
+      cursor: pointer;
+      overflow: hidden;
+      border: none;
+      text-align: left;
+      font-size: 1.3em;
+      -o-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+      height: 0;
+      margin: 0;
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: margin-left 0.3s 0s ease, margin-top 0.3s 0.3s ease, margin-bottom 0.3s 0.3s ease, height 0.3s 0.3s ease, visibility 0.3s 0s ease, opacity 0.3s 0s ease;
+      -moz-transition: margin-left 0.3s 0s ease, margin-top 0.3s 0.3s ease, margin-bottom 0.3s 0.3s ease, height 0.3s 0.3s ease, visibility 0.3s 0s ease, opacity 0.3s 0s ease;
+      transition: margin-left 0.3s 0s ease, margin-top 0.3s 0.3s ease, margin-bottom 0.3s 0.3s ease, height 0.3s 0.3s ease, visibility 0.3s 0s ease, opacity 0.3s 0s ease; }
+      .cd-primary-nav.is-small-screen a.active, .cd-primary-nav ul.is-small-screen a.active {
+        border-left: 4px solid #ffffff;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: -250px;
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: border 0.3s 0s ease, margin-left 0.3s 0s ease, margin-top 0.3s 0.3s ease, margin-bottom 0.3s 0.3s ease, height 0.3s 0.3s ease, visibility 0.3s 0.3s ease, opacity 0.3s 0.3s ease;
+        -moz-transition: border 0.3s 0s ease, margin-left 0.3s 0s ease, margin-top 0.3s 0.3s ease, margin-bottom 0.3s 0.3s ease, height 0.3s 0.3s ease, visibility 0.3s 0.3s ease, opacity 0.3s 0.3s ease;
+        transition: border 0.3s 0s ease, margin-left 0.3s 0s ease, margin-top 0.3s 0.3s ease, margin-bottom 0.3s 0.3s ease, height 0.3s 0.3s ease, visibility 0.3s 0.3s ease, opacity 0.3s 0.3s ease; }
+    .cd-primary-nav.is-small-screen a:hover, .cd-primary-nav ul.is-small-screen a:hover {
+      background-color: #0069b1;
+      -webkit-transition: all 0.1s ease;
+      -moz-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+    .cd-primary-nav.is-small-screen a:active, .cd-primary-nav ul.is-small-screen a:active {
+      background-color: #003355;
+      -webkit-transform: translate(2px, 2px);
+      -moz-transform: translate(2px, 2px);
+      -ms-transform: translate(2px, 2px);
+      -o-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+      -webkit-transition: all 0.1s ease;
+      -moz-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+    .cd-primary-nav.is-small-screen.nav-is-visible, .cd-primary-nav ul.is-small-screen.nav-is-visible {
+      right: 0; }
+      .cd-primary-nav.is-small-screen.nav-is-visible a, .cd-primary-nav ul.is-small-screen.nav-is-visible a {
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 0;
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: margin-left 0.3s 0s ease, margin-top 0.3s 0s ease, margin-bottom 0.3s 0s ease, height 0.3s 0s ease, visibility 0.3s 0s ease, opacity 0.3s 0s;
+        -moz-transition: margin-left 0.3s 0s ease, margin-top 0.3s 0s ease, margin-bottom 0.3s 0s ease, height 0.3s 0s ease, visibility 0.3s 0s ease, opacity 0.3s 0s;
+        transition: margin-left 0.3s 0s ease, margin-top 0.3s 0s ease, margin-bottom 0.3s 0s ease, height 0.3s 0s ease, visibility 0.3s 0s ease, opacity 0.3s 0s; }
+
+@media only screen and (max-width: 1269px) {
+  .cd-primary-nav {
+    /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
+    visibility: hidden;
+    -webkit-transition: visibility 0s 0.3s, right 0.3s;
+    -moz-transition: visibility 0s 0.3s, right 0.3s;
+    transition: visibility 0s 0.3s, right 0.3s; }
+    .cd-primary-nav.nav-is-visible {
+      visibility: visible;
+      -webkit-transition: visibility 0s 0s, right 0.3s;
+      -moz-transition: visibility 0s 0s, right 0.3s;
+      transition: visibility 0s 0s, right 0.3s; } }
+
+.cd-primary-nav a::before, .cd-primary-nav a::after {
+  /* arrow goes on the left side - go back button */
+  left: 20px;
+  -webkit-transform-origin: 1px 50%;
+  -moz-transform-origin: 1px 50%;
+  -ms-transform-origin: 1px 50%;
+  -o-transform-origin: 1px 50%;
+  transform-origin: 1px 50%; }
+
+@media only screen and (min-width: 1270px) {
+  .cd-primary-nav {
+    font-size: 2rem;
+    position: static;
+    padding: 0 80px 0 0;
+    height: auto;
+    width: auto;
+    float: right;
+    overflow: visible;
+    background: transparent;
+    /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu [reversal for big screens] - */
+    overflow-x: visible;
+    /* - end - */ }
+    .cd-primary-nav::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .cd-primary-nav.moves-out > li > a {
+      /* reset mobile style */
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1; }
+    .cd-primary-nav ul {
+      position: static;
+      height: auto;
+      width: auto;
+      background: transparent;
+      overflow: visible;
+      z-index: 3; }
+      .cd-primary-nav ul.is-hidden {
+        /* reset mobile style */
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0); }
+      .cd-primary-nav ul.moves-out > li > a {
+        /* reset mobile style */
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1; }
+    .cd-primary-nav > li {
+      float: left;
+      margin-left: 12px; }
+    .cd-primary-nav > li > a {
+      /* main navigation buttons style */
+      position: relative;
+      display: inline-block;
+      height: 80px;
+      line-height: 80px;
+      padding: 0 10px;
+      color: #ffffff;
+      overflow: visible;
+      border-bottom: none;
+      -webkit-transition: color 0.3s, box-shadow 0.3s;
+      -moz-transition: color 0.3s, box-shadow 0.3s;
+      transition: color 0.3s, box-shadow 0.3s; }
+      .cd-primary-nav > li > a.active {
+        box-shadow: inset 0 -4px #ffffff; }
+      .cd-primary-nav > li > a:hover {
+        color: #c3c4c0; }
+      .cd-primary-nav > li > a:hover::before, .cd-primary-nav > li > a:hover::after {
+        background: #c3c4c0; }
+      .cd-primary-nav > li > a.selected {
+        color: #ff9c00;
+        box-shadow: inset 0 -2px 0 #ff9c00; }
+    .cd-primary-nav .see-all {
+      display: none; }
+
+  .cd-primary-nav a {
+    padding-left: 20px; }
+    .cd-primary-nav a::before, .cd-primary-nav a::after {
+      left: 1px; } }
+@media only screen and (max-width: 1269px) {
+  .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
+    right: auto;
+    left: 0; } }
+
+/*# sourceMappingURL=menu-landing.css.map */

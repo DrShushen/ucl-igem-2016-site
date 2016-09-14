@@ -1,0 +1,66 @@
+// shared variables
+@import '../../_shared/scss/variables';
+
+// --- Large screen nav colors ---
+
+$color-nav-background: #004574; // blue VI
+$color-nav-graphical: #e2e3df; // grey light
+
+$color-nav-link: #ffffff; // white
+$color-nav-link-hover: #c3c4c0; // grey light-medium
+$color-nav-link-active: #ff9c00; // orange
+
+$color-nav-group-link: #ffffff; // white
+$color-nav-group-link-hover: #ff9c00; // orange
+
+$color-nav-panel-link: #ffffff; // white
+$color-nav-panel-description: #c3c4c0; // grey light-medium
+
+$color-nav-back: #c3c4c0; // grey light-medium
+$color-nav-back-hover: #7b7b7b; // grey medium
+
+$color-nav-see-all: #c3c4c0; // grey light-medium
+$color-nav-see-all-hover: #7b7b7b; // grey medium
+
+
+
+// --- Function buttons colors ---
+
+$color-search-trigger: #ffffff; // white
+$color-nav-trigger: #ffffff; // white
+
+
+
+// --- Fonts ---
+
+$menu-font: 'Open Sans', sans-serif;
+
+
+
+// Landing-specific values:
+
+$header-height-landing: 80px; // HAS A COUNTERPART IN landing.js, MUST KEEP SYNCHRONISED!
+$logo-y-landing-adj: $header-height-landing / 2 - ($logo-height-int + 0px) / 2;
+$nav-menu-buttons-top-landing: $header-height-landing / 2 - $nav-menu-buttons-height / 2;
+$search-height-landing: 80px;
+
+
+
+// --- Navigation size ---
+
+// Small screen nav bar.
+$nav-width-landing: 250px;
+$nav-item-height: 50px;
+$nav-item-offset-from-right: 20px;
+$nav-item-margin-top-bottom: 10px;
+$nav-item-margin-right: 5px;
+$nav-item-margin-left: 15px;
+//$nav-item-margin-set: 10px 15px 10px 5px;
+
+
+
+// --- Z-index ---
+
+$below-content: 1;
+$content: 2;
+$above-content: 3;

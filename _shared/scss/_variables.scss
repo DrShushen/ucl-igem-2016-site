@@ -17,9 +17,13 @@ $color-black: #000000;          // black
 
 
 
+
+
 // --- Main content colors ---
 
 $color-main-content-bgd: #e7f0f9; // very subtle blue
+
+
 
 
 
@@ -29,21 +33,24 @@ $color-main-content-bgd: #e7f0f9; // very subtle blue
 
 
 
+
+// --- Header size ---
+
+$header-height-S: 70px;
+$header-height-L: 90px;
+
+
+
+
+
 // --- Logo ---
 
-$logo-y-S: 18px;
-$logo-y-L: 26px;
-
-
 // Adaptation to varied logo sizes
-$logo-height-int: 45; /* change this to actual logo height */
-$original-height-int: 23;
-$addition-factor: ($logo-height-int - $original-height-int)/2;
-$subtraction-factor: -1*$addition-factor/2;
-$nav-items-y-adj: 0px - $subtraction-factor;
+$logo-height-int: 45;
+$nav-items-y-adj: 0px;// - $subtraction-factor;
 
-$logo-y-S-adj: $logo-y-S + $subtraction-factor;
-$logo-y-L-adj: $logo-y-L + $subtraction-factor;
+$logo-y-S-adj: $header-height-S / 2 - ($logo-height-int + 0px) / 2;
+$logo-y-L-adj: $header-height-L / 2 - ($logo-height-int + 0px) / 2;
 
 // Logo width
 $logo-width: 250px;
@@ -51,16 +58,46 @@ $logo-move-left-adjust: -1*$logo-width/2;
 
 
 
-// --- Header size ---
 
-$header-height-S: 60px + $addition-factor; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
-$header-height-L: 80px + $addition-factor; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
+
+// --- Navigation settings ---
+
+$nav-menu-links-offset: 80px;
+$nav-menu-link-gap: 12px;
+$nav-menu-buttons-offset: $nav-menu-link-gap * 2;
+
+$nav-menu-buttons-height: 44px;
+
+$nav-menu-buttons-top-L: $header-height-L / 2 - $nav-menu-buttons-height / 2;
+$nav-menu-buttons-top-S: $header-height-S / 2 - $nav-menu-buttons-height / 2;
+
+
+
+
+
+// --- Search size ---
+
+$search-height-S: 50px;
+$search-height-L: 100px;
+
+
+
+
+
+// --- Menu Slide-out Timing ---
+
+$menu-slideout-timing: .3s;
+
+
 
 
 
 // --- Footer parameters ---
+
+$footer-custom-padding: 10px;
+
 $footer-left-width: 30%;
 $footer-center-width: 46%;
-$footer-right-width: 22%;
+$footer-right-width: 24%;
 
 $M_Footer: 880px;

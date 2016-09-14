@@ -1,33 +1,168 @@
-/* change this to actual logo height */
 /* --------------------------------
 
 Within fullScreen.js area of operation.
 
 -------------------------------- */
-body > #fullpage .section.non-footer {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  color: #7b7b7b; }
-  body > #fullpage .section.non-footer .wrap {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-    position: relative; }
-  body > #fullpage .section.non-footer h1 {
-    font-size: 6em; }
-  body > #fullpage .section.non-footer p {
-    font-size: 2em; }
-  body > #fullpage .section.non-footer .intro p {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1.5em; }
-body > #fullpage .section.sec1 {
+body > header#landing-header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  height: 80px;
+  background: #004574; }
+  @media only screen and (min-width: 1270px) {
+    body > header#landing-header {
+      height: 80px; }
+      body > header#landing-header::after {
+        clear: both;
+        content: "";
+        display: table; } }
+
+/* --------------------------------
+
+Within fullScreen.js area of operation.
+
+-------------------------------- */
+#fullpage .fp-slidesNav.bottom > ul > li > a > span {
+  background-color: #ffffff;
+  opacity: 1; }
+#fullpage .section {
   background-color: #e7f0f9; }
-body > #fullpage .section.sec2 {
-  background-color: LightSlateGray; }
-body > #fullpage .section.sec3 {
-  background-color: Aquamarine; }
-body > #fullpage .section.sec4 {
-  background-color: #2e3233; }
+  #fullpage .section.slides-with-header {
+    vertical-align: middle; }
+    #fullpage .section.slides-with-header .slide-section-header {
+      height: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    #fullpage .section.slides-with-header .slide-section-content {
+      height: 80%; }
+      #fullpage .section.slides-with-header .slide-section-content .slide.fp-slide > div {
+        vertical-align: middle !important;
+        height: 80% !important; }
+      #fullpage .section.slides-with-header .slide-section-content .fp-controlArrow {
+        top: 100% !important;
+        margin-top: -40vh !important; }
+  #fullpage .section.non-footer {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    color: #2e3233;
+    text-align: center; }
+    #fullpage .section.non-footer .text-box {
+      padding-left: 5%;
+      padding-right: 5%; }
+      #fullpage .section.non-footer .text-box p {
+        text-align: left;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem; }
+    #fullpage .section.non-footer .wrap {
+      margin-left: auto;
+      margin-right: auto;
+      width: 960px;
+      position: relative; }
+    #fullpage .section.non-footer h1 {
+      font-size: 5rem; }
+    #fullpage .section.non-footer p {
+      font-size: 1.6em; }
+    #fullpage .section.non-footer .button {
+      display: inline-block;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      position: relative;
+      cursor: pointer;
+      padding: 0 20px 0 73px;
+      border: none;
+      font: normal 20px/2.4 "Roboto", sans-serif;
+      color: #ffffff;
+      text-transform: capitalize;
+      -o-text-overflow: clip;
+      text-overflow: clip;
+      background: #004574;
+      -webkit-box-shadow: 0 5px 0 0 #5591d3;
+      box-shadow: 0 5px 0 0 #5591d3;
+      -webkit-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+      transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1); }
+      #fullpage .section.non-footer .button a {
+        color: #ffffff; }
+    #fullpage .section.non-footer .button:hover {
+      background: #0063a7;
+      -webkit-box-shadow: 0 5px 0 0 #7eabdd;
+      box-shadow: 0 5px 0 0 #7eabdd;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      transition: none; }
+    #fullpage .section.non-footer .button:active {
+      top: 2px;
+      background: #002741;
+      -webkit-box-shadow: 0 3px 0 0 #3277c3;
+      box-shadow: 0 3px 0 0 #3277c3;
+      -webkit-transform-origin: 50% 100% 0;
+      transform-origin: 50% 100% 0; }
+    #fullpage .section.non-footer .button::before {
+      display: inline-block;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      width: 50px;
+      height: 100%;
+      position: absolute;
+      content: "";
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      border: 0 solid #0100dd;
+      border-right: 1px solid #285e9a;
+      font: normal medium/normal Arial, Helvetica, sans-serif;
+      color: #000000;
+      -o-text-overflow: clip;
+      text-overflow: clip;
+      background: url("../img/icons/icon-more.svg"), #699ed8;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      -webkit-background-origin: content-box;
+      background-origin: content-box;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      -webkit-background-size: 30px auto;
+      background-size: 30px auto;
+      -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+      transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1); }
+    #fullpage .section.non-footer .intro p {
+      width: 50%;
+      margin: 0 auto;
+      font-size: 1.5em; }
+  #fullpage .section.sec1 {
+    background-color: #e7f0f9; }
+    #fullpage .section.sec1 .slide {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%; }
+    #fullpage .section.sec1 .slide1 {
+      background-image: url(../img/sample/bio1.jpg); }
+    #fullpage .section.sec1 .slide2 {
+      background-image: url(../img/sample/ucl1.jpeg); }
+    #fullpage .section.sec1 .slide3 {
+      background-image: url(../img/sample/age1.jpg); }
+    #fullpage .section.sec1 .slide4 {
+      background-image: url(../img/sample/cat1.jpg); }
+  #fullpage .section.sec2 {
+    background-color: #FFF5EE; }
+  #fullpage .section.sec3 {
+    background-color: #e7f0f9; }
+  #fullpage .section.sec4 {
+    background-color: #FFF5EE; }
+  #fullpage .section.sec5 {
+    background-color: #e7f0f9; }
+  #fullpage .section.sec6 {
+    background-color: #FFF5EE; }
+  #fullpage .section.sec7 {
+    background-color: #e7f0f9; }
 
 /*# sourceMappingURL=landing.css.map */

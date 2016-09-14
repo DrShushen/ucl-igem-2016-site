@@ -5,3 +5,9 @@ TODO:
 * Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
 * Add keyword metadata for SEO purposes.
 * Consider if that strange IE comment is needed in header, see e.g. fullPaje.js's demo htmls whare this is done.
+* Replace .3s with a variable in both menu systems.
+Landing:
+* Restore overlay.
+* Add top scroller for small screens.
+* Fix footer screen-fit on small screens.
+* Sections centralisation bullshit.

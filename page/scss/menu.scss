@@ -1,5 +1,5 @@
 // http://bourbon.io/
-@import './bourbon/bourbon';
+@import '../../_shared/scss/bourbon/bourbon';
 
 // shared variables
 @import '../../_shared/scss/variables';
@@ -186,12 +186,12 @@ Main components
 }
 
 .cd-main-content, .cd-main-header {
-  @include transition(transform .3s);
+  @include transition(transform $menu-slideout-timing);
   // Workaround to reconcile with my shrinking menu.
-  -o-transition: transform .3s, height $htrtl!important;
-  -moz-transition: transform .3s, height $htrtl!important;
-  -webkit-transition: transform .3s, height $htrtl!important;
-  transition: transform .3s, height $htrtl!important;
+  -o-transition: transform $menu-slideout-timing, height $htrtl!important;
+  -moz-transition: transform $menu-slideout-timing, height $htrtl!important;
+  -webkit-transition: transform $menu-slideout-timing, height $htrtl!important;
+  transition: transform $menu-slideout-timing, height $htrtl!important;
 
   @include MQ(maxL) {
     &.nav-is-visible {
@@ -315,7 +315,7 @@ Main components
     /* search icon */
     content: '';
     position: absolute;
-    @include transition(opacity .3s);
+    @include transition(opacity $menu-slideout-timing);
     /* Force Hardware Acceleration in WebKit */
     @include transform(translateZ(0));
     -webkit-backface-visibility: hidden;
@@ -368,7 +368,7 @@ Main components
     @include transform(translateZ(0));
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    @include transition(opacity .3s, transform .3s);
+    @include transition(opacity $menu-slideout-timing, transform $menu-slideout-timing);
   }
 
   span::before {
@@ -419,7 +419,7 @@ Main components
     top: 50%;
     right: 10px;
     margin-top: -2px;
-    @include transition(background .3s .3s);
+    @include transition(background $menu-slideout-timing $menu-slideout-timing);
   }
 
   span::before, span::after {
@@ -431,7 +431,7 @@ Main components
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     @include transform-origin(0% 50%);
-    @include transition(transform .3s .3s);
+    @include transition(transform $menu-slideout-timing $menu-slideout-timing);
   }
 
   span::before {
@@ -483,7 +483,7 @@ Main components
   @include transform(translateZ(0));
 
   @include transform(translateX(0));
-  @include transition(transform .3s);
+  @include transition(transform $menu-slideout-timing);
 
   /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu - */
   overflow-x: hidden;
@@ -506,7 +506,7 @@ Main components
     border-bottom: 1px solid lighten($color-grey-dark, 5%);
     @include transform(translateZ(0));
     will-change: transform, opacity;
-    @include transition(transform .3s, opacity .3s);
+    @include transition(transform $menu-slideout-timing, opacity $menu-slideout-timing);
   }
 
   &.is-hidden {
@@ -800,7 +800,7 @@ Main components
   @include MQ(maxL) {
     /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
     visibility: hidden;
-    @include transition(visibility 0s .3s);
+    @include transition(visibility 0s $menu-slideout-timing);
 
     &.nav-is-visible {
       visibility: visible;
@@ -870,13 +870,13 @@ Main components
       color: $color-nav-link;
       overflow: visible;
       border-bottom: none;
-      @include transition(color .3s, box-shadow .3s);
+      @include transition(color $menu-slideout-timing, box-shadow $menu-slideout-timing);
 
       &:hover {
         color: $color-nav-link-hover;
       }
       &:hover::before, &:hover::after {
-        //@include transition(background .3s);
+        //@include transition(background $menu-slideout-timing);
         background: $color-nav-link-hover;
       }
 
@@ -900,18 +900,18 @@ Main components
       box-shadow: inset 0 1px 0 $color-nav-graphical, 0 3px 6px rgba(#000, .05);
       @include transform(translateX(0));
       @include clearfix;
-      -o-transition: opacity .3s 0s, visibility 0s 0s;
-      -moz-transition: opacity .3s 0s, visibility 0s 0s;
-      -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-      transition: opacity .3s 0s, visibility 0s 0s;
+      -o-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+      -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+      -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+      transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
 
       &.is-hidden {
         opacity: 0;
         visibility: hidden;
-        -o-transition: opacity .3s 0s, visibility 0s .3s;
-        -moz-transition: opacity .3s 0s, visibility 0s .3s;
-        -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-        transition: opacity .3s 0s, visibility 0s .3s;
+        -o-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+        -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+        -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+        transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
       }
 
       > .see-all {
@@ -1226,7 +1226,7 @@ Main components
       background: darken($color-nav-link, 10%);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      @include transition(width .3s, transform .3s, background .3s);
+      @include transition(width $menu-slideout-timing, transform $menu-slideout-timing, background $menu-slideout-timing);
     }
 
     &::before {
@@ -1274,10 +1274,10 @@ Main components
   z-index: $above-content;
   opacity: 0;
   visibility: hidden;
-  -o-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  -o-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
 
   form {
     height: 100%;
@@ -1306,10 +1306,10 @@ Main components
   &.is-visible {
     opacity: 1;
     visibility: visible;
-    -o-transition: opacity .3s 0s, visibility 0s 0s;
-    -moz-transition: opacity .3s 0s, visibility 0s 0s;
-    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-    transition: opacity .3s 0s, visibility 0s 0s;
+    -o-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
   }
 
   .nav-is-fixed & {
@@ -1345,12 +1345,12 @@ Main components
   visibility: hidden;
   opacity: 0;
   @include backface-visibility(hidden);
-  @include transition(opacity .3s 0s, visibility 0s .3s, transform .3s 0s);
+  @include transition(opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing, transform $menu-slideout-timing 0s);
 
   &.is-visible {
     opacity: 1;
     visibility: visible;
-    @include transition(opacity .3s 0s, visibility 0s 0s, transform .3s 0s);
+    @include transition(opacity $menu-slideout-timing 0s, visibility 0s 0s, transform $menu-slideout-timing 0s);
   }
 
   @include MQ(maxL) {

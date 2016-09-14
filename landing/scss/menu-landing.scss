@@ -1,0 +1,757 @@
+// http://bourbon.io/
+@import '../../_shared/scss/bourbon/_bourbon';
+
+// shared variables
+@import '../../_shared/scss/_variables';
+// variables
+@import '_menu-landing-variables';
+
+// shared layout
+@import '../../_shared/scss/_layout';
+
+// shared image urls
+@import '../../_shared/scss/_images';
+
+
+
+
+
+/* --------------------------------
+
+Navigation shrinking effect
+
+-------------------------------- */
+
+// Fix the nav bar and the search bar.
+.cd-main-header {
+  // "Fixing" the nav bar.
+  position: fixed;
+  width: 100%;
+}
+.cd-search {
+  position: fixed;
+}
+
+
+
+
+
+/* -------------------------------- 
+
+Navigation style
+
+-------------------------------- */
+
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  font: {
+    size: 1.6rem;
+    family: $menu-font; // variables inside partials > _variables.scss
+  }
+  color: $color-grey-dark;
+  background-color: $color-white;
+
+  @include MQ(maxL) { // layout mixins inside partials > _layout.scss
+    &.nav-on-left.overflow-hidden {
+      overflow: hidden;
+    }
+  }
+}
+
+a {
+  color: $color-blue-base;
+  text-decoration: none;
+}
+
+img {
+  /* make images responsive */
+  max-width: 100%;
+}
+
+input {
+  font-family: $menu-font;
+  font-size: 2.2rem;
+}
+
+input[type="search"]::-ms-clear {
+  /* removes close icon - IE */
+  display: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+
+
+
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+.cd-main-header {
+
+  /* Force Hardware Acceleration in WebKit */
+  @include transform(translateZ(0));
+  will-change: transform;
+
+  -o-transition: transform $menu-slideout-timing;
+  -moz-transition: transform $menu-slideout-timing;
+  -webkit-transition: transform $menu-slideout-timing;
+  transition: transform $menu-slideout-timing;
+  @include transition(transform $menu-slideout-timing);
+
+  height: $header-height-landing;
+  background: $color-nav-background;
+  z-index: $above-content;
+
+  .nav-is-fixed & {
+    /* add .nav-is-fixed class to body if you want a fixed navigation on > 1170px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  @include MQ(L) {
+    height: $header-height-landing;
+    @include clearfix;
+  }
+
+  @include MQ(maxL) {
+    &.nav-is-visible {
+      @include transform(translateX(-$nav-width-landing));
+    }
+
+    .nav-on-left &.nav-is-visible {
+      @include transform(translateX($nav-width-landing));
+    }
+  }
+}
+
+.cd-logo {
+  position: absolute;
+  top: $logo-y-landing-adj;
+  left: 5%;
+
+  .img {
+    display: block;
+    //background-image: $logo;
+    background: $logo no-repeat center;
+    background-size: 100% 100%;
+    /* logo dimensions */
+    width: 250px;
+    height: 45px;
+    @media only screen and (max-width: 400px) {
+      background-size: 70% 70%;
+    }
+    @media only screen and (max-width: 350px) {
+      background-size: 40% 40%;
+    }
+  }
+
+
+  @include MQ(maxL) {
+    .nav-on-left & {
+      left: auto;
+      right: 5%;
+    }
+  }
+
+  @include MQ(L) {
+    top: $logo-y-landing-adj;
+    left: 4em;
+  }
+}
+
+.cd-header-buttons {
+  position: absolute;
+  display: inline-block;
+  top: $nav-menu-buttons-top-landing;
+  right: 5%;
+
+  li {
+    display: inline-block;
+  }
+
+  @include MQ(maxL) {
+    .nav-on-left & {
+      right: auto;
+      left: 5%;
+
+      li {
+        float: right;
+      }
+    }
+  }
+
+  @include MQ(L) {
+    top: $nav-menu-buttons-top-landing;
+    right: $nav-menu-buttons-offset;
+  }
+}
+
+.cd-search-trigger, .cd-nav-trigger {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  white-space: nowrap;
+  /* hide text */
+  color: transparent;
+  z-index: $above-content;
+}
+.cd-search-trigger {
+
+  top: $nav-items-y-adj;
+
+  &::before, &::after {
+    /* search icon */
+    content: '';
+    position: absolute;
+    @include transition(opacity $menu-slideout-timing);
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &::before {
+    /* lens */
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid $color-search-trigger;
+  }
+
+  &::after {
+    /* handle */
+    height: 3px;
+    width: 8px;
+    background: $color-search-trigger;
+    bottom: 14px;
+    right: 11px;
+    @include transform(rotate(45deg));
+  }
+
+  span {
+    /* container for the X icon */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  span::before, span::after {
+    /* close icon */
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 22px;
+    top: 50%;
+    margin-top: -2px;
+    left: 50%;
+    margin-left: -11px;
+    background: $color-search-trigger;
+    opacity: 0;
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include transition(opacity $menu-slideout-timing, transform $menu-slideout-timing);
+  }
+
+  span::before {
+    @include transform(rotate(45deg));
+  }
+
+  span::after {
+    @include transform(rotate(-45deg));
+  }
+
+  &.search-is-visible {
+    &::before, &::after {
+      /* hide search icon */
+      opacity: 0;
+    }
+
+    span::before, span::after {
+      /* show close icon */
+      opacity: 1;
+    }
+
+    span::before {
+      @include transform(rotate(135deg));
+    }
+
+    span::after {
+      @include transform(rotate(45deg));
+    }
+  }
+}
+.cd-nav-trigger {
+
+  top: $nav-items-y-adj;
+
+  span, span::before, span::after {
+    /* hamburger icon in CSS */
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 24px;
+    background: $color-nav-trigger;
+  }
+
+  span {
+    /* line in the center */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -2px;
+    @include transition(background $menu-slideout-timing);
+  }
+
+  span::before, span::after {
+    /* other 2 lines */
+    content: '';
+    right: 0;
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include transform-origin(0% 50%);
+    @include transition(transform $menu-slideout-timing);
+  }
+
+  span::before {
+    /* menu icon top line */
+    top: -6px;
+  }
+
+  span::after {
+    /* menu icon bottom line */
+    top: 6px;
+  }
+
+  &.nav-is-visible {
+    span {
+      /* hide line in the center */
+      background: rgba($color-nav-trigger, 0);
+    }
+
+    span::before, span::after {
+      /* keep visible other 2 lines */
+      background: rgba($color-nav-trigger, 1);
+    }
+
+    span::before {
+      @include transform(translateX(4px) translateY(-3px) rotate(45deg));
+    }
+
+    span::after {
+      @include transform(translateX(4px) translateY(2px) rotate(-45deg));
+    }
+  }
+
+  @include MQ(L) {
+    display: none;
+  }
+}
+
+.cd-search {
+  height: $search-height-landing;
+  width: 100%;
+  top: $header-height-landing;
+  left: 0;
+  z-index: $above-content;
+  opacity: 0;
+  visibility: hidden;
+  -o-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+
+  form {
+    height: 100%;
+    width: 100%;
+  }
+
+  input {
+    border-radius: 0;
+    border: none;
+    background: $color-white;
+    height: 100%;
+    width: 100%;
+    padding: 0 5%;
+    box-shadow: inset 0 1px 0 $color-grey-light, 0 3px 6px rgba(#000, .05);
+    @include appearance(none);
+
+    @include placeholder {
+      color: darken($color-grey-light, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -o-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+  }
+
+  .nav-is-fixed & {
+    position: fixed;
+  }
+
+  @include MQ(L) {
+    height: $search-height-landing;
+    top: $header-height-landing;
+
+    input {
+      padding: 0 2em;
+      font-size: 2.2rem;
+
+      @include placeholder {
+        //
+      }
+    }
+  }
+}
+
+.cd-overlay {
+  /* shadow layer visible when navigation is active */
+  position: fixed;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-blue-base, .8);
+  visibility: hidden;
+  opacity: 0;
+  @include backface-visibility(hidden);
+  @include transition(opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing, transform $menu-slideout-timing 0s);
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity $menu-slideout-timing 0s, visibility 0s 0s, transform $menu-slideout-timing 0s);
+  }
+
+  @include MQ(maxL) {
+    &.is-visible.search-is-visible, .nav-on-left &.is-visible.search-is-visible {
+      @include transform(translateX(0));
+    }
+  }
+}
+
+.cd-primary-nav, .cd-primary-nav ul {
+
+  // SHARED NAV SETTINGS:
+
+  position: fixed;
+  top: $header-height-landing;
+  height: 100%;
+  width: $nav-width-landing;
+  background: transparent;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: $below-content;
+  /* Force Hardware Acceleration in WebKit */
+  @include transform(translateZ(0));
+  @include transform(translateX(0));
+  @include transition(transform $menu-slideout-timing ease);
+
+  /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu - */
+  overflow-x: hidden;
+  /* - end - */
+
+  a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: $color-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include transform(translateZ(0));
+    will-change: transform, opacity;
+  }
+
+  &.is-small-screen {
+
+    // SMALL SCREEN ONLY RESPONSIVE NAV SETTINGS:
+
+    right: -1 * $nav-width-landing;
+    @include transition(right $menu-slideout-timing 0s ease, visibility $menu-slideout-timing 0s ease);
+
+    overflow: visible; // For the "active" link.
+
+    a {
+      background: $color-nav-background;
+      width: $nav-width-landing - $nav-item-offset-from-right;
+      cursor: pointer;
+      overflow: hidden;
+      border: none;
+      text-align: left;
+      font-size: 1.3em;
+      -o-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
+      -moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
+      -webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
+      box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
+
+      // Not active, when nav panel moved beyond the screen.
+      height: 0;
+      margin: 0;
+      visibility: hidden;
+      opacity: 0;
+
+      @include transition(
+                      margin-left $menu-slideout-timing 0s ease,
+                      margin-top $menu-slideout-timing $menu-slideout-timing ease,
+                      margin-bottom $menu-slideout-timing $menu-slideout-timing ease,
+                      height $menu-slideout-timing $menu-slideout-timing ease,
+                      visibility $menu-slideout-timing 0s ease,
+                      opacity $menu-slideout-timing 0s ease
+      );
+
+      // Active, when nav panel moved beyond the screen.
+      &.active {
+
+        border-left: 4px solid $color-white;
+        height: $nav-item-height;
+        margin-top: $nav-item-margin-top-bottom;
+        margin-bottom: $nav-item-margin-top-bottom;
+        margin-right: $nav-item-margin-right;
+        margin-left: -1 * $nav-width-landing;
+        visibility: visible;
+        opacity: 1;
+
+        @include transition(
+                        border $menu-slideout-timing 0s ease,
+                        margin-left $menu-slideout-timing 0s ease,
+                        margin-top $menu-slideout-timing $menu-slideout-timing ease,
+                        margin-bottom $menu-slideout-timing $menu-slideout-timing ease,
+                        height $menu-slideout-timing $menu-slideout-timing ease,
+                        visibility $menu-slideout-timing $menu-slideout-timing ease,
+                        opacity $menu-slideout-timing $menu-slideout-timing ease
+        );
+
+      }
+
+    }
+    a:hover {
+      background-color: lighten($color-nav-background, 12%);
+      @include transition(all 0.1s ease);
+    }
+    a:active {
+      background-color: darken($color-nav-background, 6%);
+      @include transform(translate(2px, 2px));
+      box-shadow: 0 0 3px 1px rgba(0,0,0,0.5);
+      @include transition(all 0.1s ease);
+    }
+    :first-child a {
+      //margin-top: 5px;
+    }
+
+    &.nav-is-visible {
+
+      right: 0;
+
+      // Not active, when nav panel in the view.
+      a {
+
+        height: $nav-item-height;
+        margin-top: $nav-item-margin-top-bottom;
+        margin-bottom: $nav-item-margin-top-bottom;
+        margin-right: $nav-item-margin-right;
+        margin-left: 0;
+        visibility: visible;
+        opacity: 1;
+
+        @include transition(
+                        margin-left $menu-slideout-timing 0s ease,
+                        margin-top $menu-slideout-timing 0s ease,
+                        margin-bottom $menu-slideout-timing 0s ease,
+                        height $menu-slideout-timing 0s ease,
+                        visibility $menu-slideout-timing 0s ease,
+                        opacity $menu-slideout-timing 0s
+        );
+
+        // Active, when nav panel in the view.
+        &.active {
+          // No code.
+        }
+
+      }
+
+    }
+
+    &.is-hidden {
+      // No code.
+    }
+
+    &.moves-out > li > a {
+      // No code.
+    }
+
+  }
+
+}
+
+.cd-primary-nav {
+
+  @include MQ(maxL) {
+    /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
+    visibility: hidden;
+    @include transition(visibility 0s $menu-slideout-timing, right $menu-slideout-timing);
+
+    &.nav-is-visible {
+      visibility: visible;
+      @include transition(visibility 0s 0s, right $menu-slideout-timing);
+    }
+  }
+
+}
+.cd-primary-nav a {
+
+  &::before, &::after {
+    /* arrow goes on the left side - go back button */
+    left: 20px;
+    @include transform-origin(1px 50%);
+  }
+
+}
+
+@include MQ(L) {
+
+  .cd-primary-nav {
+
+    font-size: 2rem;
+
+    position: static;
+    padding: 0 $nav-menu-links-offset 0 0;
+    height: auto;
+    width: auto;
+    float: right;
+    overflow: visible;
+    background: transparent;
+    @include clearfix;
+
+    /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu [reversal for big screens] - */
+    overflow-x: visible;
+    /* - end - */
+
+    &.moves-out > li > a {
+      /* reset mobile style */
+      @include transform(translateX(0));
+      opacity: 1;
+    }
+
+    ul {
+      position: static;
+      height: auto;
+      width: auto;
+      background: transparent;
+      overflow: visible;
+      z-index: $above-content;
+
+      &.is-hidden {
+        /* reset mobile style */
+        @include transform(translateX(0));
+      }
+
+      &.moves-out > li > a {
+        /* reset mobile style */
+        @include transform(translateX(0));
+        opacity: 1;
+      }
+    }
+
+    > li {
+      float: left;
+      margin-left: $nav-menu-link-gap;
+    }
+
+    > li > a {
+      /* main navigation buttons style */
+      position: relative;
+      display: inline-block;
+      height: $header-height-landing;
+      line-height: $header-height-landing;
+      padding: 0 10px;
+      color: $color-nav-link;
+      overflow: visible;
+      border-bottom: none;
+      @include transition(color $menu-slideout-timing, box-shadow $menu-slideout-timing);
+
+      // ACTIVE:
+      &.active {
+        box-shadow: inset 0 -4px $color-white;
+      }
+
+      &:hover {
+        color: $color-nav-link-hover;
+      }
+      &:hover::before, &:hover::after {
+        background: $color-nav-link-hover;
+      }
+
+      &.selected {
+        color: $color-nav-link-active;
+        box-shadow: inset 0 -2px 0 $color-nav-link-active;
+      }
+    }
+
+    .see-all {
+      display: none;
+    }
+
+  }
+
+  .cd-primary-nav a {
+    padding-left: 20px;
+
+    &::before, &::after {
+      left: 1px;
+    }
+  }
+
+}
+
+@include MQ(maxL) {
+  .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
+    right: auto;
+    left: 0;
+  }
+}
+

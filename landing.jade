@@ -20,6 +20,7 @@ head
         link(rel='stylesheet', href='./landing/css/fullPage/jquery.fullPage.css')
         // Custom:
         link(rel='stylesheet', href='./landing/css/landing.css')
+        link(rel='stylesheet', href='./landing/css/menu-landing.css')
         // [Hosted alternatives]:
             link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.css')
 
@@ -33,6 +34,7 @@ head
         script(src='./landing/js/scrolloverflow.min.js')
         // fullPage
         script(src='./landing/js/jquery.fullPage.min.js')
+        script(src='./landing/js/fullpage.continuousHorizontal.min.js')
         // [Hosted alternatives]:
             script(src='https://code.jquery.com/jquery-2.1.4.min.js')
             script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
@@ -48,24 +50,93 @@ body
 
     block content
 
+        // Fixed header / navigation
+        header#landing-header
+            a.cd-logo(href='#')
+                .img
+            ul.cd-header-buttons
+                li
+                    a.cd-search-trigger(href='#cd-search')
+                        | Search
+                        span
+                li
+                    a.cd-nav-trigger(href='#cd-primary-nav')
+                        | Menu
+                        span
+        // ---
+
+
+
+
+
         // Compulsory fullPage id
-        #fullpage
-            .section.sec1.non-footer(data-anchor="landing-section1")
-                | Section 1
-            .section.sec2.non-footer(data-anchor="landing-section2")
-                | Section 2
-                .slide(data-anchor="landing-section2-slide1")
-                    | Slide 1
-                .slide(data-anchor="landing-section2-slide2")
-                    | Slide 2
-                .slide(data-anchor="landing-section2-slide3")
-                    | Slide 3
-            .section.sec3.non-footer(data-anchor="landing-section3")
-                | Section 3
-            .section.sec4.fp-auto-height.is-footer(data-anchor="landing-section4")
-                include _shared/_footer
+        main.cd-main-content
+            #fullpage
+                .section.sec1.fp-noscroll.non-footer.slides-with-header(data-anchor="project")
+                    .slide-section-header
+                        p Project
+                    .slide-section-content
+                        .slide.slide1(data-anchor="slide1")
+                        .slide.slide2(data-anchor="slide2")
+                        .slide.slide3(data-anchor="slide3")
+                        .slide.slide4(data-anchor="slide4")
+                .section.sec2.fp-noscroll.non-footer(data-anchor="lab")
+                    .text-box
+                        h1 Lab
+                        p Lorem ipsum dolor sit amet, usu elitr honestatis te, ei nec veri mandamus. Dicat repudiandae ea pri. Mea eu reque discere, his commodo repudiare torquatos id, nihil honestatis ea sed. Et animal tractatos vis, suas saepe habemus eu mei. Sonet nullam eripuit id pri, ut quodsi verear voluptaria est. Sea elit iriure an, nec augue adolescens in.
+                        p oblique dissentiet vel ut, qui semper erroribus contentiones eu. Eu mea praesent recteque, cum te hinc cotidieque. In eum clita fastidii, mei ea elitr contentiones. Duo ad viris legere equidem, ex utinam regione eum, appellantur signiferumque ex mea.
+                        .button
+                            a(href='page.html') Read more
+                .section.sec3.non-footer(data-anchor="parts")
+                    .text-box
+                        h1 Parts
+                .section.sec4.fp-noscroll.non-footer(data-anchor="modelling")
+                    .text-box
+                        h1 Modelling
+                .section.sec5.fp-noscroll.non-footer(data-anchor="human-practices")
+                    .text-box
+                        h1 Human Practices
+                .section.sec6.fp-noscroll.non-footer(data-anchor="entrepreneurship")
+                    .text-box
+                        h1 Modelling
+                .section.sec7.fp-noscroll.non-footer(data-anchor="people")
+                    .text-box
+                        h1 People
+                .section.sec8.fp-auto-height.is-footer(data-anchor="#")
+                    include _shared/_footer
+        // ---
+
+
+
+
+        // Navigation
+        .cd-overlay
+        nav.cd-nav
+            ul#cd-primary-nav.cd-primary-nav.is-fixed
+                li
+                    a(href='#project', data-menuanchor="project") Project
+                li
+                    a(href='#lab', data-menuanchor="lab") Lab
+                li
+                    a(href='#parts', data-menuanchor="parts") Parts
+                li
+                    a(href='#modelling', data-menuanchor="modelling") Modelling
+                li
+                    a(href='#human-practices', data-menuanchor="human-practices") Human Practices
+                li
+                    a(href='#entrepreneurship', data-menuanchor="entrepreneurship") Entrepreneurship
+                li
+                    a(href='#people', data-menuanchor="people") People
+            #cd-search.cd-search
+                form
+                    input(type='search', data-role="none", placeholder='Search...')
+        // ---
+
+
+
 
 
     block end-of-body-scripts
         // END OF BODY SCRIPTS
         script(src='./landing/js/custom/landing.js')
+        script(src='./landing/js/custom/menu-landing.js')

@@ -34,6 +34,10 @@ html.no-js(lang='en')
         meta(name='theme-color', content='#ffffff')
         // ---
 
+        block ess-loader-refs
+            link(rel='stylesheet', href='./_shared/css/ess-loader.css')
+            script(src='./_shared/js/custom/ess-loader.js')
+
         block additional
 
         block fonts
@@ -49,6 +53,16 @@ html.no-js(lang='en')
     // BODY:
     body
 
-        block content
+        #ess-loader-holder
+            block ess-loader
+                .ess-loader
+                    .rect1
+                    .rect2
+                    .rect3
+                    .rect4
+                    .rect5
+
+        #body-loaded
+            block content
 
         block end-of-body-scripts

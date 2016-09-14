@@ -4,7 +4,7 @@ $_safenet: 10;
 
 $S: 480px;
 $M: 768px;
-$L: 1280px - $_safenet; // HAS A COUNTERPART IN menu.js, MUST KEEP IN SYNC!
+$L: 1280px - $_safenet; // HAS A COUNTERPART IN menu.js AND menu-landing.js, MUST KEEP IN SYNC!
 $maxL: $L - 1px;
 
 // media queries
