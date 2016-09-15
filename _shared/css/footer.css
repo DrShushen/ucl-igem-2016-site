@@ -49,7 +49,7 @@ Footer style
     #footer.footer-distributed .footer-left {
       padding-right: 10px;
       overflow: hidden;
-      width: 30%; }
+      width: 28%; }
     #footer.footer-distributed h3 {
       color: #ffffff;
       font: normal 30px 'Montserrat', bold;
@@ -71,7 +71,7 @@ Footer style
       font-weight: normal;
       margin: 0; }
     #footer.footer-distributed .footer-center {
-      width: 46%; }
+      width: 47%; }
       #footer.footer-distributed .footer-center .footer-section > .col {
         padding-left: 0.1%; }
       #footer.footer-distributed .footer-center div span {
@@ -118,7 +118,7 @@ Footer style
         width: 100%; } }
     #footer.footer-distributed .footer-right {
       padding-left: 10px;
-      width: 24%;
+      width: 23%;
       /*
       @media only screen and (max-width: $L) {
         div {
@@ -143,7 +143,7 @@ Footer style
         padding-right: 10px;
         display: inline-block;
         text-align: left;
-        width: 80%; }
+        width: 78%; }
       #footer.footer-distributed .footer-right div p > a {
         padding-left: 0;
         padding-right: 0;

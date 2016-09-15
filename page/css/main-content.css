@@ -5,7 +5,11 @@ Main content style
 -------------------------------- */
 .cd-main-content {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 1.4em;
+  min-height: 65vh; }
+  .cd-main-content div, .cd-main-content p, .cd-main-content span, .cd-main-content h1, .cd-main-content h2, .cd-main-content h3, .cd-main-content h4, .cd-main-content h5, .cd-main-content h6 {
+    line-height: 1.4em; }
   .cd-main-content .media-figure img {
     -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3); }

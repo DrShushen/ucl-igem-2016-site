@@ -470,6 +470,14 @@ Main components
 }
 
 .cd-primary-nav, .cd-primary-nav ul {
+
+  // iGem wiki fix.
+  margin-top: 1em!important;
+  @include MQ(L) {
+    margin-top: 0!important;
+  }
+  // ---
+
   position: fixed;
   top: 0;
   right: 0;
@@ -813,7 +821,7 @@ Main components
 
   .cd-primary-nav {
     position: static;
-    padding: 0 $nav-menu-links-offset 0 0;
+    padding: 0 $nav-menu-links-offset 0 0!important;
     height: auto;
     width: auto;
     float: right;

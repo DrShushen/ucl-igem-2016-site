@@ -1,18 +1,22 @@
-function onReady(callback) {
+function onReady_UCLiGem(callback) {
     var intervalID = window.setInterval(checkReady, 300);
     function checkReady() {
-        if (document.getElementsByTagName('body')[0] !== undefined) {
+        console.log("Checking Ready");
+        if (document.getElementsByTagName('body')[0] !== undefined && document.getElementById('body-loaded') !== null) {
             window.clearInterval(intervalID);
             callback.call(this);
         }
     }
 }
 
-function show(id, value) {
-    document.getElementById(id).style.display = value ? 'block' : 'none';
+function show_UCLiGem(id, value) {
+    console.log("Show: " + id);
+    if (document.getElementById(id) !== null && document.getElementById(id).style !== null) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
 }
 
-onReady(function () {
-    show('body-loaded', true);
-    show('ess-loader-holder', false);
+onReady_UCLiGem(function () {
+    show_UCLiGem('body-loaded', true);
+    show_UCLiGem('ess-loader-holder', false);
 });

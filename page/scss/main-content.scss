@@ -25,6 +25,13 @@ Main content style
   // overrides:
   font-family: $main-content-font;
   font-size: 1.6rem;
+  line-height: 1.4em;
+  div, p, span, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4em;
+  }
+
+  // ensure min height, such that the footer is always a footer.
+  min-height: $main-content-min-height;
   
   .media-figure {
 

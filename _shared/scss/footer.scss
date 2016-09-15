@@ -1,5 +1,9 @@
 // variables
 @import 'variables';
+
+// footer-specific variables
+@import 'footer-variables';
+
 // layout
 @import 'layout';
 
@@ -186,14 +190,14 @@ Footer style
         a {
           display: inline-block;
           text-align: right;
-          width: 20%;
+          width: $footer-right-col1-width;
         }
         p, p > a {
           padding-left: 12.5%;
           padding-right: $footer-custom-padding;
           display: inline-block;
           text-align: left;
-          width: 80%
+          width: $footer-right-col2-width;
         }
         p > a {
           //text-align: left;

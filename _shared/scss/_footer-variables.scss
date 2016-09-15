@@ -1,0 +1,14 @@
+// --- Footer parameters ---
+
+$footer-safety-margin-percentage: 2%;
+
+$footer-custom-padding: 10px;
+
+$footer-left-width: 28%;
+$footer-center-width: 47%;
+$footer-right-width: (25% - $footer-safety-margin-percentage);
+
+$footer-right-col1-width: 20%;
+$footer-right-col2-width: (80% - $footer-safety-margin-percentage);
+
+$M_Footer: 880px;

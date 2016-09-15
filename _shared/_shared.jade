@@ -1,8 +1,6 @@
 doctype html
 html.no-js(lang='en')
 
-    // [!] PATHS RELATIVE TO root folder [!]
-
     // HEAD:
     head
 
@@ -12,7 +10,6 @@ html.no-js(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         title UCL iGEM 2016 | BioSynthAge
-        // ---
 
         // Favicon
         link(rel='apple-touch-icon', sizes='57x57', href='./_shared/img/favicon/apple-icon-57x57.png')
@@ -28,15 +25,19 @@ html.no-js(lang='en')
         link(rel='icon', type='image/png', sizes='32x32', href='./_shared/img/favicon/favicon-32x32.png')
         link(rel='icon', type='image/png', sizes='96x96', href='./_shared/img/favicon/favicon-96x96.png')
         link(rel='icon', type='image/png', sizes='16x16', href='./_shared/img/favicon/favicon-16x16.png')
-        link(rel='manifest', href='./_shared/img/favicon/manifest.json')
         meta(name='msapplication-TileColor', content='#ffffff')
         meta(name='msapplication-TileImage', content='./_shared/img/favicon/ms-icon-144x144.png')
         meta(name='theme-color', content='#ffffff')
-        // ---
 
-        block ess-loader-refs
-            link(rel='stylesheet', href='./_shared/css/ess-loader.css')
-            script(src='./_shared/js/custom/ess-loader.js')
+        // ESS loader refs.
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/ess-loader.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./_shared/css/ess-loader.css')
+        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/ess-loader.js&action=raw&ctype=text/javascript')
+        //script(src='./_shared/js/custom/ess-loader.js')
+
+        // iGem style override.
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/igem-override.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./_shared/css/igem-override.css')
 
         block additional
 
@@ -54,13 +55,12 @@ html.no-js(lang='en')
     body
 
         #ess-loader-holder
-            block ess-loader
-                .ess-loader
-                    .rect1
-                    .rect2
-                    .rect3
-                    .rect4
-                    .rect5
+            .ess-loader
+                .rect1
+                .rect2
+                .rect3
+                .rect4
+                .rect5
 
         #body-loaded
             block content

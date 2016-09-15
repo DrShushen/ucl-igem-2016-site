@@ -1,13 +1,17 @@
 // [!] PATHS RELATIVE TO here [!]
 
+// Montserrat and FontAwesome
+@import 'font-montserrat';
+@import 'font-awesome';
+
+
 // Roboto
 
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-MediumItalic.woff2') format('woff2'),
-  url('../fonts/Roboto-MediumItalic.woff') format('woff'),
-  url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/a/a4/T--UCL--Roboto-MediumItalic1.woff') format('woff'), //url('../fonts/Roboto-MediumItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/4/4a/T--UCL--Roboto-MediumItalic.ttf') format('truetype'); //url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
 }
@@ -15,9 +19,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
-  url('../fonts/Roboto-Bold.woff') format('woff'),
-  url('../fonts/Roboto-Bold.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/1/13/T--UCL--Roboto_Bold1.woff') format('woff'), // url('../fonts/Roboto-Bold.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/0/0c/T--UCL--Roboto_Bold.ttf') format('truetype'); // url('../fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -25,9 +28,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Light.woff2') format('woff2'),
-  url('../fonts/Roboto-Light.woff') format('woff'),
-  url('../fonts/Roboto-Light.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/2/27/T--UCL--Roboto-Light1.woff') format('woff'), // url('../fonts/Roboto-Light.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/9/9a/T--UCL--Roboto-Light.ttf') format('truetype'); // url('../fonts/Roboto-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -35,9 +37,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
-  url('../fonts/Roboto-Medium.woff') format('woff'),
-  url('../fonts/Roboto-Medium.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/6/65/T--UCL--Roboto-Medium1.woff') format('woff'), // url('../fonts/Roboto-Medium.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/1/1f/T--UCL--Roboto-Medium.ttf') format('truetype'); // url('../fonts/Roboto-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -45,9 +46,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-BlackItalic.woff2') format('woff2'),
-  url('../fonts/Roboto-BlackItalic.woff') format('woff'),
-  url('../fonts/Roboto-BlackItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/7/71/T--UCL--Roboto-BlackItalic1.woff') format('woff'), // url('../fonts/Roboto-BlackItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/b/bc/T--UCL--Roboto-BlackItalic.ttf') format('truetype'); // url('../fonts/Roboto-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
 }
@@ -55,9 +55,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Thin.woff2') format('woff2'),
-  url('../fonts/Roboto-Thin.woff') format('woff'),
-  url('../fonts/Roboto-Thin.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/5/5e/T--UCL--Roboto-Thin1.woff') format('woff'), // url('../fonts/Roboto-Thin.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/7/76/T--UCL--Roboto-Thin.ttf') format('truetype'); // url('../fonts/Roboto-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
@@ -65,9 +64,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-LightItalic.woff2') format('woff2'),
-  url('../fonts/Roboto-LightItalic.woff') format('woff'),
-  url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/3/3a/T--UCL--Roboto-LightItalic1.woff') format('woff'), // url('../fonts/Roboto-LightItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/d/dc/T--UCL--Roboto-LightItalic.ttf') format('truetype'); // url('../fonts/Roboto-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
 }
@@ -75,9 +73,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-BoldItalic.woff2') format('woff2'),
-  url('../fonts/Roboto-BoldItalic.woff') format('woff'),
-  url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/2/25/T--UCL--Roboto-BoldItalic1.woff') format('woff'), // url('../fonts/Roboto-BoldItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/7/7e/T--UCL--Roboto-BoldItalic.ttf') format('truetype'); // url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
@@ -85,9 +82,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-ThinItalic.woff2') format('woff2'),
-  url('../fonts/Roboto-ThinItalic.woff') format('woff'),
-  url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/2/27/T--UCL--Roboto-ThinItalic1.woff') format('woff'), // url('../fonts/Roboto-ThinItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/9/92/T--UCL--Roboto-ThinItalic.ttf') format('truetype'); // url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
 }
@@ -95,9 +91,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
-  url('../fonts/Roboto-Italic.woff') format('woff'),
-  url('../fonts/Roboto-Italic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/a/a9/T--UCL--Roboto-Italic1.woff') format('woff'), // url('../fonts/Roboto-Italic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/a/ac/T--UCL--Roboto-Italic.ttf') format('truetype'); // url('../fonts/Roboto-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -105,9 +100,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Black.woff2') format('woff2'),
-  url('../fonts/Roboto-Black.woff') format('woff'),
-  url('../fonts/Roboto-Black.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/d/d2/T--UCL--Roboto_Black1.woff') format('woff'), // url('../fonts/Roboto-Black.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/e/e6/T--UCL--Roboto_Black.ttf') format('truetype'); // url('../fonts/Roboto-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
@@ -115,9 +109,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-  url('../fonts/Roboto-Regular.woff') format('woff'),
-  url('../fonts/Roboto-Regular.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/d/db/T--UCL--Roboto-Regular1.woff') format('woff'), // url('../fonts/Roboto-Regular.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/9/94/T--UCL--Roboto-Regular.ttf') format('truetype'); // url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -127,9 +120,8 @@
 @font-face {
   font-family: 'Open Sans';
   //noinspection CssUnknownTarget
-  src: url('../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
-  url('../fonts/OpenSans-BoldItalic.woff') format('woff'),
-  url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/8/86/T--UCL--OpenSans_Bolditalic.woff') format('woff'), // url('../fonts/OpenSans-BoldItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/6/64/T--UCL--OpenSans_Bolditalic1.ttf') format('truetype'); // url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
@@ -137,9 +129,8 @@
 //noinspection ALL
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
-  url('../fonts/OpenSans-Light.woff') format('woff'),
-  url('../fonts/OpenSans-Light.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/d/d2/T--UCL--OpenSans_Light.woff') format('woff'), // url('../fonts/OpenSans-Light.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/1/1b/T--UCL--OpenSans_Light1.ttf') format('truetype'); // url('../fonts/OpenSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -147,9 +138,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans.woff2') format('woff2'),
-  url('../fonts/OpenSans.woff') format('woff'),
-  url('../fonts/OpenSans.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/d/d5/T--UCL--OpenSans1.woff') format('woff'), // url('../fonts/OpenSans.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/5/5a/T--UCL--OpenSans.ttf') format('truetype'); // url('../fonts/OpenSans.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -157,9 +147,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Italic.woff2') format('woff2'),
-  url('../fonts/OpenSans-Italic.woff') format('woff'),
-  url('../fonts/OpenSans-Italic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/9/9c/T--UCL--OpenSans_Italic.woff') format('woff'), // url('../fonts/OpenSans-Italic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/4/48/T--UCL--OpenSans_Italic1.ttf') format('truetype'); // url('../fonts/OpenSans-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -167,9 +156,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-SemiboldItalic.woff2') format('woff2'),
-  url('../fonts/OpenSans-SemiboldItalic.woff') format('woff'),
-  url('../fonts/OpenSans-SemiboldItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/7/7a/T--UCL--OpenSans_SemiboldItalic.woff') format('woff'), // url('../fonts/OpenSans-SemiboldItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/a/aa/T--UCL--OpenSans-SemiboldItalic.ttf') format('truetype'); // url('../fonts/OpenSans-SemiboldItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
 }
@@ -177,9 +165,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-ExtraboldItalic.woff2') format('woff2'),
-  url('../fonts/OpenSans-ExtraboldItalic.woff') format('woff'),
-  url('../fonts/OpenSans-ExtraboldItalic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/d/db/T--UCL--OpenSans_ExtraboldItalic.woff') format('woff'), // url('../fonts/OpenSans-ExtraboldItalic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/7/72/T--UCL--OpenSans_ExtraboldItalic1.ttf') format('truetype'); // url('../fonts/OpenSans-ExtraboldItalic.ttf') format('truetype');
   font-weight: 800;
   font-style: italic;
 }
@@ -187,9 +174,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-  url('../fonts/OpenSans-Bold.woff') format('woff'),
-  url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/3/33/T--UCL--OpenSans_Bold.woff') format('woff'), // url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/0/09/T--UCL--OpenSans_Bold1.ttf') format('truetype'); // url('../fonts/OpenSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -197,9 +183,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
-  url('../fonts/OpenSans-Semibold.woff') format('woff'),
-  url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/1/1b/T--UCL--OpenSans_Semibold.woff') format('woff'), // url('../fonts/OpenSans-Semibold.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/d/d4/T--UCL--OpenSans_Semibold1.ttf') format('truetype'); // url('../fonts/OpenSans-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
@@ -207,9 +192,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Extrabold.woff2') format('woff2'),
-  url('../fonts/OpenSans-Extrabold.woff') format('woff'),
-  url('../fonts/OpenSans-Extrabold.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/3/30/T--UCL--OpenSans_Extrabold.woff') format('woff'), // url('../fonts/OpenSans-Extrabold.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/9/99/T--UCL--OpenSans_Extrabold1.ttf') format('truetype'); // url('../fonts/OpenSans-Extrabold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
@@ -217,9 +201,8 @@
 //noinspection CssUnknownTarget
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSansLight-Italic.woff2') format('woff2'),
-  url('../fonts/OpenSansLight-Italic.woff') format('woff'),
-  url('../fonts/OpenSansLight-Italic.ttf') format('truetype');
+  src: url('http://2016.igem.org/wiki/images/b/b7/T--UCL--OpenSansLight_italic1.woff') format('woff'), // url('../fonts/OpenSansLight-Italic.woff') format('woff'),
+  url('http://2016.igem.org/wiki/images/4/46/T--UCL--OpenSansLight_italic.ttf') format('truetype'); // url('../fonts/OpenSansLight-Italic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
 }

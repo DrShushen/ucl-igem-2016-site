@@ -19,9 +19,15 @@ $color-black: #000000;          // black
 
 
 
-// --- Main content colors ---
+// --- Main content parameters ---
+
+// Colors:
 
 $color-main-content-bgd: #e7f0f9; // very subtle blue
+
+// Positional:
+
+$main-content-min-height: 65vh;
 
 
 
@@ -87,17 +93,3 @@ $search-height-L: 100px;
 // --- Menu Slide-out Timing ---
 
 $menu-slideout-timing: .3s;
-
-
-
-
-
-// --- Footer parameters ---
-
-$footer-custom-padding: 10px;
-
-$footer-left-width: 30%;
-$footer-center-width: 46%;
-$footer-right-width: 24%;
-
-$M_Footer: 880px;

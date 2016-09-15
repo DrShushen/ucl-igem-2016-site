@@ -1,41 +1,38 @@
-include _shared/_shared
+extends _shared/_shared
 
 head
     block fonts
         // Fonts
         // Shared fonts:
-        link(rel='stylesheet', href='./_shared/css/fonts.css')
-        link(rel='stylesheet', href='./_shared/css/font-awesome.min.css')
-        link(rel='stylesheet', href='./_shared/css/font-montserrat.css')
-        // [Hosted alternatives]:
-            link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
-            link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat|Roboto')
-        // ---
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/fonts.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./_shared/css/fonts.css')
 
     block stylesheets
         // STYLESHEETS
         // Shared.
-        link(rel='stylesheet', href='./_shared/css/footer.css')
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/footer.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./_shared/css/footer.css')
         // Local:
-        link(rel='stylesheet', href='./page/css/reset.css')
-        link(rel='stylesheet', href='./page/css/menu.css')
-        link(rel='stylesheet', href='./page/css/main-content.css')
-        // ---
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/reset.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./page/css/reset.css')
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/menu.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./page/css/menu.css')
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/main-content.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./page/css/main-content.css')
 
     block scripts
         // HEADER SCRIPTS - See more scripts in the end of body
         // jQuery, a jQuery mobile compatible latest version.
-        script(src='./_shared/js/jquery-2.1.4.min.js')
+        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/jquery-2.1.4.min.js&action=raw&ctype=text/javascript')
+        //script(src='./_shared/js/jquery-2.1.4.min.js')
         // jQuery mobile 1.4.5 with theme-less CSS.
-        link(rel='stylesheet', href='./page/css/jquery-mobile/jquery.mobile.structure-1.4.5.min.css')
-        script(src='./page/js/jquery.mobile.min.js')
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/jquery.mobile.structure-1.4.5.min.css&action=raw&ctype=text/css')
+        //link(rel='stylesheet', href='./page/css/jquery-mobile/jquery.mobile.structure-1.4.5.min.css')
+        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/jquery.mobile.min.js&action=raw&ctype=text/javascript')
+        //script(src='./page/js/jquery.mobile.min.js')
         // Modernizr is allowed in the head, as it's a library.
-        script(src='./page/js/modernizr.min.js')
-        // [Hosted alternatives]:
-            script(src='https://code.jquery.com/jquery-2.1.4.min.js')
-            link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css');
-            script(src='http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js')
-            script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/modernizr.min.js&action=raw&ctype=text/javascript')
+        //script(src='./page/js/modernizr.min.js')
 
 
 
@@ -49,8 +46,10 @@ body
         header.cd-main-header
             a.cd-logo(href='#')
                 .img
+                    .imagefix
             a.cd-logo.logo-replacer(href='#')
                 .img
+                    .imagefix
             ul.cd-header-buttons
                 li
                     a.cd-search-trigger(href='#cd-search')
@@ -74,7 +73,7 @@ body
                         .grd-row-col-1-6
                             .media
                                 .media-figure
-                                    img(src='./page/img/sample-content/ucl.jpg', alt='UCL', style='height: 300px')
+                                    //img(src='./page/img/sample-content/ucl.jpg', alt='UCL', style='height: 300px')
                         .grd-row-col-5-6
                             .media
                                 .media-body
@@ -338,5 +337,7 @@ body
 
     block end-of-body-scripts
         // END OF BODY SCRIPTS
-        script(src='./page/js/custom/menu.js')
-        script(src='./page/js/custom/nav-shrink.js')
+        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/menu.js&action=raw&ctype=text/javascript')
+        //script(src='./page/js/custom/menu.js')
+        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/nav-shrink.js&action=raw&ctype=text/javascript')
+        //script(src='./page/js/custom/nav-shrink.js')
