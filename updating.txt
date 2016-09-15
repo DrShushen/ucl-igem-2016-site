@@ -1,0 +1,3 @@
+1. Render the Templates.
+2. Render all pages that use the Templates.
+2. Git & GitHub (don't forget to "add").

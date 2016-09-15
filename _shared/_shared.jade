@@ -4,14 +4,17 @@ html.no-js(lang='en')
     // HEAD:
     head
 
-        // Meta
+        // Meta:
         meta(charset='UTF-8')
         meta(name='keywords', content='iGEM, UCL, 2016, BioSynthAge')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         title UCL iGEM 2016 | BioSynthAge
+        // ---
 
-        // Favicon
+
+
+        // Favicon:
         #favicon-array
             link(rel='apple-touch-icon', sizes='57x57', href='http://2016.igem.org/wiki/images/a/a3/T--UCL--apple-icon-57x57.png')
             link(rel='apple-touch-icon', sizes='60x60', href='http://2016.igem.org/wiki/images/f/f6/T--UCL--apple-icon-60x60.png')
@@ -44,32 +47,35 @@ html.no-js(lang='en')
             link(rel='icon', type='image/png', sizes='96x96', href='./_shared/img/favicon/favicon-96x96.png')
             link(rel='icon', type='image/png', sizes='16x16', href='./_shared/img/favicon/favicon-16x16.png')
             meta(name='msapplication-TileImage', content='./_shared/img/favicon/ms-icon-144x144.png')
+        // ---
 
-        // ESS loader refs.
-        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/ess-loader.css&action=raw&ctype=text/css')
+
+
+        // Top level CSS and JS:
+
+        // ESS loader.
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-loader.css&action=raw&ctype=text/css')
         //link(rel='stylesheet', href='./_shared/css/ess-loader.css')
-        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/ess-loader.js&action=raw&ctype=text/javascript')
+        script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-loader.js&action=raw&ctype=text/javascript')
         //script(src='./_shared/js/custom/ess-loader.js')
 
-        // ESS search reft.
-        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/ess-search.js&action=raw&ctype=text/javascript')
-        //script(src='./_shared/js/custom/ess-search.js')
-
         // ESS favicon setter.
-        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/ess-favicon-setter.js&action=raw&ctype=text/javascript')
+        script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-favicon-setter.js&action=raw&ctype=text/javascript')
         //script(src='./_shared/js/custom/ess-favicon-setter.js')
 
         // iGem style override.
-        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/igem-override.css&action=raw&ctype=text/css')
+        link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/igem-override.css&action=raw&ctype=text/css')
         //link(rel='stylesheet', href='./_shared/css/igem-override.css')
 
+        // ---
+
+
+        // Overriding jade blocks:
         block additional
-
         block fonts
-
         block stylesheets
-
         block scripts
+        // ---
 
 
 

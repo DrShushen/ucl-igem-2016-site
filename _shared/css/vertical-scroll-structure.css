@@ -1,0 +1,73 @@
+#vertical-scroll-nav {
+  position: fixed;
+  top: 92px;
+  right: 20px;
+  left: auto;
+  bottom: auto;
+  z-index: 3;
+  text-shadow: none;
+  color: #ffffff;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: right 0.3s;
+  -moz-transition: right 0.3s;
+  transition: right 0.3s; }
+  #vertical-scroll-nav.nav-is-visible {
+    right: 280px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: right 0.3s;
+    -moz-transition: right 0.3s;
+    transition: right 0.3s; }
+  #vertical-scroll-nav ul {
+    overflow: hidden;
+    background: #7b7b7b;
+    background: rgba(27, 29, 30, 0.5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    max-width: 12rem; }
+  #vertical-scroll-nav li {
+    margin: 3px; }
+  #vertical-scroll-nav a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    display: block;
+    padding: 0.2em 0.6em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  #vertical-scroll-nav a:hover, #vertical-scroll-nav a.mPS2id-clicked {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: #004573; }
+  #vertical-scroll-nav a.mPS2id-highlight {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: #284cb9; }
+  @media only screen and (min-width: 1270px) {
+    #vertical-scroll-nav {
+      top: 112px;
+      right: 20px; } }
+
+#main-content-container .vertical-scroll-section {
+  padding-top: 22px;
+  min-height: 80vh;
+  padding-right: 5rem; }
+  @media only screen and (min-width: 1270px) {
+    #main-content-container .vertical-scroll-section {
+      padding-top: 42px; } }
+
+/*# sourceMappingURL=vertical-scroll-structure.css.map */

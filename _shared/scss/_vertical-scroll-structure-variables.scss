@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'menu-variables';
+
+// General.
+
+$vertical-scroll-section-min-height: 80vh;
+
+$nav-section-offset-at-least: 70px;
+$vertical-scroll-section-adjuster-param: 22px;
+
+$vertical-scroll-section-y-adj-S: $header-height-S - $nav-section-offset-at-least + $vertical-scroll-section-adjuster-param;
+$vertical-scroll-section-y-adj-L: $header-height-L - $nav-section-offset-at-least + $vertical-scroll-section-adjuster-param;
+$vertical-scroll-section-nav-y-S: $header-height-S + $vertical-scroll-section-adjuster-param;
+$vertical-scroll-section-nav-y-L: $header-height-L + $vertical-scroll-section-adjuster-param;
+
+$nav-section-from-right-S: 20px;
+$nav-section-from-right-L: 20px;
+
+$nav-section-from-right-S-moved: $nav-section-from-right-S + $nav-width-S;
+
+$nav-section-max-width: 12rem;
+
+$vertical-scroll-section-padding-extra: ($nav-section-max-width + 1rem) - $main-content-padding-rl;
+
+// Colors:
+
+$vertical-scroll-section-nav-color: rgba(27,29,30,0.5);

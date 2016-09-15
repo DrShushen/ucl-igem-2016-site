@@ -1,0 +1,121 @@
+// Import.
+
+@import 'bourbon/bourbon';
+@import 'layout';
+@import 'variables';
+@import 'vertical-scroll-structure-variables';
+
+
+
+// Navigation menu.
+
+#vertical-scroll-nav {
+
+  // Moving out with nav fix.
+
+  &.nav-is-visible {
+    right: $nav-section-from-right-S-moved;
+
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+
+    @include transition(right $menu-slideout-timing);
+  }
+
+  // ---
+
+  position: fixed;
+  top: $vertical-scroll-section-nav-y-S;
+  right: $nav-section-from-right-S;
+  left: auto;
+  bottom: auto;
+  z-index: $z-just-above;
+  text-shadow: none;
+  color: $color-white;
+
+  /* Force Hardware Acceleration in WebKit */
+  @include transform(translateZ(0));
+
+  @include transition(right $menu-slideout-timing);
+
+  ul {
+    overflow: hidden;
+    background: $color-grey-medium;
+    background: $vertical-scroll-section-nav-color;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    max-width: $nav-section-max-width;
+  }
+
+  li {
+    margin: 3px;
+  }
+
+  a {
+
+    @include transition(all 0.3s ease);
+
+    color: $color-white;
+
+    display: block;
+    padding: 0.2em 0.6em;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+  }
+
+  a:hover, a.mPS2id-clicked {
+
+    @include transition(all 0.3s ease);
+
+    background: $color-blue-I;
+
+  }
+
+  a.mPS2id-highlight {
+
+    @include transition(all 0.3s ease);
+
+    background: $color-blue-base;
+
+  }
+
+  @include MQ(L) {
+    top: $vertical-scroll-section-nav-y-L;
+    right: $nav-section-from-right-L;
+  }
+
+}
+
+
+
+// Sections.
+
+#main-content-container {
+
+  .vertical-scroll-section {
+
+    padding-top: $vertical-scroll-section-y-adj-S;
+    @include MQ(L) {
+      padding-top: $vertical-scroll-section-y-adj-L;
+    }
+
+    min-height: $vertical-scroll-section-min-height;
+
+    padding-right: $vertical-scroll-section-padding-extra;
+
+  }
+
+  .vertical-scroll-section:nth-child(even) {
+    //background-color: red;
+  }
+  .vertical-scroll-section:nth-child(odd) {
+    //background-color: blue;
+  }
+
+}

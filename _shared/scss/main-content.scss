@@ -34,7 +34,7 @@ High level settings.
   // Various.
   position: relative;
   background: $color-main-content-bgd;
-  z-index: $content;
+  z-index: $z-content;
 
   // Ensure min height, such that the footer is always a footer.
   min-height: $main-content-min-height;
@@ -118,8 +118,11 @@ Main content style.
     }
   }
 
-  div.container {
+  #main-content-container {
     margin: 0;
-    padding: 6rem;
+    padding-top: $main-content-padding-tb;
+    padding-bottom: $main-content-padding-tb;
+    padding-right: $main-content-padding-rl;
+    padding-left: $main-content-padding-rl;
   }
 }

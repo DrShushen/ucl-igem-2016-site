@@ -80,7 +80,8 @@ $nav-menu-links-y-new: 0px - $shrink-header-height-L-diff;
 
 // --- Z-index ---
 
-$below-content: 1;
-$content: 2;
-$at-overlay: 3;
-$above-content: 4;
+$z-below-content: 1;
+$z-content: 2;
+$z-just-above: 3;
+$z-at-overlay: 4;
+$z-above-content: 5;

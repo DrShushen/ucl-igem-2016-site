@@ -58,8 +58,11 @@ Main content style.
     .cd-main-content ul ul li {
       list-style-type: circle;
       margin-left: 2.8rem; }
-  .cd-main-content div.container {
+  .cd-main-content #main-content-container {
     margin: 0;
-    padding: 6rem; }
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 8rem;
+    padding-left: 8rem; }
 
 /*# sourceMappingURL=main-content.css.map */
