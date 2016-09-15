@@ -1,0 +1,1418 @@
+// http://bourbon.io/
+@import 'bourbon/_bourbon';
+
+// shared variables
+@import 'variables';
+// variables
+@import 'menu-variables';
+
+// shared layout
+@import 'layout';
+
+// shared image urls
+@import 'images';
+// image urls
+@import 'images';
+
+// fonts
+//
+
+/* --------------------------------
+
+Navigation shrinking effect
+
+-------------------------------- */
+
+// Fix the nav bar and the search bar.
+.cd-main-header {
+  // "Fixing" the nav bar.
+  position: fixed;
+  width: 100%;
+}
+.cd-search {
+  position: fixed;
+}
+
+// Non-shrunk state.
+.cd-main-header {
+  // Nav bar.
+  -o-transition: height $htrtl $htrts ease!important; -moz-transition: height $htrtl $htrts ease!important;
+  -webkit-transition: height $htrtl $htrts ease!important; transition: height $htrtl $htrts ease!important;
+  // Elements within.
+  .cd-nav, .cd-header-buttons {
+    -o-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease; -moz-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease;
+    -webkit-transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease; transition: opacity $htrtl $htrts ease, top $htrtl $htrts ease;
+    .cd-primary-nav {
+      -o-transition: top $htrtl $htrts ease; -moz-transition: top $htrtl $htrts ease;
+      -webkit-transition: top $htrtl $htrts ease; transition: top $htrtl $htrts ease;
+      // height: IS INHERITED.
+      position: absolute;
+    }
+  }
+  .cd-logo {
+    -o-transition: all $htrtl $htrts ease; -moz-transition: all $htrtl $htrts ease;
+    -webkit-transition: all $htrtl $htrts ease; transition: all $htrtl $htrts ease;
+  }
+  .cd-logo.logo-replacer {
+    -o-transition: all $htrtl ease; -moz-transition: all $htrtl ease;
+    -webkit-transition: all $htrtl ease; transition: all $htrtl ease;
+    margin-left: 50%;
+    left: $logo-move-left-adjust;
+    top: $logo-replacer-y;
+    opacity: 0!important;
+  }
+}
+
+// Shrunk state.
+.cd-main-header.shrink {
+  // Stop links:
+  // Nav bar.
+  -o-transition: height $htrtl ease!important; -moz-transition: height $htrtl ease!important;
+  -webkit-transition: height $htrtl ease!important; transition: height $htrtl ease!important;
+  height: $shrink-header-height-S;
+  @include MQ(L) {
+    height: $shrink-header-height-L;
+  }
+  // Elements within.
+  .cd-nav, .cd-header-buttons {
+    -o-transition: opacity $htrtl ease, top $htrtl ease; -moz-transition: opacity $htrtl ease, top $htrtl ease;
+    -webkit-transition: opacity $htrtl ease, top $htrtl ease; transition: opacity $htrtl ease, top $htrtl ease;
+    top: $logo-y-new;
+    opacity: 0;
+    .cd-primary-nav {
+      li > a {
+        -o-transition: height 0s $htrtl ease; -moz-transition: height 0s $htrtl ease;
+        -webkit-transition: height 0s $htrtl ease; transition: height 0s $htrtl ease;
+        height: $shrink-header-height-S;
+      }
+      -o-transition: top $htrtl ease; -moz-transition: top $htrtl ease;
+      -webkit-transition: top $htrtl ease; transition: top $htrtl ease;
+      top: $nav-menu-links-y-new;
+    }
+  }
+  .cd-logo {
+    -o-transition: all $htrtl ease; -moz-transition: all $htrtl ease;
+    -webkit-transition: all $htrtl ease; transition: all $htrtl ease;
+    top: $logo-y-new;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .cd-logo.logo-replacer {
+    -o-transition: all $htrtl $htrtm ease; -moz-transition: all $htrtl $htrtm ease;
+    -webkit-transition: all $htrtl $htrtm ease; transition: all $htrtl $htrtm ease;
+    top: $logo-replacer-y-new-S;
+    opacity: 1!important;
+    visibility: visible;
+    @include MQ(L) {
+        top: $logo-replacer-y-new-L;
+    }
+  }
+}
+
+/* -------------------------------- 
+
+Navigation style
+
+-------------------------------- */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: {
+    size: 1.6rem;
+    family: $menu-font; // variables inside partials > _menu-variables.scss
+  }
+  color: $color-grey-dark;
+  background-color: $color-white;
+
+  @include MQ(maxL) { // layout mixins inside partials > _layout.scss
+    &.nav-on-left.overflow-hidden {
+      overflow: hidden;
+    }
+  }
+}
+
+a {
+  color: $color-blue-base;
+  text-decoration: none;
+}
+
+img {
+  /* make images responsive */
+  max-width: 100%;
+}
+
+input {
+  font-family: $menu-font;
+  font-size: 1.6rem;
+}
+
+input[type="search"]::-ms-clear {
+  /* removes close icon - IE */
+  display: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+.cd-main-content, .cd-main-header {
+  /* Force Hardware Acceleration in WebKit */
+  @include transform(translateZ(0));
+  will-change: transform;
+}
+
+.cd-main-content, .cd-main-header {
+  @include transition(transform $menu-slideout-timing);
+  // Workaround to reconcile with my shrinking menu.
+  -o-transition: transform $menu-slideout-timing, height $htrtl!important;
+  -moz-transition: transform $menu-slideout-timing, height $htrtl!important;
+  -webkit-transition: transform $menu-slideout-timing, height $htrtl!important;
+  transition: transform $menu-slideout-timing, height $htrtl!important;
+
+  @include MQ(maxL) {
+    &.nav-is-visible {
+      @include transform(translateX(-$nav-width-S));
+    }
+
+    .nav-on-left &.nav-is-visible {
+      @include transform(translateX($nav-width-S));
+    }
+  }
+}
+
+.cd-main-header {
+  height: $header-height-S;
+  background: $color-nav-background;
+  z-index: $above-content;
+
+  .nav-is-fixed & {
+    /* add .nav-is-fixed class to body if you want a fixed navigation on > 1170px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  @include MQ(L) {
+    height: $header-height-L;
+    @include clearfix;
+  }
+}
+
+.cd-logo {
+  position: absolute;
+  top: $logo-y-S-adj;
+  left: 5%;
+
+  .img {
+    display: block;
+    //background-image: $logo;
+    background: $logo no-repeat center;
+    background-size: 100% 100%;
+    /* logo dimensions */
+    width: 250px;
+    height: 45px;
+    @media only screen and (max-width: 400px) {
+      background-size: 70% 70%;
+    }
+    @media only screen and (max-width: 350px) {
+      background-size: 40% 40%;
+    }
+  }
+
+
+  @include MQ(maxL) {
+    .nav-on-left & {
+      left: auto;
+      right: 5%;
+    }
+  }
+
+  @include MQ(L) {
+    top: $logo-y-L-adj;
+    left: 4em;
+  }
+}
+
+.cd-header-buttons {
+  position: absolute;
+  display: inline-block;
+  top: $nav-menu-buttons-top-S;
+  right: 5%;
+
+  li {
+    display: inline-block;
+  }
+
+  @include MQ(maxL) {
+    .nav-on-left & {
+      right: auto;
+      left: 5%;
+
+      li {
+        float: right;
+      }
+    }
+  }
+
+  @include MQ(L) {
+    top: $nav-menu-buttons-top-L;
+    right: $nav-menu-buttons-offset;
+  }
+
+  // iGem wiki fix.
+  a:active, a:focus, a:hover {
+    color: transparent;
+  }
+  // ---
+
+}
+
+.cd-search-trigger, .cd-nav-trigger {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  white-space: nowrap;
+  /* hide text */
+  color: transparent;
+  z-index: $above-content;
+}
+
+.cd-search-trigger {
+
+  top: $nav-items-y-adj;
+
+  &::before, &::after {
+    /* search icon */
+    content: '';
+    position: absolute;
+    @include transition(opacity $menu-slideout-timing);
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &::before {
+    /* lens */
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid $color-search-trigger;
+  }
+
+  &::after {
+    /* handle */
+    height: 3px;
+    width: 8px;
+    background: $color-search-trigger;
+    bottom: 14px;
+    right: 11px;
+    @include transform(rotate(45deg));
+  }
+
+  span {
+    /* container for the X icon */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  span::before, span::after {
+    /* close icon */
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 22px;
+    top: 50%;
+    margin-top: -2px;
+    left: 50%;
+    margin-left: -11px;
+    background: $color-search-trigger;
+    opacity: 0;
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include transition(opacity $menu-slideout-timing, transform $menu-slideout-timing);
+  }
+
+  span::before {
+    @include transform(rotate(45deg));
+  }
+
+  span::after {
+    @include transform(rotate(-45deg));
+  }
+
+  &.search-is-visible {
+    &::before, &::after {
+      /* hide search icon */
+      opacity: 0;
+    }
+
+    span::before, span::after {
+      /* show close icon */
+      opacity: 1;
+    }
+
+    span::before {
+      @include transform(rotate(135deg));
+    }
+
+    span::after {
+      @include transform(rotate(45deg));
+    }
+  }
+}
+
+.cd-nav-trigger {
+
+  top: $nav-items-y-adj - $nav-trigger-higher;
+
+  span, span::before, span::after {
+    /* hamburger icon in CSS */
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 24px;
+    background: $color-nav-trigger;
+  }
+
+  span {
+    /* line in the center */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -2px;
+    @include transition(background $menu-slideout-timing $menu-slideout-timing);
+  }
+
+  span::before, span::after {
+    /* other 2 lines */
+    content: '';
+    right: 0;
+    /* Force Hardware Acceleration in WebKit */
+    @include transform(translateZ(0));
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include transform-origin(0% 50%);
+    @include transition(transform $menu-slideout-timing $menu-slideout-timing);
+  }
+
+  span::before {
+    /* menu icon top line */
+    top: -6px;
+  }
+
+  span::after {
+    /* menu icon bottom line */
+    top: 6px;
+  }
+
+  &.nav-is-visible {
+    span {
+      /* hide line in the center */
+      background: rgba($color-nav-trigger, 0);
+    }
+
+    span::before, span::after {
+      /* keep visible other 2 lines */
+      background: rgba($color-nav-trigger, 1);
+    }
+
+    span::before {
+      @include transform(translateX(4px) translateY(-3px) rotate(45deg));
+    }
+
+    span::after {
+      @include transform(translateX(4px) translateY(2px) rotate(-45deg));
+    }
+  }
+
+  @include MQ(L) {
+    display: none;
+  }
+}
+
+.cd-primary-nav, .cd-primary-nav ul {
+
+  // iGem wiki fix.
+  margin-top: 1em!important;
+  @include MQ(L) {
+    margin-top: 0!important;
+  }
+  // ---
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: $nav-width-S;
+  background: $color-grey-dark;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: $below-content;
+  /* Force Hardware Acceleration in WebKit */
+  @include transform(translateZ(0));
+
+  @include transform(translateX(0));
+  @include transition(transform $menu-slideout-timing);
+
+  /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu - */
+  overflow-x: hidden;
+  .cd-secondary-nav, .cd-secondary-nav ul {
+    overflow-x: hidden;
+  }
+  /* - end - */
+
+  a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: $color-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid lighten($color-grey-dark, 5%);
+    @include transform(translateZ(0));
+    will-change: transform, opacity;
+    @include transition(transform $menu-slideout-timing, opacity $menu-slideout-timing);
+  }
+
+  &.is-hidden {
+    /* secondary navigations hidden by default */
+    @include transform(translateX(100%));
+  }
+
+  &.moves-out > li > a {
+    /* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
+    @include transform(translateX(-100%));
+    opacity: 0;
+  }
+
+  // iGem wiki fix:
+  li > ul {
+    margin-top: 0!important;
+    @include MQ(L) {
+      margin-top: inherit;
+    }
+    li > a > h3 {
+      color: $color-white!important;
+    }
+  }
+  // ---
+}
+
+@include MQ(maxL) {
+  .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
+    right: auto;
+    left: 0;
+  }
+}
+
+.cd-primary-nav {
+
+  .see-all a {
+    /* different style for the See all button on mobile and tablet */
+    color: $color-grey-light;
+  }
+
+  .cd-nav-gallery .cd-nav-item, .cd-nav-icons .cd-nav-item, .cd-nav-iconless .cd-nav-item {
+    /* items with picture (or icon) and title */
+    height: 80px;
+    line-height: 80px;
+
+    h3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .cd-nav-gallery .cd-nav-item {
+    padding-left: 90px;
+
+    img {
+      position: absolute;
+      display: block;
+      height: 40px;
+      width: auto;
+      left: 20px;
+      top: 50%;
+      margin-top: -20px;
+    }
+  }
+
+  .cd-nav-icons .cd-nav-item {
+    padding-left: 75px;
+
+    p {
+      color: $color-grey-dark;
+      font-size: 1.3rem;
+      /* hide description on small devices */
+      display: none;
+    }
+
+    &::before {
+      /* item icon */
+      content: '';
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      margin-top: -20px;
+      width: 40px;
+      height: 40px;
+      background: no-repeat center center;
+      background-size: 40px 40px;
+    }
+
+    &.item-1::before {
+      background-image: none;
+    }
+
+    &.item-2::before {
+      background-image: none;
+    }
+
+    &.item-3::before {
+      background-image: none;
+    }
+
+    &.item-4::before {
+      background-image: none;
+    }
+
+    &.item-5::before {
+      background-image: none;
+    }
+
+    &.item-6::before {
+      background-image: none;
+    }
+
+    &.item-7::before {
+      background-image: none;
+    }
+
+    &.item-8::before {
+      background-image: none;
+    }
+  }
+
+
+
+  /* --------------------------------
+
+  Flat icons
+
+  -------------------------------- */
+
+  // * Project
+  .cd-nav-icons#category-project .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-description;
+    }
+
+    &.item-2::before {
+      background-image: $icon-design;
+    }
+
+    &.item-3::before {
+      background-image: $icon-notebook;
+    }
+
+    &.item-4::before {
+      background-image: $icon-glossary;
+    }
+
+    &.item-5::before {
+      background-image: $icon-achievements;
+    }
+  }
+
+  // * Lab
+  .cd-nav-icons#category-lab .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-overview;
+    }
+
+    &.item-2::before {
+      background-image: $icon-proof-of-concept;
+    }
+
+    &.item-3::before {
+      background-image: $icon-demonstrate;
+    }
+
+    &.item-4::before {
+      background-image: $icon-hardware;
+    }
+
+    &.item-5::before {
+      background-image: $icon-lab-book;
+    }
+
+    &.item-6::before {
+      background-image: $icon-safety;
+    }
+
+    &.item-7::before {
+      background-image: $icon-scaling-up;
+    }
+  }
+
+  // * Parts
+  .cd-nav-icons#category-parts .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-basic;
+    }
+
+    &.item-2::before {
+      background-image: $icon-composite;
+    }
+
+    &.item-3::before {
+      background-image: $icon-collection;
+    }
+
+    &.item-4::before {
+      background-image: $icon-measurement;
+    }
+  }
+
+  // * Modelling
+  .cd-nav-icons#category-modelling .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-modelling-1;
+    }
+
+    &.item-2::before {
+      background-image: $icon-modelling-2;
+    }
+  }
+
+  // * Human Practices
+  .cd-nav-icons#category-human-practices .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-our-story;
+    }
+
+    &.item-2::before {
+      background-image: $icon-silver;
+    }
+
+    &.item-3::before {
+      background-image: $icon-gold;
+    }
+
+    &.item-4::before {
+      background-image: $icon-integrated-practices;
+    }
+
+    &.item-5::before {
+      background-image: $icon-engagement;
+    }
+
+    &.item-6::before {
+      background-image: $icon-blog;
+    }
+
+    &.item-7::before {
+      background-image: $icon-vlog;
+    }
+  }
+
+  // * Entrepreneurship
+  .cd-nav-icons#category-entrepreneurship .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-entrepreneurship-general;
+    }
+
+    &.item-2::before {
+      background-image: $icon-software;
+    }
+
+    &.item-3::before {
+      background-image: $icon-alphabrick;
+    }
+
+    &.item-4::before {
+      background-image: $icon-dental;
+    }
+  }
+
+  // * People
+  .cd-nav-icons#category-people .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-team;
+    }
+
+    &.item-2::before {
+      background-image: $icon-collaborations;
+    }
+
+    &.item-3::before {
+      background-image: $icon-sponsors;
+    }
+
+    &.item-4::before {
+      background-image: $icon-attributions;
+    }
+  }
+
+  /* --------------------------------
+
+  End (Flat Icons)
+
+  -------------------------------- */
+
+
+
+  .cd-nav-iconless .cd-nav-item {
+    padding-left: 20px;
+
+    p {
+      color: $color-grey-dark;
+      font-size: 1.3rem;
+      /* hide description on small devices */
+      display: none;
+    }
+  }
+
+  @include MQ(maxL) {
+    /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
+    visibility: hidden;
+    @include transition(visibility 0s $menu-slideout-timing);
+
+    &.nav-is-visible {
+      visibility: visible;
+      @include transition(visibility 0s 0s);
+    }
+  }
+}
+
+@include MQ(L) {
+
+  .cd-primary-nav {
+    position: static;
+    padding: 0 $nav-menu-links-offset 0 0!important;
+    height: auto;
+    width: auto;
+    float: right;
+    overflow: visible;
+    background: transparent;
+    @include clearfix;
+
+
+    /* - Evgeny addition to fix unnecessary horizontal scroll bar in mobile menu [reversal for big screens] - */
+    overflow-x: visible;
+    .cd-secondary-nav, .cd-secondary-nav ul {
+      overflow-x: visible;
+    }
+    /* - end - */
+
+    &.moves-out > li > a {
+      /* reset mobile style */
+      @include transform(translateX(0));
+      opacity: 1;
+    }
+
+    ul {
+      position: static;
+      height: auto;
+      width: auto;
+      background: transparent;
+      overflow: visible;
+      z-index: $above-content;
+
+      &.is-hidden {
+        /* reset mobile style */
+        @include transform(translateX(0));
+      }
+
+      &.moves-out > li > a {
+        /* reset mobile style */
+        @include transform(translateX(0));
+        opacity: 1;
+      }
+    }
+
+    > li {
+      float: left;
+      margin-left: $nav-menu-link-gap;
+    }
+
+    > li > a {
+      /* main navigation buttons style */
+      position: relative;
+      display: inline-block;
+      height: $header-height-L;
+      line-height: $header-height-L;
+      padding: 0 10px;
+      color: $color-nav-link;
+      overflow: visible;
+      border-bottom: none;
+      @include transition(color $menu-slideout-timing, box-shadow $menu-slideout-timing);
+
+      &:hover {
+        color: $color-nav-link-hover;
+      }
+      &:hover::before, &:hover::after {
+        //@include transition(background $menu-slideout-timing);
+        background: $color-nav-link-hover;
+      }
+
+      &.selected {
+        color: $color-nav-link-active;
+        box-shadow: inset 0 -2px 0 $color-nav-link-active;
+      }
+    }
+
+    .go-back, .see-all {
+      display: none;
+    }
+
+    .cd-secondary-nav, .cd-nav-gallery, .cd-nav-icons, .cd-nav-iconless {
+      /* dropdown menu style */
+      position: absolute;
+      top: $header-height-L;
+      width: 100vw;
+      background: $color-nav-background;
+      padding: 20px 64px 80px;
+      box-shadow: inset 0 1px 0 $color-nav-graphical, 0 3px 6px rgba(#000, .05);
+      @include transform(translateX(0));
+      @include clearfix;
+      -o-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+      -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+      -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+      transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+
+      &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        -o-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+        -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+        -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+        transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+      }
+
+      > .see-all {
+        /* this is the BIG See all button at the bottom of the dropdown menu */
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: $nav-bottom-bar-height;
+        width: 100%;
+        overflow: hidden;
+        /* reset some inherited style */
+        margin: 0;
+        padding: 0;
+
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          font-size: 2.2rem;
+          font-weight: bold;
+          text-align: center;
+          line-height: $nav-bottom-bar-height;
+          border-top: 1px solid $color-nav-graphical;
+          /* reset some inherited style */
+          border-bottom: none;
+          margin: 0;
+          padding: 0;
+          color: $color-nav-link;
+          background: $color-nav-bottom-panel;
+          @include transition(color .2s, background .2s, border .2s);
+
+          &:hover {
+            background: $color-nav-bottom-panel-hover;
+            border-color: $color-nav-graphical;
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .cd-secondary-nav {
+
+      > li {
+        /* change the height according to your needs - you can even set height: auto */
+        height: 340px;
+        /* here you set the number of columns - use width percentage */
+        @include column(.23); // see partials > _layout.scss
+        margin-right: 2.66%;
+        border-right: 1px solid $color-nav-graphical;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        &:nth-child(4n+2) {
+          /* +2 because we have 2 list items with display:none */
+          margin-right: 0;
+          border-right: none;
+        }
+
+        > a {
+          /* secondary nav title */
+          color: $color-nav-link;
+          font-weight: bold;
+          font-size: 1.6rem;
+          margin-bottom: .6em;
+
+          &:hover {
+            color: $color-nav-link-hover;
+          }
+        }
+
+      }
+
+      .has-children .see-all > a {
+        color: $color-nav-see-all;
+        &:hover {
+          color: $color-nav-see-all-hover;
+        }
+      }
+
+      a {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 18% 0 0;
+        color: $color-nav-link;
+        border-bottom: none;
+        font-size: 1.4rem;
+
+        &:hover {
+          color: $color-nav-link-hover;
+        }
+      }
+
+      ul {
+        /* Force Hardware Acceleration in WebKit */
+        @include transform(translateZ(0));
+      }
+
+      ul ul {
+        /* tertiary navigation */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        &.is-hidden {
+          @include transform(translateX(100%));
+        }
+
+        .go-back {
+          display: block;
+
+          a {
+            color: $color-nav-back;
+          }
+          a:hover {
+            color: $color-nav-back-hover;
+          }
+        }
+
+        .see-all {
+          display: block;
+        }
+      }
+
+      .moves-out > li > a {
+        /* push the navigation items to the left - and lower down opacity - when tertiary nav slides in */
+        @include transform(translateX(-100%));
+      }
+
+    }
+
+    .cd-nav-gallery {
+      li {
+        /* set here number of columns - use width percentage */
+        @include column(.22);
+        margin: 0 4% 40px 0;
+
+        &:nth-child(4n+2) {
+          /* +2 because we have two additional list items with display:none */
+          margin-right: 0;
+        }
+      }
+
+      .cd-nav-item {
+        border-bottom: none;
+        padding: 0;
+        height: auto;
+        line-height: 1.2;
+
+        img {
+          position: static;
+          margin-top: 0;
+          height: auto;
+          width: 100%;
+          margin-bottom: .6em;
+        }
+
+        h3 {
+          color: $color-nav-group-link;
+          font-weight: bold;
+          padding: 0 .4em;
+        }
+      }
+    }
+
+    .cd-nav-icons, .cd-nav-iconless {
+      .cd-nav-item {
+        border-bottom: none;
+        height: 80px;
+        line-height: 1.2;
+        position: relative;
+        @include transition(background .2s);
+
+        h3 {
+          color: $color-nav-panel-link;
+          font-weight: bold;
+        }
+
+        p {
+          display: block;
+          color: $color-nav-panel-description;
+        }
+
+        &:hover {
+          background: lighten($color-nav-background, 8%);
+          @include transition(background .2s);
+        }
+      }
+    }
+
+    .cd-nav-icons {
+
+      // Bug fix (theme's native bug).
+      background-color: $color-blue-I!important;
+
+      li {
+        /* set here number of columns - use width percentage */
+        @include column(.32);
+        margin: 0 2% 20px 0;
+
+        &:nth-child(3n+2) {
+          /* +2 because we have two additional list items with display:none */
+          margin-right: 0;
+        }
+      }
+
+      .cd-nav-item {
+        padding: 24px 0 0 85px;
+
+        &::before {
+          left: 25px;
+        }
+      }
+    }
+
+    .cd-nav-iconless {
+      li {
+        /* set here number of columns - use width percentage */
+        @include column(.32);
+        margin: 0 2% 20px 0;
+
+        &:nth-child(3n+2) {
+          /* +2 because we have two additional list items with display:none */
+          margin-right: 0;
+        }
+      }
+
+      .cd-nav-item {
+        padding: 24px 0 0 20px;
+      }
+    }
+  }
+}
+
+.has-children > a, .go-back a {
+  position: relative;
+
+  &::before, &::after {
+    /* arrow icon in CSS - for element with nested unordered lists */
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    display: inline-block;
+    height: 2px;
+    width: 10px;
+    background: lighten($color-nav-link, 10%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &::before {
+    @include transform(rotate(45deg));
+  }
+
+  &::after {
+    @include transform(rotate(-45deg));
+  }
+
+  @include MQ(L) {
+    &::before, &::after {
+      background: darken($color-nav-back, 10%);
+    }
+
+    &:hover::before, &:hover::after {
+      background: $color-nav-back-hover;
+    }
+  }
+}
+
+.has-children > a {
+  padding-right: 40px;
+
+  &::before, &::after {
+    /* arrow goes on the right side - children navigation */
+    right: 20px;
+    @include transform-origin(9px 50%);
+  }
+}
+
+.cd-primary-nav .go-back a {
+  padding-left: 40px;
+
+  &::before, &::after {
+    /* arrow goes on the left side - go back button */
+    left: 20px;
+    @include transform-origin(1px 50%);
+  }
+}
+
+@include MQ(L) {
+
+  .has-children > a {
+    &::before, &::after {
+      right: 15%;
+    }
+  }
+
+  .cd-primary-nav > .has-children > a {
+    /* main navigation arrows on larger devices */
+    padding-right: 30px !important;
+
+    &::before, &::after {
+      width: 9px;
+      @include transform-origin(50% 50%);
+      background: darken($color-nav-link, 10%);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      @include transition(width $menu-slideout-timing, transform $menu-slideout-timing, background $menu-slideout-timing);
+    }
+
+    &::before {
+      right: 12px;
+    }
+
+    &::after {
+      right: 7px;
+    }
+
+    &.selected::before, &.selected::after {
+      width: 14px;
+      background: $color-nav-link-active;
+    }
+
+    &.selected::before {
+      @include transform(translateX(5px) rotate(-45deg));
+    }
+
+    &.selected::after {
+      @include transform(rotate(45deg));
+    }
+  }
+
+  .cd-secondary-nav > .has-children > a::before, .cd-secondary-nav > .has-children > a::after {
+    /* remove arrows on secondary nav titles */
+    display: none;
+  }
+
+  .cd-primary-nav .go-back a {
+    padding-left: 20px;
+
+    &::before, &::after {
+      left: 1px;
+    }
+  }
+}
+
+.cd-search {
+
+  // iGem wiki fix.
+  margin-top: $search-lower!important;
+
+  //position: absolute; - changed to fixed with fixed menu
+  height: $search-height-S;
+  width: 100%;
+  top: $header-height-S;
+  left: 0;
+  z-index: $above-content;
+  opacity: 0;
+  visibility: hidden;
+  -o-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+  transition: opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing;
+
+  form {
+    height: 100%;
+    width: 100%;
+  }
+
+  input {
+    border-radius: 0;
+    border: none;
+    background: $color-white;
+    height: 100%;
+    width: 100%;
+    padding: 0 5%;
+    box-shadow: inset 0 1px 0 $color-grey-light, 0 3px 6px rgba(#000, .05);
+    @include appearance(none);
+
+    @include placeholder {
+      color: darken($color-grey-light, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -o-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    -moz-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    -webkit-transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+    transition: opacity $menu-slideout-timing 0s, visibility 0s 0s;
+  }
+
+  .nav-is-fixed & {
+    position: fixed;
+  }
+
+  @include MQ(L) {
+    height: $search-height-L;
+    top: $header-height-L;
+
+    input {
+      padding: 0 2em;
+      font-size: 3.2rem;
+      font-weight: 300;
+
+      @include placeholder {
+
+      }
+    }
+  }
+}
+
+.cd-overlay {
+  /* shadow layer visible when navigation is active */
+  position: fixed;
+  z-index: $at-overlay;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  //cursor: pointer; - disabled this due to personal preference.
+  background-color: rgba($color-blue-base, .8);
+  visibility: hidden;
+  opacity: 0;
+  @include backface-visibility(hidden);
+  @include transition(opacity $menu-slideout-timing 0s, visibility 0s $menu-slideout-timing, transform $menu-slideout-timing 0s);
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity $menu-slideout-timing 0s, visibility 0s 0s, transform $menu-slideout-timing 0s);
+  }
+
+  @include MQ(maxL) {
+    &.is-visible {
+      @include transform(translateX(-$nav-width-S));
+    }
+    .nav-on-left &.is-visible {
+      @include transform(translateX($nav-width-S));
+    }
+    &.is-visible.search-is-visible, .nav-on-left &.is-visible.search-is-visible {
+      @include transform(translateX(0));
+    }
+  }
+}
+
+/* -------------------------------- 
+
+support for no js 
+
+-------------------------------- */
+
+.no-js .cd-primary-nav {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: visible;
+  visibility: visible;
+  z-index: $content;
+}
+
+.no-js .cd-search {
+  //position: relative; - changed to fixed with fixed menu
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+@include MQ(L) {
+  .no-js .cd-primary-nav {
+    position: absolute;
+    z-index: $above-content;
+    display: inline-block;
+    width: auto;
+    top: 0;
+    right: $nav-menu-links-offset;
+    padding: 0;
+  }
+
+  .no-js .nav-is-fixed .cd-primary-nav {
+    position: fixed;
+  }
+}

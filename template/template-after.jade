@@ -1,0 +1,28 @@
+// Does NOT extend a jade.
+
+
+html
+
+    body
+
+
+
+        block content
+
+            // Content.
+            // [CONTENT CAME HERE]
+            // ---
+
+            block footer
+                // Footer
+                include ../_shared/_footer
+
+
+
+
+        block end-of-body-scripts
+            // END OF BODY SCRIPTS
+            script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/menu.js&action=raw&ctype=text/javascript')
+            //script(src='./page/js/custom/menu.js')
+            script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/nav-shrink.js&action=raw&ctype=text/javascript')
+            //script(src='./page/js/custom/nav-shrink.js')

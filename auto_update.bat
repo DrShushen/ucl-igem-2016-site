@@ -1,6 +1,9 @@
 @echo off
-call jade landing.jade landing.html
+
 call jade page.jade page.html
+
+call jade template/template-before.jade template/template-before.html
+call jade template/template-after.jade template/template-after.html
 call sass --update _shared/scss:_shared/css
-call sass --update landing/scss:landing/css
-call sass --update page/scss:page/css
+
+call jade pages/sample/sample-page.jade pages/sample/sample-page.html

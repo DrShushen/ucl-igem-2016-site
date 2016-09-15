@@ -1,0 +1,125 @@
+// http://bourbon.io/
+@import 'bourbon/_bourbon';
+
+// shared variables
+@import 'variables';
+// variables
+@import 'menu-variables';
+
+// shared layout
+@import 'layout';
+
+// shared image urls
+@import 'images';
+// image urls
+@import 'images';
+
+/* --------------------------------
+
+High level settings.
+
+-------------------------------- */
+
+// Compensation for "fixed" top bar.
+.cd-main-content {
+  padding-top: $header-height-S;
+  @include MQ(L) {
+    padding-top: $header-height-L;
+  }
+}
+
+// High level variables.
+.cd-main-content {
+
+  // Various.
+  position: relative;
+  background: $color-main-content-bgd;
+  z-index: $content;
+
+  // Ensure min height, such that the footer is always a footer.
+  min-height: $main-content-min-height;
+
+}
+
+
+
+
+
+/* --------------------------------
+
+Main content style.
+
+-------------------------------- */
+
+.cd-main-content {
+
+  // overrides:
+  font-family: $main-content-font;
+  font-size: 1.6rem;
+  line-height: 1.4em;
+  div, p, span, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4em;
+  }
+  
+  .media-figure {
+
+    img {
+      -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &.small {
+      width: 200px;
+      max-height: 200px;
+    }
+
+    &.medium {
+      width: 300px;
+      max-height: 300px;
+    }
+
+    &.large {
+      width: 400px;
+      max-height: 400px;
+    }
+
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  ol li {
+    font-size: 1.6rem;
+
+    list-style-type: decimal;
+    margin-left: 1.6rem;
+  }
+
+  ul {
+    font-size: 1.6rem;
+
+    li {
+      list-style-type: disc;
+      margin-left: 1.6rem;
+    }
+    ul li {
+      list-style-type: circle;
+      margin-left: 2.8rem;
+    }
+  }
+
+  div.container {
+    margin: 0;
+    padding: 6rem;
+  }
+}

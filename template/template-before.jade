@@ -1,4 +1,4 @@
-extends _shared/_shared
+extends ../_shared/_shared
 
 head
     block fonts
@@ -254,89 +254,11 @@ body
 
 
 
-        // Content.
-        main.cd-main-content
-            .container
-                // ACTUAL CONTENT
-                .grd.p0.m0
-                    .grd-row
-                        .grd-row-col-1-6
-                            .media
-                                .media-figure
-                                    //img(src='./page/img/sample-content/ucl.jpg', alt='UCL', style='height: 300px')
-                        .grd-row-col-5-6
-                            .media
-                                .media-body
-                                    h2.m0.p0 Image with text
-                                    p.m0.p0
-                                        | Lorem ipsum dolor sit amet, nonumy commune te nam, quod erant tation et qui. Malis civibus perfecto
-                                        | usu te. Adhuc idque delenit quo an, duo ad modo omittam deterruisset. Id per duis inimicus aliquando,
-                                        | vis ei solet postea definitionem, vim oporteat maiestatis ut. Ius sale consul delicata eu, cu dico
-                                        | cetero sit. Ullum vivendo dissentias eam eu.
-                .spacer
-                .grd.p0.m0
-                    .txt--center
-                        h2 Columns: you can organise elements on the page.
-                    .grd-row.my1
-                        .grd-row-col-1-6.bg--light-gray.py1
-                            p.m0.p1  Some text here.
-                        .grd-row-col-5-6.py1.bg--white
-                            p.m0.p1  Some more text here.
-                    .grd-row.my1
-                        .grd-row-col-3-6.bg--light-gray.py1
-                            p.m0.p1  Some text here.
-                        .grd-row-col-3-6.py1.bg--white
-                            p.m0.p1  Some text here.
-                    .grd-row.my1
-                        .grd-row-col-4-6.bg--light-gray.py1
-                            p.m0.p1  Some text here.
-                        .grd-row-col-2-6.py1.bg--white
-                            p.m0.p1  Some text here.
-                .spacer
-                .grd.p0.m0
-                    .txt--left
-                        h2 Here are some buttons:
-                    .grd-row.my0
-                        .grd-row-col-4-6.py0
-                            a.w100--s.my1.btn(href='#', title='Furtive button example') .btn
-                            a.w100--s.my1.btn--blue(href='#', title='Furtive button example') .btn--blue
-                            a.w100--s.my1.btn--green(href='#', title='Furtive button example') .btn--green
-                            a.w100--s.my1.btn--red(href='#', title='Furtive button example') .btn--red
-                            a.w100--s.my1.btn--gray(href='#', title='Furtive button example') .btn--gray
-                            a.w100--s.my1.btn--link(href='#', title='Furtive button example') .btn--link
-                        .grd-row-col-2-6.py0
-                .spacer
-                .grd.p0.m0
-                    .txt--left
-                        h2 Here are some lists:
-                    .grd-row.my0
-                        .grd-row-col-1-6.py0
-                            h3.muted Ordered
-                            ol
-                                li Apples
-                                li Bananas
-                                li Oranges
-        // ---
 
-
-
-
-
-        block footer
-            // Footer
-            include _shared/_footer
-
-
-
-        // ---
-
-
-
-
-
-    block end-of-body-scripts
-        // END OF BODY SCRIPTS
-        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/menu.js&action=raw&ctype=text/javascript')
-        //script(src='./page/js/custom/menu.js')
-        script(src='http://2016.igem.org/wiki/index.php?title=Template:UCL/Dev/nav-shrink.js&action=raw&ctype=text/javascript')
-        //script(src='./page/js/custom/nav-shrink.js')
+        // Content goes here, like so --------
+            block actual-content
+                main.cd-main-content
+                            .container
+                                // ACTUAL CONTENT
+        // -----------------------------------
+        block actual-content
