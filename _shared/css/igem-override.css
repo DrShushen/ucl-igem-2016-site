@@ -52,6 +52,9 @@
 .ui-loader .ui-icon-loading {
   display: none !important; }
 
+.ui-page {
+  display: block !important; }
+
 #bodyContent {
   height: 100%;
   width: 100%;
