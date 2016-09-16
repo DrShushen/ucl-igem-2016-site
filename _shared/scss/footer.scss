@@ -41,7 +41,6 @@ Footer style
   // ---
 
   &.footer-distributed .footer-left,
-  &.footer-distributed .footer-center,
   &.footer-distributed .footer-right {
     display: inline-block;
     vertical-align: top;
@@ -62,9 +61,97 @@ Footer style
     /* --- Footer left --- */
 
     .footer-left {
+
       padding-right: $footer-custom-padding;
+      padding-left: $footer-custom-padding;
       overflow: hidden;
       width: $footer-left-width;
+
+      a {
+        padding: 0;
+      }
+
+    }
+
+    /* Big link */
+    .footer-big-link {
+
+      margin-top: $footer-vertical-spacer;
+
+      a {
+        display: inline-block;
+        text-align: center;
+        width: $footer-big-link-col1-width;
+      }
+      p, p > a {
+        padding-left: 5%;
+        padding-right: $footer-custom-padding;
+        display: inline-block;
+        text-align: left;
+        width: $footer-big-link-col2-width;
+      }
+      p > a {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
+      p {
+        display: inline-block;
+        color: $color-white;
+        vertical-align: middle;
+        margin: 0;
+        span {
+          display: block;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 1.8;
+        }
+        a, a > span {
+          color: $color-blue-V;
+          text-decoration: none;;
+        }
+        a > span {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 1;
+          display: inline-block;
+        }
+      }
+
+    }
+
+    /* Circular icons */
+    i.circular {
+      background-color: $color-grey-less-dark;
+      color: $color-white;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      //text-align: center;
+      line-height: 42px;
+      margin: 10px 0;
+      vertical-align: middle;
+
+      // Customised:
+      text-align: right;
+      cursor: pointer;
+      padding-right: 10px;
+      &.fa-map-marker {
+        padding-right: 12px;
+      }
+      // ---
+
+      &.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+      }
+    }
+    i.circular:hover {
+      background-color: $color-grey-medium;
+    }
+    i.circular:active {
+      background-color: $color-grey-very-dark;
     }
 
     /* The company logo */
@@ -102,9 +189,10 @@ Footer style
 
     /* --- Footer center --- */
 
-    .footer-center {
+    .footer-right {
 
-      width: $footer-center-width;
+      padding-left: 5%;
+      width: $footer-right-width;
 
       .footer-section > .col {
         padding-left: 0.1%;
@@ -179,131 +267,9 @@ Footer style
       }
     }
 
-    /* --- Footer right --- */
-
-    .footer-right {
-
-      padding-left: $footer-custom-padding;
-      width: $footer-right-width;
-
-      div {
-        a {
-          display: inline-block;
-          text-align: right;
-          width: $footer-right-col1-width;
-        }
-        p, p > a {
-          padding-left: 12.5%;
-          padding-right: $footer-custom-padding;
-          display: inline-block;
-          text-align: left;
-          width: $footer-right-col2-width;
-        }
-        p > a {
-          //text-align: left;
-          padding-left: 0;
-          padding-right: 0;
-          width: 100%;
-        }
-      }
-
-      /*
-      @media only screen and (max-width: $L) {
-        div {
-          text-align: center;
-          a {
-            display: block;
-            width: 100%;
-          }
-          .p {
-            display: block;
-            width: 100%;
-          }
-        }
-      }
-      */
-
-      a.circular {
-        /* nothing */
-      }
-      i.circular {
-        background-color: $color-grey-less-dark;
-        color: $color-white;
-        font-size: 25px;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        //text-align: center;
-        line-height: 42px;
-        margin: 10px 0;
-        vertical-align: middle;
-
-        // Customised:
-        text-align: right;
-        cursor: pointer;
-        padding-right: 10px;
-        &.fa-map-marker {
-          padding-right: 12px;
-        }
-        // ---
-
-        &.fa-envelope {
-          font-size: 17px;
-          line-height: 38px;
-        }
-      }
-      i.circular:hover {
-        background-color: $color-grey-medium;
-      }
-      i.circular:active {
-        background-color: $color-grey-very-dark;
-      }
-
-      p {
-        display: inline-block;
-        color: $color-white;
-        vertical-align: middle;
-        margin: 0;
-
-        span {
-          display: block;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 1.8;
-        }
-
-        a, a > span {
-          color: $color-blue-V;
-          text-decoration: none;;
-        }
-        a > span {
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 1;
-          display: inline-block;
-        }
-
-      }
-    }
-
-    .footer-company-about {
-      line-height: 20px;
-      color: $color-grey-light;
-      font-size: 13px;
-      font-weight: normal;
-      margin: 0;
-
-      span {
-        display: block;
-        color: $color-white;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-    }
-
+    /* Footer icons */
     .footer-icons {
-      margin-top: 25px;
+      margin-top: $footer-vertical-spacer;
       margin-left: 0;
 
       a {
@@ -319,8 +285,8 @@ Footer style
         text-align: center;
         line-height: 35px;
 
-        margin-right: 3px;
-        margin-bottom: 5px;
+        margin-right: 1.5%;
+        margin-bottom: 1.5%;
       }
       a:hover {
         background-color: $color-grey-medium;
@@ -329,22 +295,45 @@ Footer style
         background-color: $color-grey-very-dark;
       }
     }
+
   }
 
   /* Media queries */
   @media (max-width: $M_Footer) {
 
     &.footer-distributed {
+
       font: bold 14px sans-serif;
+
+      .footer-big-link {
+        a {
+          width: $footer-big-link-col1-width-resp;
+          text-align: right;
+        }
+        p {
+          width: $footer-big-link-col2-width-resp;
+          padding-right: 20%;
+        }
+      }
+      .footer-icons {
+        a:first-of-type {
+          margin-left: 0;
+        }
+      }
+
     }
 
     &.footer-distributed .footer-left,
-    &.footer-distributed .footer-center,
     &.footer-distributed .footer-right {
       display: block;
       width: 100%;
       margin-bottom: 40px;
       text-align: center;
+      // iGem wiki fix.
+      p.footer-company-name {
+        text-align: center!important;
+      }
+      // ---
     }
 
     &.footer-distributed .footer-right i {

@@ -4,11 +4,15 @@ $footer-safety-margin-percentage: 2%;
 
 $footer-custom-padding: 10px;
 
-$footer-left-width: 28%;
-$footer-center-width: 47%;
-$footer-right-width: (25% - $footer-safety-margin-percentage);
+$footer-left-width: 35%;
+$footer-right-width: (65% - $footer-safety-margin-percentage);
 
-$footer-right-col1-width: 20%;
-$footer-right-col2-width: (80% - $footer-safety-margin-percentage);
+$footer-big-link-col1-width: 10%;
+$footer-big-link-col2-width: (90% - $footer-safety-margin-percentage);
+
+$footer-big-link-col1-width-resp: 30%;
+$footer-big-link-col2-width-resp: (70% - $footer-safety-margin-percentage);
+
+$footer-vertical-spacer: 15px;
 
 $M_Footer: 880px;
