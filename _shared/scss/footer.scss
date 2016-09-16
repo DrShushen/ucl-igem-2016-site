@@ -265,6 +265,9 @@ Footer style
       .span_3_of_3, .span_2_of_3, .span_1_of_3 {
         width: 100%;
       }
+      .footer-section.group > div {
+        margin-top: 15px;
+      }
     }
 
     /* Footer icons */
@@ -319,6 +322,10 @@ Footer style
         a:first-of-type {
           margin-left: 0;
         }
+      }
+
+      .footer-right {
+        padding-left: 3%;
       }
 
     }

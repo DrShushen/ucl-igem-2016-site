@@ -108,7 +108,10 @@
 
     min-height: $vertical-scroll-section-min-height;
 
-    padding-right: $vertical-scroll-section-padding-extra;
+    padding-right: 0;
+    @include MQ(M) {
+      padding-right: $vertical-scroll-section-padding-extra;
+    }
 
   }
 

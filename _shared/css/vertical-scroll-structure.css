@@ -66,9 +66,12 @@
 #main-content-container .vertical-scroll-section {
   padding-top: 22px;
   min-height: 80vh;
-  padding-right: 7rem; }
+  padding-right: 0; }
   @media only screen and (min-width: 1270px) {
     #main-content-container .vertical-scroll-section {
       padding-top: 42px; } }
+  @media only screen and (min-width: 768px) {
+    #main-content-container .vertical-scroll-section {
+      padding-right: 7rem; } }
 
 /*# sourceMappingURL=vertical-scroll-structure.css.map */

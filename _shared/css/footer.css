@@ -177,7 +177,9 @@ Footer style
       #footer.footer-distributed .col {
         margin: 1% 0 1% 0; }
       #footer.footer-distributed .span_3_of_3, #footer.footer-distributed .span_2_of_3, #footer.footer-distributed .span_1_of_3 {
-        width: 100%; } }
+        width: 100%; }
+      #footer.footer-distributed .footer-section.group > div {
+        margin-top: 15px; } }
     #footer.footer-distributed .footer-icons {
       margin-top: 15px;
       margin-left: 0; }
@@ -209,6 +211,8 @@ Footer style
         padding-right: 20%; }
       #footer.footer-distributed .footer-icons a:first-of-type {
         margin-left: 0; }
+      #footer.footer-distributed .footer-right {
+        padding-left: 3%; }
     #footer.footer-distributed .footer-left, #footer.footer-distributed .footer-right {
       display: block;
       width: 100%;
