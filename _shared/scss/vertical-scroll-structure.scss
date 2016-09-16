@@ -43,11 +43,12 @@
     background: $color-grey-medium;
     background: $vertical-scroll-section-nav-color;
 
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: $nav-section-radius;
+    -webkit-border-radius: $nav-section-radius;
+    border-radius: $nav-section-radius;
 
-    max-width: $nav-section-max-width;
+    text-align: center;
+    width: $nav-section-width;
   }
 
   li {
@@ -63,9 +64,9 @@
     display: block;
     padding: 0.2em 0.6em;
 
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: $nav-section-radius;
+    -webkit-border-radius: $nav-section-radius;
+    border-radius: $nav-section-radius;
 
   }
 

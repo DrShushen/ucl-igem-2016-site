@@ -18,9 +18,14 @@ $nav-section-from-right-L: 20px;
 
 $nav-section-from-right-S-moved: $nav-section-from-right-S + $nav-width-S;
 
-$nav-section-max-width: 12rem;
+$nav-section-width: 12rem;
 
-$vertical-scroll-section-padding-extra: ($nav-section-max-width + 1rem) - $main-content-padding-rl;
+$nav-section-safety-buffer: 3rem;
+$vertical-scroll-section-padding-extra: ($nav-section-width + $nav-section-safety-buffer) - $main-content-padding-rl;
+
+// Visual appearance:
+
+$nav-section-radius: 8px;
 
 // Colors:
 

@@ -483,6 +483,9 @@ Main components
         margin-top: inherit; } }
     .cd-primary-nav li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > h3 {
       color: #ffffff !important; }
+    @media only screen and (min-width: 1270px) {
+      .cd-primary-nav li > ul li > a > h3, .cd-primary-nav li > ul li > a > p, .cd-primary-nav ul li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > p {
+        line-height: 1.3em; } }
 
 @media only screen and (max-width: 1269px) {
   .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {

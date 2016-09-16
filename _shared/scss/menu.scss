@@ -517,15 +517,24 @@ Main components
     opacity: 0;
   }
 
-  // iGem wiki fix:
+  // iGem wiki fixes:
   li > ul {
+
     margin-top: 0!important;
     @include MQ(L) {
       margin-top: inherit;
     }
+
     li > a > h3 {
       color: $color-white!important;
     }
+
+    li > a > h3, li > a > p {
+      @include MQ(L) {
+        line-height: 1.3em;
+      }
+    }
+
   }
   // ---
 }
