@@ -650,18 +650,34 @@ Main components
     }
 
     &.item-2::before {
-      background-image: $icon-design;
+      background-image: $icon-oxidative-stress;
     }
 
     &.item-3::before {
-      background-image: $icon-notebook;
+      background-image: $icon-accelerating-ageing;
     }
 
     &.item-4::before {
-      background-image: $icon-glossary;
+      background-image: $icon-false-teeth;
     }
 
     &.item-5::before {
+      background-image: $icon-grey-love;
+    }
+
+    &.item-6::before {
+      background-image: $icon-design;
+    }
+
+    &.item-7::before {
+      background-image: $icon-notebook;
+    }
+
+    &.item-8::before {
+      background-image: $icon-glossary;
+    }
+
+    &.item-9::before {
       background-image: $icon-achievements;
     }
   }
@@ -695,6 +711,14 @@ Main components
     &.item-7::before {
       background-image: $icon-scaling-up;
     }
+
+    &.item-8::before {
+      background-image: $icon-protocol;
+    }
+
+    &.item-9::before {
+      background-image: $icon-results;
+    }
   }
 
   // * Parts
@@ -716,7 +740,8 @@ Main components
     }
   }
 
-  // * Modelling
+  // * Modelling - no sub-pages.
+  /*
   .cd-nav-icons#category-modelling .cd-nav-item {
     &.item-1::before {
       background-image: $icon-modelling-1;
@@ -726,6 +751,7 @@ Main components
       background-image: $icon-modelling-2;
     }
   }
+  */
 
   // * Human Practices
   .cd-nav-icons#category-human-practices .cd-nav-item {
@@ -750,10 +776,6 @@ Main components
     }
 
     &.item-6::before {
-      background-image: $icon-blog;
-    }
-
-    &.item-7::before {
       background-image: $icon-vlog;
     }
   }

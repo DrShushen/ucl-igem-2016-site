@@ -497,6 +497,17 @@ Main components
   Flat icons
 
   -------------------------------- */
+  /*
+  .cd-nav-icons#category-modelling .cd-nav-item {
+    &.item-1::before {
+      background-image: $icon-modelling-1;
+    }
+
+    &.item-2::before {
+      background-image: $icon-modelling-2;
+    }
+  }
+  */
   /* --------------------------------
 
   End (Flat Icons)
@@ -560,12 +571,20 @@ Main components
   .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-1::before {
     background-image: url("http://2016.igem.org/wiki/images/0/00/UCL_ICON_DESCRIPTION.PNG"); }
   .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-2::before {
-    background-image: url("http://2016.igem.org/wiki/images/f/fe/UCL_ICON_DESIGN.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/a/a8/T--UCL--icon-oxidative-stress.png"); }
   .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-3::before {
-    background-image: url("http://2016.igem.org/wiki/images/0/04/UCL_ICON_NOTEBOOK.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/d/dd/T--UCL--icon-accelerating-ageing.png"); }
   .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-4::before {
-    background-image: url("http://2016.igem.org/wiki/images/6/6d/UCL_ICON_GLOSSARY.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/4/40/T--UCL--icon-false-teeth.png"); }
   .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-5::before {
+    background-image: url("http://2016.igem.org/wiki/images/2/26/T--UCL--icon-grey-love.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-6::before {
+    background-image: url("http://2016.igem.org/wiki/images/f/fe/UCL_ICON_DESIGN.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-7::before {
+    background-image: url("http://2016.igem.org/wiki/images/0/04/UCL_ICON_NOTEBOOK.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-8::before {
+    background-image: url("http://2016.igem.org/wiki/images/6/6d/UCL_ICON_GLOSSARY.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-9::before {
     background-image: url("http://2016.igem.org/wiki/images/3/3c/UCL_ICON_ACHIEVEMENTS.png"); }
   .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-1::before {
     background-image: url("http://2016.igem.org/wiki/images/f/f7/UCL_ICON_OVERVIEW.png"); }
@@ -581,6 +600,10 @@ Main components
     background-image: url("http://2016.igem.org/wiki/images/a/a3/UCL_ICON_SAFETY.png"); }
   .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-7::before {
     background-image: url("http://2016.igem.org/wiki/images/7/77/UCL_ICON_SCALINGUP.png"); }
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-8::before {
+    background-image: url("http://2016.igem.org/wiki/images/2/25/T--UCL--icon-protocol.png"); }
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-9::before {
+    background-image: url("http://2016.igem.org/wiki/images/1/1a/T--UCL--icon-results.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-1::before {
     background-image: url("http://2016.igem.org/wiki/images/b/bd/UCL_ICON_BASIC.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-2::before {
@@ -589,10 +612,6 @@ Main components
     background-image: url("http://2016.igem.org/wiki/images/9/9d/UCL_ICON_COLLECTION.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-4::before {
     background-image: url("http://2016.igem.org/wiki/images/e/e4/UCL_ICON_MEASUREMENT.png"); }
-  .cd-primary-nav .cd-nav-icons#category-modelling .cd-nav-item.item-1::before {
-    background-image: url("http://2016.igem.org/wiki/images/c/c3/UCL_ICON_MODELLING_1.png"); }
-  .cd-primary-nav .cd-nav-icons#category-modelling .cd-nav-item.item-2::before {
-    background-image: url("http://2016.igem.org/wiki/images/4/47/UCL_ICON_MODELLING_2.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-1::before {
     background-image: url("http://2016.igem.org/wiki/images/c/c3/T--UCL--icon-our-story.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-2::before {
@@ -604,8 +623,6 @@ Main components
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-5::before {
     background-image: url("http://2016.igem.org/wiki/images/d/da/T--UCL--icon_engagement.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-6::before {
-    background-image: url("http://2016.igem.org/wiki/images/9/9e/T--UCL--icon_blog.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-7::before {
     background-image: url("http://2016.igem.org/wiki/images/5/53/T--UCL--icon-vlog.png"); }
   .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-1::before {
     background-image: url("http://2016.igem.org/wiki/images/4/4c/T--UCL--icon_entrepreneurship_general.png"); }

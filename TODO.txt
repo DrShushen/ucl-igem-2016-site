@@ -4,5 +4,6 @@ TODO:
 * Make the landing page with the carousel.
 * Put it all together to deploy on the wiki.
 * Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
+* Fix the looks of the iGem top bar's menus, especially #sideMenu.
 * Add keyword metadata for SEO purposes.
 * Consider if that strange IE comment is needed in header, see e.g. fullPaje.js's demo htmls whare this is done.

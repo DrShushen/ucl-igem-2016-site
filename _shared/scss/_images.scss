@@ -1,7 +1,4 @@
 // --- Image links --- //
-// NOTE THAT THESE ARE STRANGE, AS THEY ASSUME THE PATH FROM THE -- USER -- OF THIS JADE
-
-// [!] PATHS RELATIVE TO sub-page folder [!]
 
 // Main logo:
 
@@ -16,6 +13,10 @@ $icon-description: url('http://2016.igem.org/wiki/images/0/00/UCL_ICON_DESCRIPTI
 $icon-design: url('http://2016.igem.org/wiki/images/f/fe/UCL_ICON_DESIGN.png'); // url('../../_shared/img/icons/project/icon-design.png');
 $icon-glossary: url('http://2016.igem.org/wiki/images/6/6d/UCL_ICON_GLOSSARY.png'); // url('../../_shared/img/icons/project/icon-glossary.png');
 $icon-notebook: url('http://2016.igem.org/wiki/images/0/04/UCL_ICON_NOTEBOOK.png'); // url('../../_shared/img/icons/project/icon-notebook.png');
+$icon-oxidative-stress: url('http://2016.igem.org/wiki/images/a/a8/T--UCL--icon-oxidative-stress.png'); // url('../../_shared/img/icons/project/icon-oxidative-stress.png');
+$icon-accelerating-ageing: url('http://2016.igem.org/wiki/images/d/dd/T--UCL--icon-accelerating-ageing.png'); // url('../../_shared/img/icons/project/icon-accelerating-ageing.png');
+$icon-false-teeth: url('http://2016.igem.org/wiki/images/4/40/T--UCL--icon-false-teeth.png'); // url('../../_shared/img/icons/project/icon-false-teeth.png');
+$icon-grey-love: url('http://2016.igem.org/wiki/images/2/26/T--UCL--icon-grey-love.png'); // url('../../_shared/img/icons/project/icon-grey-love.png');
 
 // * Lab
 $icon-demonstrate: url('http://2016.igem.org/wiki/images/e/e4/UCL_ICON_DEMONSTRATE.png'); // url('../../_shared/img/icons/lab/icon-demonstrate.png');
@@ -25,6 +26,8 @@ $icon-overview: url('http://2016.igem.org/wiki/images/f/f7/UCL_ICON_OVERVIEW.png
 $icon-proof-of-concept: url('http://2016.igem.org/wiki/images/a/a8/UCL_ICON_PROOFOFCONCEPT.png'); // url('../../_shared/img/icons/lab/icon-proof-of-concept.png');
 $icon-safety: url('http://2016.igem.org/wiki/images/a/a3/UCL_ICON_SAFETY.png'); // url('../../_shared/img/icons/lab/icon-safety.png');
 $icon-scaling-up: url('http://2016.igem.org/wiki/images/7/77/UCL_ICON_SCALINGUP.png'); // url('../../_shared/img/icons/lab/icon-scaling-up.png');
+$icon-results: url('http://2016.igem.org/wiki/images/1/1a/T--UCL--icon-results.png'); // url('../../_shared/img/icons/lab/icon-results.png');
+$icon-protocol: url('http://2016.igem.org/wiki/images/2/25/T--UCL--icon-protocol.png'); // url('../../_shared/img/icons/lab/icon-protocol.png');
 
 // * Parts
 $icon-basic: url('http://2016.igem.org/wiki/images/b/bd/UCL_ICON_BASIC.png'); // url('../../_shared/img/icons/parts/icon-basic.png');
@@ -32,10 +35,8 @@ $icon-collection: url('http://2016.igem.org/wiki/images/9/9d/UCL_ICON_COLLECTION
 $icon-composite: url('http://2016.igem.org/wiki/images/8/83/UCL_ICON_COMPOSITE.png'); // url('../../_shared/img/icons/parts/icon-composite.png');
 $icon-measurement: url('http://2016.igem.org/wiki/images/e/e4/UCL_ICON_MEASUREMENT.png'); // url('../../_shared/img/icons/parts/icon-measurement.png');
 
-// * Modelling
-//noinspection CssUnknownTarget
-$icon-modelling-1: url('http://2016.igem.org/wiki/images/c/c3/UCL_ICON_MODELLING_1.png'); // url('../../_shared/img/icons/modelling/icon-modelling-1.png');
-$icon-modelling-2: url('http://2016.igem.org/wiki/images/4/47/UCL_ICON_MODELLING_2.png'); // url('../../_shared/img/icons/modelling/icon-modelling-2.png');
+// * Modelling - no sub-pages.
+//$icon-modelling-2: url('http://2016.igem.org/wiki/images/4/47/UCL_ICON_MODELLING_2.png'); // url('../../_shared/img/icons/modelling/icon-modelling-2.png');
 
 // * Human Practices
 $icon-blog: url('http://2016.igem.org/wiki/images/9/9e/T--UCL--icon_blog.png'); // url('../../_shared/img/icons/human_practices/icon-blog.png');
