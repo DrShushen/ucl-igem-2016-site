@@ -49,6 +49,9 @@
   left: 980px;
   position: fixed; }
 
+.ui-loader .ui-icon-loading {
+  display: none !important; }
+
 #bodyContent {
   height: 100%;
   width: 100%;

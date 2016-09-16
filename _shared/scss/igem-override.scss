@@ -78,6 +78,12 @@
   position: fixed;
 }
 
+// Loading graphic.
+.ui-loader {
+  .ui-icon-loading {
+    display: none!important;
+  }
+}
 
 
 
