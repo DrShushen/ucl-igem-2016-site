@@ -23,7 +23,7 @@
 #sideMenu, #top_title {
   display: none; }
 
-#mw-content-text > p:first-of-type {
+#mw-content-text > p {
   display: none; }
 
 #top_menu_inside {
@@ -51,9 +51,6 @@
 
 .ui-loader .ui-icon-loading {
   display: none !important; }
-
-.ui-page {
-  display: block !important; }
 
 #bodyContent {
   height: 100%;

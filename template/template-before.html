@@ -1,115 +1,89 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js"><!-- HEAD:-->
-<head><!-- Meta:-->
-    <meta charset="UTF-8">
-    <meta name="keywords" content="iGEM, UCL, 2016, BioSynthAge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>UCL iGEM 2016 | BioSynthAge</title><!-- ----->
-
-    <!-- Favicon:-->
-    <div id="favicon-array">
-        <link rel="apple-touch-icon" sizes="57x57"
-              href="http://2016.igem.org/wiki/images/a/a3/T--UCL--apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60"
-              href="http://2016.igem.org/wiki/images/f/f6/T--UCL--apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72"
-              href="http://2016.igem.org/wiki/images/8/80/T--UCL--apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76"
-              href="http://2016.igem.org/wiki/images/8/85/T--UCL--apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114"
-              href="http://2016.igem.org/wiki/images/c/c8/T--UCL--apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120"
-              href="http://2016.igem.org/wiki/images/9/9b/T--UCL--apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144"
-              href="http://2016.igem.org/wiki/images/c/cb/T--UCL--apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152"
-              href="http://2016.igem.org/wiki/images/6/62/T--UCL--apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180"
-              href="http://2016.igem.org/wiki/images/9/96/T--UCL--apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"
-              href="http://2016.igem.org/wiki/images/8/84/T--UCL--android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-              href="http://2016.igem.org/wiki/images/e/eb/T--UCL--favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96"
-              href="http://2016.igem.org/wiki/images/5/57/T--UCL--favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-              href="http://2016.igem.org/wiki/images/b/b0/T--UCL--favicon-16x16.png">
-        <meta name="msapplication-TileImage"
-              content="http://2016.igem.org/wiki/images/6/67/T--UCL--ms-icon-144x144.png">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="theme-color" content="#ffffff">
-    </div><!-- (Local)link(rel='apple-touch-icon', sizes='57x57', href='./_shared/img/favicon/apple-icon-57x57.png')
-link(rel='apple-touch-icon', sizes='60x60', href='./_shared/img/favicon/apple-icon-60x60.png')
-link(rel='apple-touch-icon', sizes='72x72', href='./_shared/img/favicon/apple-icon-72x72.png')
-link(rel='apple-touch-icon', sizes='76x76', href='./_shared/img/favicon/apple-icon-76x76.png')
-link(rel='apple-touch-icon', sizes='114x114', href='./_shared/img/favicon/apple-icon-114x114.png')
-link(rel='apple-touch-icon', sizes='120x120', href='./_shared/img/favicon/apple-icon-120x120.png')
-link(rel='apple-touch-icon', sizes='144x144', href='./_shared/img/favicon/apple-icon-144x144.png')
-link(rel='apple-touch-icon', sizes='152x152', href='./_shared/img/favicon/apple-icon-152x152.png')
-link(rel='apple-touch-icon', sizes='180x180', href='./_shared/img/favicon/apple-icon-180x180.png')
-link(rel='icon', type='image/png', sizes='192x192', href='./_shared/img/favicon/android-icon-192x192.png')
-link(rel='icon', type='image/png', sizes='32x32', href='./_shared/img/favicon/favicon-32x32.png')
-link(rel='icon', type='image/png', sizes='96x96', href='./_shared/img/favicon/favicon-96x96.png')
-link(rel='icon', type='image/png', sizes='16x16', href='./_shared/img/favicon/favicon-16x16.png')
-meta(name='msapplication-TileImage', content='./_shared/img/favicon/ms-icon-144x144.png')--><!-- ----->
-
-    <!-- Top level CSS and JS:--><!-- ESS loader.-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-loader.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./_shared/css/ess-loader.css')-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-loader.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/custom/ess-loader.js')--><!-- ESS favicon setter.-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-favicon-setter.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/custom/ess-favicon-setter.js')--><!-- ESS link fixer.-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-link-fixer.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/custom/ess-link-fixer.js')--><!-- iGem style override.-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/igem-override.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./_shared/css/igem-override.css')--><!-- ----->
-    <!-- Overriding jade blocks:--><!-- Fonts--><!-- Shared fonts:-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/fonts.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./_shared/css/fonts.css')--><!-- STYLESHEETS-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/footer.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./_shared/css/footer.css')-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/reset.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./page/css/reset.css')-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/menu.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./page/css/menu.css')-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/main-content.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./page/css/main-content.css')-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/vertical-scroll-structure.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./_shared/css/vertical-scroll-structure.css')-->
-    <!-- HEADER SCRIPTS - See more scripts in the end of body-->
-    <!-- jQuery, a jQuery mobile compatible latest version.-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery-2.1.4.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/jquery-2.1.4.min.js')--><!-- jQuery mobile 1.4.5 with theme-less CSS.-->
-    <link rel="stylesheet"
-          href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.mobile.structure-1.4.5.min.css&amp;action=raw&amp;ctype=text/css">
-    <!--link(rel='stylesheet', href='./page/css/jquery-mobile/jquery.mobile.structure-1.4.5.min.css')-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.mobile.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./page/js/jquery.mobile.min.js')--><!-- Modernizr is allowed in the head, as it's a library.-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/modernizr.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./page/js/modernizr.min.js')--><!-- Page Scroll 2 ID plugin (for vertical scrolling navigation)-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.malihu.PageScroll2id.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/jquery.malihu.PageScroll2id.min.js')--><!-- CUSTOM SCRIPTS--><!-- ESS search refs.-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-search.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/custom/ess-search.js')--><!-- ESS search refs.-->
-    <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/vertical-scroll-structure.js&amp;action=raw&amp;ctype=text/javascript"></script>
-    <!--script(src='./_shared/js/custom/ess-search.js')-->
-
-
-    <!-- ----->
-
-
+<head>
+    <div id="head-holder">
+        <div id="head-to-move"><!-- FAVICON:-->
+            <link rel="apple-touch-icon" sizes="57x57"
+                  href="http://2016.igem.org/wiki/images/a/a3/T--UCL--apple-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="60x60"
+                  href="http://2016.igem.org/wiki/images/f/f6/T--UCL--apple-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="72x72"
+                  href="http://2016.igem.org/wiki/images/8/80/T--UCL--apple-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76"
+                  href="http://2016.igem.org/wiki/images/8/85/T--UCL--apple-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114"
+                  href="http://2016.igem.org/wiki/images/c/c8/T--UCL--apple-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120"
+                  href="http://2016.igem.org/wiki/images/9/9b/T--UCL--apple-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144"
+                  href="http://2016.igem.org/wiki/images/c/cb/T--UCL--apple-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152"
+                  href="http://2016.igem.org/wiki/images/6/62/T--UCL--apple-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180"
+                  href="http://2016.igem.org/wiki/images/9/96/T--UCL--apple-icon-180x180.png">
+            <link rel="icon" type="image/png" sizes="192x192"
+                  href="http://2016.igem.org/wiki/images/8/84/T--UCL--android-icon-192x192.png">
+            <link rel="icon" type="image/png" sizes="32x32"
+                  href="http://2016.igem.org/wiki/images/e/eb/T--UCL--favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="96x96"
+                  href="http://2016.igem.org/wiki/images/5/57/T--UCL--favicon-96x96.png">
+            <link rel="icon" type="image/png" sizes="16x16"
+                  href="http://2016.igem.org/wiki/images/b/b0/T--UCL--favicon-16x16.png">
+            <meta name="msapplication-TileImage"
+                  content="http://2016.igem.org/wiki/images/6/67/T--UCL--ms-icon-144x144.png">
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="theme-color" content="#ffffff">
+        </div><!-- META:-->
+        <meta charset="UTF-8">
+        <meta name="keywords" content="iGEM, UCL, 2016, BioSynthAge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UCL iGEM 2016 | BioSynthAge</title><!-- TOP LEVEL JS & CSS:--><!-- ESS loader.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-loader.css&amp;action=raw&amp;ctype=text/css">
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-loader.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- ESS head setter.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-head-setter.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- ESS link fixer.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-link-fixer.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- iGem style override.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/igem-override.css&amp;action=raw&amp;ctype=text/css">
+        <!-- FONTS:-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/fonts.css&amp;action=raw&amp;ctype=text/css">
+        <!-- STYLESHEETS:--><!-- Footer-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/footer.css&amp;action=raw&amp;ctype=text/css">
+        <!-- Reset (used by the menu).-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/reset.css&amp;action=raw&amp;ctype=text/css">
+        <!-- Menu.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/menu.css&amp;action=raw&amp;ctype=text/css">
+        <!-- Main content.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/main-content.css&amp;action=raw&amp;ctype=text/css">
+        <!-- Vertical scroll structure.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/vertical-scroll-structure.css&amp;action=raw&amp;ctype=text/css">
+        <!-- HEAD SCRIPTS:--><!-- --- LIBRARIES -----><!-- jQuery, a jQuery mobile compatible latest version.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery-2.1.4.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- jQuery mobile 1.4.5 with theme-less CSS.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.mobile.structure-1.4.5.min.css&amp;action=raw&amp;ctype=text/css">
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.mobile.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- Modernizr.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/modernizr.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- Page Scroll 2 ID plugin (for vertical scrolling navigation)-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.malihu.PageScroll2id.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- --- CUSTOM -----><!-- Search.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-search.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- Vertical scroll structure.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/vertical-scroll-structure.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- ADDITIONAL:--></div>
 </head><!-- BODY:-->
-<body>
+<body><!-- LOADER:-->
 <div id="ess-loader-holder">
     <div class="ess-loader">
         <div class="rect1"></div>
@@ -118,7 +92,7 @@ meta(name='msapplication-TileImage', content='./_shared/img/favicon/ms-icon-144x
         <div class="rect4"></div>
         <div class="rect5"></div>
     </div>
-</div>
+</div><!-- MAIN BODY:-->
 <div id="body-loaded"><!-- Header.-->
     <header class="cd-main-header"><a href="http://2016.igem.org/Team:UCL" class="cd-logo">
         <div class="img">
@@ -286,6 +260,6 @@ meta(name='msapplication-TileImage', content='./_shared/img/favicon/ms-icon-144x
     <!-- Content goes here, like so --------block actual-content
         main.cd-main-content
                     .container
-                        // ACTUAL CONTENT--><!-- -------------------------------------></div>
+                        // ACTUAL CONTENT--><!-- -------------------------------------></div><!-- END-OF-BODY SCRIPTS:-->
 </body>
 </html>

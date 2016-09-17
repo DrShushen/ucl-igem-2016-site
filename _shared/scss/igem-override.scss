@@ -48,7 +48,7 @@
 
 // Make the custome HEAD element holder occupy no space.
 #mw-content-text {
-  > p:first-of-type{
+  > p{
     display: none;
   }
 }
@@ -83,12 +83,6 @@
   .ui-icon-loading {
     display: none!important;
   }
-}
-
-// General functionality.
-// HACK:
-.ui-page {
-  display: block!important;
 }
 
 
