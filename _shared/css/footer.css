@@ -160,12 +160,13 @@ Footer style
         color: #e2e3df;
         font-size: 1.2em;
         font-weight: bold;
-        line-height: 1.4em;
+        line-height: 1.6em;
         margin: 0;
         text-align: center;
-        height: 1.4em;
+        height: 1.6em;
         width: 100%;
-        display: block; }
+        display: block;
+        vertical-align: baseline; }
       #footer.footer-distributed .footer-right .sponsor-image {
         margin: 0;
         text-align: left;
