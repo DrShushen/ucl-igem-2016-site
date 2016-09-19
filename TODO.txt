@@ -1,4 +1,6 @@
 TODO:
+* Rethink where to put the js links and which ones (head vs end of body).
+* Make the vertical navigation side menu properly responsive!
 * Move page codes to GitHub location.
 * Resolve that missing Parts page issue.
 * Update README.md.
