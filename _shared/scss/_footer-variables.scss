@@ -1,11 +1,13 @@
 // --- Footer parameters ---
 
 $footer-safety-margin-percentage: 2%;
+$footer-safety-margin-percentage-v2: 1%;
 
 $footer-custom-padding: 10px;
 
-$footer-left-width: 35%;
-$footer-right-width: (65% - $footer-safety-margin-percentage);
+$footer-left-width: 30%;
+$footer-center-width: 40%;
+$footer-right-width: (30% - $footer-safety-margin-percentage);
 
 $footer-big-link-col1-width: 10%;
 $footer-big-link-col2-width: (90% - $footer-safety-margin-percentage);

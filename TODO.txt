@@ -1,6 +1,5 @@
 TODO:
-* Get rid of logging by ess-loader.
-* Fix jQuery.
+* Move page codes to GitHub location.
 * Resolve that missing Parts page issue.
 * Update README.md.
 * Add search button to tap on mobiles only, within search form.
