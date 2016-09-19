@@ -59,12 +59,14 @@
 }
 #bars_item {
   width: 20px;
-  margin-top: 1px;
-  height: 14px;
+  margin-top: 0;
+  padding-top: 0;
+  top: 0!important;
+  height: 16px;
 }
 #top_menu_inside {
   vertical-align: middle;
-  padding-top: 3px;
+  padding-top: 0;
 }
 #user_item {
   padding-top: 0!important;

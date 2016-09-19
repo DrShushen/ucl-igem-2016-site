@@ -165,6 +165,56 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+// Bootstrap fixes.
+
+.cd-main-header {
+  font-family: $menu-font;
+}
+
+.cd-primary-nav, .cd-primary-nav ul {
+
+  a:hover, a:active, a:visited {
+    color: $color-nav-link !important;
+  }
+
+  li > a {
+    font-size: 120%;
+  }
+
+  li > ul {
+
+    li {
+      a:hover, a:active, a:visited {
+        color: $color-nav-link !important;
+      }
+    }
+
+    li > a > h3 {
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+
+    @include MQ(L) {
+
+      font-size: .9em;
+
+      li > a > h3 {
+        line-height: 1.3em;
+        font-weight: 600;
+      }
+
+    }
+
+  }
+
+}
+
+.cd-primary-nav .cd-nav-icons .cd-nav-item {
+  padding: $nav-bar-links-padding-top-S 0 0 $nav-bar-links-padding-left;
+}
+
+// ---
+
 /* -------------------------------- 
 
 Main components 
@@ -460,11 +510,38 @@ Main components
 
 .cd-primary-nav, .cd-primary-nav ul {
 
-  // iGem wiki fix.
+  // iGem wiki fixes.
+
   margin-top: 1em!important;
   @include MQ(L) {
     margin-top: 0!important;
   }
+
+  li > ul {
+
+    margin-top: 0!important;
+    @include MQ(L) {
+      margin-top: inherit;
+    }
+
+    li > a > h3 {
+      color: $color-nav-link!important;
+    }
+
+    li > a > h3, li > a > p {
+      @include MQ(L) {
+        line-height: 1.3em;
+      }
+    }
+
+  }
+
+  // ---
+
+  // Bootstrap fixes
+
+  // -------------------------------------
+
   // ---
 
   position: fixed;
@@ -494,7 +571,7 @@ Main components
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    color: $color-white;
+    color: $color-nav-link;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
@@ -517,26 +594,6 @@ Main components
     opacity: 0;
   }
 
-  // iGem wiki fixes:
-  li > ul {
-
-    margin-top: 0!important;
-    @include MQ(L) {
-      margin-top: inherit;
-    }
-
-    li > a > h3 {
-      color: $color-white!important;
-    }
-
-    li > a > h3, li > a > p {
-      @include MQ(L) {
-        line-height: 1.3em;
-      }
-    }
-
-  }
-  // ---
 }
 
 @include MQ(maxL) {
@@ -989,7 +1046,7 @@ Main components
           &:hover {
             background: $color-nav-bottom-panel-hover;
             border-color: $color-nav-graphical;
-            color: $color-white;
+            color: $color-nav-link;
           }
         }
       }
@@ -1133,7 +1190,7 @@ Main components
 
         h3 {
           color: $color-nav-panel-link;
-          font-weight: bold;
+          font-weight: 600; // Bootstrap fix. //font-weight: bold;
         }
 
         p {
@@ -1165,7 +1222,10 @@ Main components
       }
 
       .cd-nav-item {
-        padding: 24px 0 0 85px;
+
+        @include MQ(L) {
+          padding: $nav-bar-links-padding-top-L 0 0 $nav-bar-links-padding-left;
+        }
 
         &::before {
           left: 25px;
@@ -1186,7 +1246,7 @@ Main components
       }
 
       .cd-nav-item {
-        padding: 24px 0 0 20px;
+        padding: $nav-bar-links-padding-top-L 0 0 $nav-bar-links-padding-left-iconless;
       }
     }
   }

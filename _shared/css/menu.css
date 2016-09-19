@@ -131,6 +131,28 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none; }
 
+.cd-main-header {
+  font-family: "Open Sans", sans-serif; }
+
+.cd-primary-nav a:hover, .cd-primary-nav a:active, .cd-primary-nav a:visited, .cd-primary-nav ul a:hover, .cd-primary-nav ul a:active, .cd-primary-nav ul a:visited {
+  color: #ffffff !important; }
+.cd-primary-nav li > a, .cd-primary-nav ul li > a {
+  font-size: 120%; }
+.cd-primary-nav li > ul li a:hover, .cd-primary-nav li > ul li a:active, .cd-primary-nav li > ul li a:visited, .cd-primary-nav ul li > ul li a:hover, .cd-primary-nav ul li > ul li a:active, .cd-primary-nav ul li > ul li a:visited {
+  color: #ffffff !important; }
+.cd-primary-nav li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > h3 {
+  font-size: 1.1em;
+  font-weight: 300; }
+@media only screen and (min-width: 1270px) {
+  .cd-primary-nav li > ul, .cd-primary-nav ul li > ul {
+    font-size: .9em; }
+    .cd-primary-nav li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > h3 {
+      line-height: 1.3em;
+      font-weight: 600; } }
+
+.cd-primary-nav .cd-nav-icons .cd-nav-item {
+  padding: 30px 0 0 85px; }
+
 /* -------------------------------- 
 
 Main components 
@@ -438,6 +460,16 @@ Main components
   @media only screen and (min-width: 1270px) {
     .cd-primary-nav, .cd-primary-nav ul {
       margin-top: 0 !important; } }
+  .cd-primary-nav li > ul, .cd-primary-nav ul li > ul {
+    margin-top: 0 !important; }
+    @media only screen and (min-width: 1270px) {
+      .cd-primary-nav li > ul, .cd-primary-nav ul li > ul {
+        margin-top: inherit; } }
+    .cd-primary-nav li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > h3 {
+      color: #ffffff !important; }
+    @media only screen and (min-width: 1270px) {
+      .cd-primary-nav li > ul li > a > h3, .cd-primary-nav li > ul li > a > p, .cd-primary-nav ul li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > p {
+        line-height: 1.3em; } }
   .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-secondary-nav ul, .cd-primary-nav ul .cd-secondary-nav, .cd-primary-nav ul .cd-secondary-nav ul {
     overflow-x: hidden; }
   .cd-primary-nav a, .cd-primary-nav ul a {
@@ -476,16 +508,6 @@ Main components
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
     opacity: 0; }
-  .cd-primary-nav li > ul, .cd-primary-nav ul li > ul {
-    margin-top: 0 !important; }
-    @media only screen and (min-width: 1270px) {
-      .cd-primary-nav li > ul, .cd-primary-nav ul li > ul {
-        margin-top: inherit; } }
-    .cd-primary-nav li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > h3 {
-      color: #ffffff !important; }
-    @media only screen and (min-width: 1270px) {
-      .cd-primary-nav li > ul li > a > h3, .cd-primary-nav li > ul li > a > p, .cd-primary-nav ul li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > p {
-        line-height: 1.3em; } }
 
 @media only screen and (max-width: 1269px) {
   .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
@@ -902,7 +924,7 @@ Main components
       transition: background 0.2s; }
       .cd-primary-nav .cd-nav-icons .cd-nav-item h3, .cd-primary-nav .cd-nav-iconless .cd-nav-item h3 {
         color: #ffffff;
-        font-weight: bold; }
+        font-weight: 600; }
       .cd-primary-nav .cd-nav-icons .cd-nav-item p, .cd-primary-nav .cd-nav-iconless .cd-nav-item p {
         display: block;
         color: #c3c4c0; }
@@ -920,11 +942,13 @@ Main components
         margin: 0 2% 20px 0; }
         .cd-primary-nav .cd-nav-icons li:nth-child(3n+2) {
           /* +2 because we have two additional list items with display:none */
-          margin-right: 0; }
+          margin-right: 0; } }
+    @media only screen and (min-width: 1270px) and (min-width: 1270px) {
       .cd-primary-nav .cd-nav-icons .cd-nav-item {
-        padding: 24px 0 0 85px; }
-        .cd-primary-nav .cd-nav-icons .cd-nav-item::before {
-          left: 25px; }
+        padding: 20px 0 0 85px; } }
+@media only screen and (min-width: 1270px) {
+      .cd-primary-nav .cd-nav-icons .cd-nav-item::before {
+        left: 25px; }
     .cd-primary-nav .cd-nav-iconless li {
       /* set here number of columns - use width percentage */
       width: 32%;
@@ -934,7 +958,7 @@ Main components
         /* +2 because we have two additional list items with display:none */
         margin-right: 0; }
     .cd-primary-nav .cd-nav-iconless .cd-nav-item {
-      padding: 24px 0 0 20px; } }
+      padding: 20px 0 0 20px; } }
 .has-children > a, .go-back a {
   position: relative; }
   .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
