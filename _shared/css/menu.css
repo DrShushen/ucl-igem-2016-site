@@ -627,13 +627,13 @@ Main components
   .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-9::before {
     background-image: url("http://2016.igem.org/wiki/images/1/1a/T--UCL--icon-results.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-1::before {
-    background-image: url("http://2016.igem.org/wiki/images/b/bd/UCL_ICON_BASIC.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/2/22/T--UCL--icon-parts-overview.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-2::before {
-    background-image: url("http://2016.igem.org/wiki/images/8/83/UCL_ICON_COMPOSITE.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/b/bd/UCL_ICON_BASIC.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-3::before {
-    background-image: url("http://2016.igem.org/wiki/images/9/9d/UCL_ICON_COLLECTION.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/8/83/UCL_ICON_COMPOSITE.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-4::before {
-    background-image: url("http://2016.igem.org/wiki/images/e/e4/UCL_ICON_MEASUREMENT.png"); }
+    background-image: url("http://2016.igem.org/wiki/images/9/9d/UCL_ICON_COLLECTION.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-1::before {
     background-image: url("http://2016.igem.org/wiki/images/c/c3/T--UCL--icon-our-story.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-2::before {
@@ -714,7 +714,8 @@ Main components
       width: auto;
       background: transparent;
       overflow: visible;
-      z-index: 5; }
+      z-index: 5;
+      border-bottom: solid #ffffff 1px; }
       .cd-primary-nav ul.is-hidden {
         /* reset mobile style */
         -webkit-transform: translateX(0);
@@ -753,6 +754,8 @@ Main components
       .cd-primary-nav > li > a.selected {
         color: #ff9c00;
         box-shadow: inset 0 -2px 0 #ff9c00; }
+        .cd-primary-nav > li > a.selected:hover {
+          color: #ff9c00 !important; }
     .cd-primary-nav .go-back, .cd-primary-nav .see-all {
       display: none; }
     .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery, .cd-primary-nav .cd-nav-icons, .cd-primary-nav .cd-nav-iconless {
@@ -761,7 +764,7 @@ Main components
       top: 90px;
       width: 100vw;
       background: #004574;
-      padding: 20px 64px 80px;
+      padding: 20px 64px 0;
       box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);

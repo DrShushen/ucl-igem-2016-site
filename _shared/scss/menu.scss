@@ -781,19 +781,19 @@ Main components
   // * Parts
   .cd-nav-icons#category-parts .cd-nav-item {
     &.item-1::before {
-      background-image: $icon-basic;
+      background-image: $icon-parts-overview;
     }
 
     &.item-2::before {
-      background-image: $icon-composite;
+      background-image: $icon-basic;
     }
 
     &.item-3::before {
-      background-image: $icon-collection;
+      background-image: $icon-composite;
     }
 
     &.item-4::before {
-      background-image: $icon-measurement;
+      background-image: $icon-collection;
     }
   }
 
@@ -940,6 +940,8 @@ Main components
       overflow: visible;
       z-index: $z-above-content;
 
+      border-bottom: solid $color-white 1px; // Post-removing "view all" links.
+
       &.is-hidden {
         /* reset mobile style */
         @include transform(translateX(0));
@@ -973,13 +975,15 @@ Main components
         color: $color-nav-link-hover;
       }
       &:hover::before, &:hover::after {
-        //@include transition(background $menu-slideout-timing);
         background: $color-nav-link-hover;
       }
 
       &.selected {
         color: $color-nav-link-active;
         box-shadow: inset 0 -2px 0 $color-nav-link-active;
+        &:hover {
+          color: $color-nav-link-active!important;
+        }
       }
     }
 
@@ -993,7 +997,7 @@ Main components
       top: $header-height-L;
       width: 100vw;
       background: $color-nav-background;
-      padding: 20px 64px 80px;
+      padding: 20px 64px 0; // Post-removing "view all" links - last one 80px to 0.
       box-shadow: inset 0 1px 0 $color-nav-graphical, 0 3px 6px rgba(#000, .05);
       @include transform(translateX(0));
       @include clearfix;
