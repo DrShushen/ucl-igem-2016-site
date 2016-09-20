@@ -142,7 +142,7 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #ffffff !important; }
 .cd-primary-nav li > ul li > a > h3, .cd-primary-nav ul li > ul li > a > h3 {
   font-size: 1.1em;
-  font-weight: 300; }
+  font-weight: 400; }
 @media only screen and (min-width: 1270px) {
   .cd-primary-nav li > ul, .cd-primary-nav ul li > ul {
     font-size: .9em; }
@@ -948,7 +948,7 @@ Main components
           margin-right: 0; } }
     @media only screen and (min-width: 1270px) and (min-width: 1270px) {
       .cd-primary-nav .cd-nav-icons .cd-nav-item {
-        padding: 20px 0 0 85px; } }
+        padding: 18px 0 0 85px; } }
 @media only screen and (min-width: 1270px) {
       .cd-primary-nav .cd-nav-icons .cd-nav-item::before {
         left: 25px; }
@@ -961,7 +961,7 @@ Main components
         /* +2 because we have two additional list items with display:none */
         margin-right: 0; }
     .cd-primary-nav .cd-nav-iconless .cd-nav-item {
-      padding: 20px 0 0 20px; } }
+      padding: 18px 0 0 20px; } }
 .has-children > a, .go-back a {
   position: relative; }
   .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {

@@ -43,9 +43,9 @@ $main-content-padding-rl: 8rem;
 
 
 
-// --- Font families ---
+// --- Fonts ---
 
-//$menu-font: 'Open Sans', sans-serif;
+$main-content-font: 'Open Sans', sans-serif;
 
 
 
@@ -71,6 +71,14 @@ $logo-y-L-adj: $header-height-L / 2 - ($logo-height-int + 0px) / 2;
 // Logo width
 $logo-width: 250px;
 $logo-move-left-adjust: -1*$logo-width/2;
+
+
+
+
+
+// --- Navigation size ---
+
+$nav-width-S: 260px;
 
 
 
@@ -103,3 +111,15 @@ $search-height-L: 100px;
 // --- Menu Slide-out Timing ---
 
 $menu-slideout-timing: .3s;
+
+
+
+
+
+// --- Z-index ---
+
+$z-below-content: 1;
+$z-content: 2;
+$z-just-above: 3;
+$z-at-overlay: 4;
+$z-above-content: 5;

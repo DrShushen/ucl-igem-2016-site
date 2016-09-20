@@ -37,13 +37,6 @@ $color-nav-trigger: #ffffff; // white
 // --- Fonts ---
 
 $menu-font: 'Open Sans', sans-serif;
-$main-content-font: 'Open Sans', sans-serif;
-
-
-
-// --- Navigation size ---
-
-$nav-width-S: 260px;
 
 
 
@@ -55,7 +48,7 @@ $nav-bottom-bar-height: 60px;
 
 // --- Navigation bar other ---
 
-$nav-bar-links-padding-top-L: 20px;
+$nav-bar-links-padding-top-L: 18px;
 $nav-bar-links-padding-top-S: 30px;
 $nav-bar-links-padding-left: 85px;
 $nav-bar-links-padding-left-iconless: 20px;
@@ -85,12 +78,3 @@ $nav-menu-buttons-top-L-new: $nav-menu-buttons-top-L - $shrink-header-height-L-d
 $nav-menu-buttons-top-L-new: $nav-menu-buttons-top-S - $shrink-header-height-S-diff;
 
 $nav-menu-links-y-new: 0px - $shrink-header-height-L-diff;
-
-
-// --- Z-index ---
-
-$z-below-content: 1;
-$z-content: 2;
-$z-just-above: 3;
-$z-at-overlay: 4;
-$z-above-content: 5;
