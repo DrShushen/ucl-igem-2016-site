@@ -1,14 +1,11 @@
 TODO:
-* See if possibke to safely remove doctype declaration.
-* Rethink where to put the js links and which ones (head vs end of body).
-* Make the vertical navigation side menu properly responsive!
-* Move page codes to GitHub location.
-* Resolve that missing Parts page issue.
-* Update README.md.
-* Add search button to tap on mobiles only, within search form.
 * Make the landing page with the carousel.
-* Put it all together to deploy on the wiki.
 * Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
-* !!! Fix the looks and functionality of the iGem top bar's menus. !!!
+* Fix the looks and functionality of the iGem top bar's menus.
+* Make the vertical navigation side menu properly responsive!
+* Add search button to tap on mobiles only, within search form.
+* See if possible to safely remove doctype declaration.
+* Rethink where to put the js links and which ones (head vs end of body).
+* Update README.md.
 * Add keyword metadata for SEO purposes.
 * Consider if that strange IE comment is needed in header, see e.g. fullPaje.js's demo htmls whare this is done.
