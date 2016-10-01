@@ -7,6 +7,7 @@
   z-index: 3;
   text-shadow: none;
   color: #ffffff;
+  margin-top: 5px;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -30,7 +31,6 @@
   #vertical-scroll-nav ul {
     overflow: hidden;
     background: #7b7b7b;
-    background: rgba(27, 29, 30, 0.5);
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -62,6 +62,24 @@
     #vertical-scroll-nav {
       top: 112px;
       right: 20px; } }
+  #vertical-scroll-nav ul.desktop .vertical-scroll-nav-chevron {
+    cursor: pointer;
+    display: none; }
+  #vertical-scroll-nav ul.mobile {
+    width: 3.1rem; }
+    #vertical-scroll-nav ul.mobile .vertical-scroll-nav-chevron {
+      cursor: pointer;
+      display: block; }
+    #vertical-scroll-nav ul.mobile .vertical-scroll-nav-chevron:hover {
+      background-color: #004574; }
+    #vertical-scroll-nav ul.mobile li {
+      display: none; }
+    #vertical-scroll-nav ul.mobile.pressed {
+      width: 12rem; }
+      #vertical-scroll-nav ul.mobile.pressed li {
+        display: block; }
+      #vertical-scroll-nav ul.mobile.pressed .vertical-scroll-nav-chevron:hover {
+        background-color: #7b7b7b; }
 
 #main-content-container .vertical-scroll-section {
   padding-top: 22px;

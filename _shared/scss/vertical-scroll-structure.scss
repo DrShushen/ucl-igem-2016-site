@@ -32,6 +32,7 @@
   z-index: $z-just-above;
   text-shadow: none;
   color: $color-white;
+  margin-top: 5px;
 
   /* Force Hardware Acceleration in WebKit */
   @include transform(translateZ(0));
@@ -41,7 +42,6 @@
   ul {
     overflow: hidden;
     background: $color-grey-medium;
-    background: $vertical-scroll-section-nav-color;
 
     -moz-border-radius: $nav-section-radius;
     -webkit-border-radius: $nav-section-radius;
@@ -89,6 +89,39 @@
   @include MQ(L) {
     top: $vertical-scroll-section-nav-y-L;
     right: $nav-section-from-right-L;
+  }
+
+  // Responsive classes.
+  ul.desktop {
+    .vertical-scroll-nav-chevron {
+      cursor: pointer;
+      display: none;
+    }
+  }
+  ul.mobile {
+
+    width: 3.1rem;
+    .vertical-scroll-nav-chevron {
+      cursor: pointer;
+      display: block;
+    }
+    .vertical-scroll-nav-chevron:hover {
+      background-color: $color-blue-I;
+    }
+    li {
+      display: none;
+    }
+
+    &.pressed {
+      width: $nav-section-width;
+      li {
+        display: block;
+      }
+      .vertical-scroll-nav-chevron:hover {
+        background-color: $color-grey-medium;
+      }
+    }
+
   }
 
 }

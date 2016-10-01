@@ -1,10 +1,30 @@
 (function($){
 
+    // Responsive.
+    var updateVerticalScrollResponsivity_safety = 1;
+    var updateVerticalScrollResponsivity_w = 768 - updateVerticalScrollResponsivity_safety;
+    function updateVerticalScrollResponsivity() {
+        if (verticalScrollResponsivityEl !== undefined && verticalScrollResponsivityEl !== null) {
+            if (window.innerWidth > updateVerticalScrollResponsivity_w || $(window).width() > updateVerticalScrollResponsivity_w) { // HAS COUNTERPARTS IN CSS, MUST BE KEPT IN SYNC.
+                verticalScrollResponsivityEl.removeClass('mobile');
+                verticalScrollResponsivityEl.addClass('desktop');
+            } else {
+                verticalScrollResponsivityEl.removeClass('desktop');
+                verticalScrollResponsivityEl.addClass('mobile');
+            }
+        }
+    }
+    $(window).resize(function() {
+        updateVerticalScrollResponsivity();
+    });
+
     // Set up scroll structure.
-    $(window).on("load",function(){
+    $(document).ready(function(){
 
         var navItemsSelector = "#vertical-scroll-nav a";
         var navSectionOffsetAtLeast = 70; // HAS A COUNTERPART IN _vertical-scroll-structure-variables.scss !
+
+        verticalScrollResponsivityEl = $('#vertical-scroll-nav > ul');
 
         /* Page Scroll to id fn call */
         $(navItemsSelector).mPageScroll2id({
@@ -13,6 +33,30 @@
             scrollEasing: "easeInOutQuad",
             offset: navSectionOffsetAtLeast,
             forceSingleHighlight: true
+        });
+
+        updateVerticalScrollResponsivity();
+
+        // Responsive events (mobile only).
+        $('.vertical-scroll-nav-chevron').click(function() {
+            if (verticalScrollResponsivityEl.hasClass('mobile')) {
+                if (!verticalScrollResponsivityEl.hasClass('pressed')) {
+                    verticalScrollResponsivityEl.addClass('pressed');
+                } else {
+                    verticalScrollResponsivityEl.removeClass('pressed');
+                }
+            }
+        });
+        $(document).mouseup(function (e)
+        {
+            if (verticalScrollResponsivityEl.hasClass('mobile')) {
+                var container = verticalScrollResponsivityEl;
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    verticalScrollResponsivityEl.removeClass('pressed');
+                }
+            }
         });
 
     });
