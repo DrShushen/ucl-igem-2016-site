@@ -28,6 +28,9 @@ Navigation shrinking effect
   // "Fixing" the nav bar.
   position: fixed;
   width: 100%;
+  // Possible flicker fix
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .cd-search {
   position: fixed;
@@ -247,6 +250,11 @@ Main components
 }
 
 .cd-main-header {
+
+  // iGem wiki fix.
+  top: 20px;
+  // ---
+
   height: $header-height-S;
   background: $color-nav-background;
   z-index: $z-above-content;
@@ -702,97 +710,105 @@ Main components
 
   // * Project
   .cd-nav-icons#category-project .cd-nav-item {
-    &.item-1::before {
-      background-image: $icon-description;
+    &.item-project-overview::before {
+      background-image: $icon-project-overview;
     }
 
-    &.item-2::before {
-      background-image: $icon-oxidative-stress;
+    &.item-lungs::before {
+      background-image: $icon-lungs;
     }
 
-    &.item-3::before {
-      background-image: $icon-accelerating-ageing;
+    &.item-gut::before {
+      background-image: $icon-gut;
     }
 
-    &.item-4::before {
+    &.item-false-teeth::before {
       background-image: $icon-false-teeth;
     }
 
-    &.item-5::before {
-      background-image: $icon-grey-love;
+    &.item-heart::before {
+      background-image: $icon-heart;
     }
 
-    &.item-6::before {
+    &.item-lubricant::before {
+      background-image: $icon-lubricant;
+    }
+
+    &.item-pest-control::before {
+      background-image: $icon-pest-control;
+    }
+
+    &.item-design::before {
       background-image: $icon-design;
     }
 
-    &.item-7::before {
+    &.item-notebook::before {
       background-image: $icon-notebook;
     }
 
-    &.item-8::before {
+    &.item-glossary::before {
       background-image: $icon-glossary;
     }
 
-    &.item-9::before {
+    &.item-achievements::before {
       background-image: $icon-achievements;
     }
   }
 
   // * Lab
   .cd-nav-icons#category-lab .cd-nav-item {
-    &.item-1::before {
-      background-image: $icon-overview;
+    &.item-lab-overview::before {
+      background-image: $icon-lab-overview;
     }
 
-    &.item-2::before {
+    &.item-proof-of-concept::before {
       background-image: $icon-proof-of-concept;
     }
 
-    &.item-3::before {
+    &.item-demonstrate::before {
       background-image: $icon-demonstrate;
     }
 
-    &.item-4::before {
+    &.item-hardware::before {
       background-image: $icon-hardware;
     }
 
-    &.item-5::before {
+    &.item-lab-book::before {
       background-image: $icon-lab-book;
     }
 
-    &.item-6::before {
+    &.item-safety::before {
       background-image: $icon-safety;
     }
 
-    &.item-7::before {
+    &.item-scaling-up::before {
       background-image: $icon-scaling-up;
     }
 
-    &.item-8::before {
+    &.item-protocol::before {
       background-image: $icon-protocol;
     }
 
-    &.item-9::before {
+    &.item-results::before {
       background-image: $icon-results;
     }
   }
 
   // * Parts
   .cd-nav-icons#category-parts .cd-nav-item {
-    &.item-1::before {
+    &.item-parts-overview::before {
       background-image: $icon-parts-overview;
     }
 
-    &.item-2::before {
+    &.item-basic::before {
       background-image: $icon-basic;
     }
 
-    &.item-3::before {
+    &.item-composite::before {
       background-image: $icon-composite;
     }
 
-    &.item-4::before {
+    &.item-collection::before {
       background-image: $icon-collection;
     }
   }
@@ -812,65 +828,65 @@ Main components
 
   // * Human Practices
   .cd-nav-icons#category-human-practices .cd-nav-item {
-    &.item-1::before {
+    &.item-our-story::before {
       background-image: $icon-our-story;
     }
 
-    &.item-2::before {
-      background-image: $icon-gold;
-    }
-
-    &.item-3::before {
+    &.item-silver::before {
       background-image: $icon-silver;
     }
 
-    &.item-4::before {
+    &.item-gold::before {
+      background-image: $icon-gold;
+    }
+
+    &.item-integrated-practices::before {
       background-image: $icon-integrated-practices;
     }
 
-    &.item-5::before {
+    &.item-engagement::before {
       background-image: $icon-engagement;
     }
 
-    &.item-6::before {
+    &.item-vlog::before {
       background-image: $icon-vlog;
     }
   }
 
   // * Entrepreneurship
   .cd-nav-icons#category-entrepreneurship .cd-nav-item {
-    &.item-1::before {
+    &.item-entrepreneurship-general::before {
       background-image: $icon-entrepreneurship-general;
     }
 
-    &.item-2::before {
+    &.item-software::before {
       background-image: $icon-software;
     }
 
-    &.item-3::before {
+    &.item-alphabrick::before {
       background-image: $icon-alphabrick;
     }
 
-    &.item-4::before {
+    &.item-dental::before {
       background-image: $icon-dental;
     }
   }
 
   // * People
   .cd-nav-icons#category-people .cd-nav-item {
-    &.item-1::before {
+    &.item-team::before {
       background-image: $icon-team;
     }
 
-    &.item-2::before {
+    &.item-collaborations::before {
       background-image: $icon-collaborations;
     }
 
-    &.item-3::before {
+    &.item-sponsors::before {
       background-image: $icon-sponsors;
     }
 
-    &.item-4::before {
+    &.item-attributions::before {
       background-image: $icon-attributions;
     }
   }
@@ -966,6 +982,7 @@ Main components
       height: $header-height-L;
       line-height: $header-height-L;
       padding: 0 10px;
+
       color: $color-nav-link;
       overflow: visible;
       border-bottom: none;
@@ -1255,6 +1272,14 @@ Main components
     }
   }
 }
+
+// Fix nav responsive size
+@media only screen and (max-width: $Menu_ML) {
+  .cd-primary-nav > li > a {
+    padding: 0;
+  }
+}
+// ---
 
 .has-children > a, .go-back a {
   position: relative;

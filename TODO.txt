@@ -1,6 +1,4 @@
 TODO:
-* Make the landing page with the carousel.
-* Create a number of simple "themes" (html tags, basically) you guys can use to update individual pages from my template.
 * Fix the looks and functionality of the iGem top bar's menus.
 * Make the vertical navigation side menu properly responsive!
 * Add search button to tap on mobiles only, within search form.

@@ -37,6 +37,34 @@ High level settings.
   // Ensure min height, such that the footer is always a footer.
   min-height: $main-content-min-height;
 
+  // Owl.
+  #ess-landing-carousel .owl-controls {
+    background-color: $color-main-content-bgd;
+  }
+
+}
+
+// Menu background prettifiers.
+.ess-menu-bgd-prettify-blue {
+  background-color: $color-blue-I;
+}
+.ess-menu-bgd-prettify-white {
+  background-color: $color-white;
+}
+.ess-menu-bgd-prettify-light-gray {
+  background-color: rgba($color-black, .03);
+}
+
+
+
+
+/* --------------------------------
+
+Overriding Flew.
+
+-------------------------------- */
+.js-fh5co-nav-toggle, .fh5co-nav-toggle {
+  display: none!important;
 }
 
 
@@ -49,7 +77,7 @@ Main content style.
 
 -------------------------------- */
 
-.cd-main-content {
+#HQ_page .cd-main-content, .cd-main-content {
 
   // overrides:
   font-family: $main-content-font;
@@ -118,9 +146,18 @@ Main content style.
 
   #main-content-container {
     margin: 0;
+
+    background-color: $color-main-content-bgd;
+
     padding-top: $main-content-padding-tb;
     padding-bottom: $main-content-padding-tb;
     padding-right: $main-content-padding-rl;
     padding-left: $main-content-padding-rl;
+  }
+
+  #ess-landing-carousel-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }

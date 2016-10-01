@@ -3,7 +3,7 @@
 
 // --- Large screen nav colors ---
 
-$color-nav-background: #004574; // blue VI
+$color-nav-background: #004574; // blue I
 $color-nav-graphical: #e2e3df; // grey light
 
 $color-nav-link: #ffffff; // white
@@ -78,3 +78,8 @@ $nav-menu-buttons-top-L-new: $nav-menu-buttons-top-L - $shrink-header-height-L-d
 $nav-menu-buttons-top-L-new: $nav-menu-buttons-top-S - $shrink-header-height-S-diff;
 
 $nav-menu-links-y-new: 0px - $shrink-header-height-L-diff;
+
+
+
+// Special responsiveness size
+$Menu_ML: 1350px;

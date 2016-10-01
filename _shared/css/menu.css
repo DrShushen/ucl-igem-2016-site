@@ -5,7 +5,9 @@ Navigation shrinking effect
 -------------------------------- */
 .cd-main-header {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
 
 .cd-search {
   position: fixed; }
@@ -190,6 +192,7 @@ Main components
       transform: translateX(260px); } }
 
 .cd-main-header {
+  top: 20px;
   height: 70px;
   background: #004574;
   z-index: 5; }
@@ -590,77 +593,81 @@ Main components
       background-image: none; }
     .cd-primary-nav .cd-nav-icons .cd-nav-item.item-8::before {
       background-image: none; }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-1::before {
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-project-overview::before {
     background-image: url("http://2016.igem.org/wiki/images/0/00/UCL_ICON_DESCRIPTION.PNG"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-2::before {
-    background-image: url("http://2016.igem.org/wiki/images/a/a8/T--UCL--icon-oxidative-stress.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-3::before {
-    background-image: url("http://2016.igem.org/wiki/images/d/dd/T--UCL--icon-accelerating-ageing.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-4::before {
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-lungs::before {
+    background-image: url("http://2016.igem.org/wiki/images/0/0a/T--UCL--icon-lungs.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-gut::before {
+    background-image: url("http://2016.igem.org/wiki/images/b/b1/T--UCL--icon-gut.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-false-teeth::before {
     background-image: url("http://2016.igem.org/wiki/images/4/40/T--UCL--icon-false-teeth.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-5::before {
-    background-image: url("http://2016.igem.org/wiki/images/2/26/T--UCL--icon-grey-love.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-6::before {
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-heart::before {
+    background-image: url("http://2016.igem.org/wiki/images/2/24/T--UCL--icon-heart.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-lubricant::before {
+    background-image: url("http://2016.igem.org/wiki/images/9/98/T--UCL--icon-lubricant.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-pest-control::before {
+    background-image: url("http://2016.igem.org/wiki/images/d/dd/T--UCL--icon-accelerating-ageing.png"); }
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-design::before {
     background-image: url("http://2016.igem.org/wiki/images/f/fe/UCL_ICON_DESIGN.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-7::before {
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-notebook::before {
     background-image: url("http://2016.igem.org/wiki/images/0/04/UCL_ICON_NOTEBOOK.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-8::before {
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-glossary::before {
     background-image: url("http://2016.igem.org/wiki/images/6/6d/UCL_ICON_GLOSSARY.png"); }
-  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-9::before {
+  .cd-primary-nav .cd-nav-icons#category-project .cd-nav-item.item-achievements::before {
     background-image: url("http://2016.igem.org/wiki/images/3/3c/UCL_ICON_ACHIEVEMENTS.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-1::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-lab-overview::before {
     background-image: url("http://2016.igem.org/wiki/images/f/f7/UCL_ICON_OVERVIEW.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-2::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-proof-of-concept::before {
     background-image: url("http://2016.igem.org/wiki/images/a/a8/UCL_ICON_PROOFOFCONCEPT.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-3::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-demonstrate::before {
     background-image: url("http://2016.igem.org/wiki/images/e/e4/UCL_ICON_DEMONSTRATE.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-4::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-hardware::before {
     background-image: url("http://2016.igem.org/wiki/images/e/e4/UCL_ICON_HARDWARE.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-5::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-lab-book::before {
     background-image: url("http://2016.igem.org/wiki/images/b/bc/UCL_ICON_LABBOOK.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-6::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-safety::before {
     background-image: url("http://2016.igem.org/wiki/images/a/a3/UCL_ICON_SAFETY.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-7::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-scaling-up::before {
     background-image: url("http://2016.igem.org/wiki/images/7/77/UCL_ICON_SCALINGUP.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-8::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-protocol::before {
     background-image: url("http://2016.igem.org/wiki/images/2/25/T--UCL--icon-protocol.png"); }
-  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-9::before {
+  .cd-primary-nav .cd-nav-icons#category-lab .cd-nav-item.item-results::before {
     background-image: url("http://2016.igem.org/wiki/images/1/1a/T--UCL--icon-results.png"); }
-  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-1::before {
+  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-parts-overview::before {
     background-image: url("http://2016.igem.org/wiki/images/2/22/T--UCL--icon-parts-overview.png"); }
-  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-2::before {
+  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-basic::before {
     background-image: url("http://2016.igem.org/wiki/images/b/bd/UCL_ICON_BASIC.png"); }
-  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-3::before {
+  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-composite::before {
     background-image: url("http://2016.igem.org/wiki/images/8/83/UCL_ICON_COMPOSITE.png"); }
-  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-4::before {
+  .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-collection::before {
     background-image: url("http://2016.igem.org/wiki/images/9/9d/UCL_ICON_COLLECTION.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-1::before {
+  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-our-story::before {
     background-image: url("http://2016.igem.org/wiki/images/c/c3/T--UCL--icon-our-story.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-2::before {
-    background-image: url("http://2016.igem.org/wiki/images/0/04/T--UCL--icon_gold.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-3::before {
+  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-silver::before {
     background-image: url("http://2016.igem.org/wiki/images/7/7d/T--UCL--icon-silver.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-4::before {
+  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-gold::before {
+    background-image: url("http://2016.igem.org/wiki/images/0/04/T--UCL--icon_gold.png"); }
+  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-integrated-practices::before {
     background-image: url("http://2016.igem.org/wiki/images/f/fd/T--UCL--icon-integrated_practices.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-5::before {
+  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-engagement::before {
     background-image: url("http://2016.igem.org/wiki/images/d/da/T--UCL--icon_engagement.png"); }
-  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-6::before {
+  .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-vlog::before {
     background-image: url("http://2016.igem.org/wiki/images/5/53/T--UCL--icon-vlog.png"); }
-  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-1::before {
+  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-entrepreneurship-general::before {
     background-image: url("http://2016.igem.org/wiki/images/4/4c/T--UCL--icon_entrepreneurship_general.png"); }
-  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-2::before {
+  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-software::before {
     background-image: url("http://2016.igem.org/wiki/images/d/d3/T--UCL--icon_software.png"); }
-  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-3::before {
+  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-alphabrick::before {
     background-image: url("http://2016.igem.org/wiki/images/3/3f/T--UCL--icon_alphabrick.png"); }
-  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-4::before {
+  .cd-primary-nav .cd-nav-icons#category-entrepreneurship .cd-nav-item.item-dental::before {
     background-image: url("http://2016.igem.org/wiki/images/a/a3/T--UCL--icon_dental.png"); }
-  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-1::before {
+  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-team::before {
     background-image: url("http://2016.igem.org/wiki/images/2/2b/UCL_ICON_TEAM2.png"); }
-  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-2::before {
+  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-collaborations::before {
     background-image: url("http://2016.igem.org/wiki/images/4/48/UCL_ICON_COLLABS.png"); }
-  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-3::before {
+  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-sponsors::before {
     background-image: url("http://2016.igem.org/wiki/images/f/f7/UCL_ICON_SPONSORS.png"); }
-  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-4::before {
+  .cd-primary-nav .cd-nav-icons#category-people .cd-nav-item.item-attributions::before {
     background-image: url("http://2016.igem.org/wiki/images/9/9e/UCL_ICON_ATTRIBUTIONS.png"); }
   .cd-primary-nav .cd-nav-iconless .cd-nav-item {
     padding-left: 20px; }
@@ -937,7 +944,7 @@ Main components
         -moz-transition: background 0.2s;
         transition: background 0.2s; }
     .cd-primary-nav .cd-nav-icons {
-      background-color: #004573 !important; }
+      background-color: #004574 !important; }
       .cd-primary-nav .cd-nav-icons li {
         /* set here number of columns - use width percentage */
         width: 32%;
@@ -962,6 +969,9 @@ Main components
         margin-right: 0; }
     .cd-primary-nav .cd-nav-iconless .cd-nav-item {
       padding: 18px 0 0 20px; } }
+@media only screen and (max-width: 1350px) {
+  .cd-primary-nav > li > a {
+    padding: 0; } }
 .has-children > a, .go-back a {
   position: relative; }
   .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {

@@ -2,6 +2,7 @@
 
 $_safenet: 10;
 
+// These are set to Bootstrap's standard values.
 $S: 480px;
 $M: 768px;
 $L: 1280px - $_safenet; // HAS A COUNTERPART IN menu.js AND menu-landing.js, MUST KEEP IN SYNC!

@@ -84,6 +84,9 @@
         <!-- Menu.-->
         <link rel="stylesheet"
               href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/menu.css&amp;action=raw&amp;ctype=text/css">
+        <!-- Landing carousel.-->
+        <link rel="stylesheet"
+              href="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-landing-carousel.css&amp;action=raw&amp;ctype=text/css">
         <!-- HEAD SCRIPTS:--><!-- --- LIBRARIES -----><!-- jQuery, a jQuery mobile compatible latest version.-->
         <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery-2.1.4.min.js&amp;action=raw&amp;ctype=text/javascript"></script>
         <!-- jQuery mobile 1.4.5 with theme-less CSS.-->
@@ -112,6 +115,8 @@
         <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/vertical-scroll-structure.js&amp;action=raw&amp;ctype=text/javascript"></script>
         <!-- Flew-based.-->
         <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/flew-based.js&amp;action=raw&amp;ctype=text/javascript"></script>
+        <!-- Landing carousel.-->
+        <script src="http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-landing-carousel.js&amp;action=raw&amp;ctype=text/javascript"></script>
         <!-- ADDITIONAL:--></div>
 </head><!-- BODY:-->
 <body><!-- LOADER:-->
@@ -146,27 +151,33 @@
                     href="http://2016.igem.org/Team:UCL/Description">Project</a>
                 <ul id="category-project" class="cd-nav-icons is-hidden">
                     <li class="go-back"><a href="#">Menu</a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Description" class="cd-nav-item item-1"><h3>
-                        Description</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Description" class="cd-nav-item item-project-overview">
+                        <h3>Overview</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Oxidative_Stress" class="cd-nav-item item-2"><h3>
-                        Oxidative Stress</h3>
-                        <p>The root of the problem</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Vitellogenin" class="cd-nav-item item-3"><h3>Accelerating
-                        Ageing</h3>
-                        <p>Pest Control</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Dental_hygiene" class="cd-nav-item item-4"><h3>False
-                        Teeth</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Lungs" class="cd-nav-item item-lungs"><h3>Lungs</h3>
+                        <p>Gene therapy approach</p></a></li>
+                    <li><a href="http://2016.igem.org/Team:UCL/Gut" class="cd-nav-item item-gut"><h3>Gut</h3>
+                        <p>Lycopene probiotic</p></a></li>
+                    <li><a href="http://2016.igem.org/Team:UCL/Dental_hygiene" class="cd-nav-item item-false-teeth"><h3>
+                        False Teeth</h3>
                         <p>A thing of the past</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/STI" class="cd-nav-item item-5"><h3>Grey Love</h3>
-                        <p>It does not have to be dangerous</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Design" class="cd-nav-item item-6"><h3>Design</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Heart" class="cd-nav-item item-heart"><h3>Heart</h3>
+                        <p>Healthy heart, healthy ageing</p></a></li>
+                    <li><a href="http://2016.igem.org/Team:UCL/Lubricant" class="cd-nav-item item-lubricant"><h3>
+                        Cathater Lubricant</h3>
+                        <p>Detecting and killing UTI causing bacteria</p></a></li>
+                    <li><a href="http://2016.igem.org/Team:UCL/Vitellogenin" class="cd-nav-item item-pest-control"><h3>
+                        Pest control</h3>
+                        <p>Vitellogenin</p></a></li>
+                    <li><a href="http://2016.igem.org/Team:UCL/Design" class="cd-nav-item item-design"><h3>Design</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Notebook" class="cd-nav-item item-7"><h3>Notebook</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Notebook" class="cd-nav-item item-notebook"><h3>
+                        Notebook</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Glossary" class="cd-nav-item item-8"><h3>Glossary</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Glossary" class="cd-nav-item item-glossary"><h3>
+                        Glossary</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Achievements" class="cd-nav-item item-9"><h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Achievements" class="cd-nav-item item-achievements"><h3>
                         Achievements</h3>
                         <p>Some more info goes here...</p></a></li>
                 </ul>
@@ -175,25 +186,28 @@
                     href="http://2016.igem.org/Team:UCL/Overview">Lab</a>
                 <ul id="category-lab" class="cd-nav-icons is-hidden">
                     <li class="go-back"><a href="#">Menu</a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Overview" class="cd-nav-item item-1"><h3>Overview</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Overview" class="cd-nav-item item-lab-overview"><h3>
+                        Overview</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Proof" class="cd-nav-item item-2"><h3>Proof of
-                        Concept</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Proof" class="cd-nav-item item-proof-of-concept"><h3>
+                        Proof of Concept</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Demonstrate" class="cd-nav-item item-3"><h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Demonstrate" class="cd-nav-item item-demonstrate"><h3>
                         Demonstrate</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Hardware" class="cd-nav-item item-4"><h3>Hardware</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Lab_book" class="cd-nav-item item-lab-book"><h3>
+                        Lab-book</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Lab_book" class="cd-nav-item item-5"><h3>Lab-book</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Safety" class="cd-nav-item item-safety"><h3>Safety</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Safety" class="cd-nav-item item-6"><h3>Safety</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Scale_up" class="cd-nav-item item-scaling-up"><h3>Scaling
+                        up</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Scale_up" class="cd-nav-item item-7"><h3>Scaling up</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Experiments" class="cd-nav-item item-protocol"><h3>
+                        Protocol</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Experiments" class="cd-nav-item item-8"><h3>Protocol</h3>
-                        <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Results" class="cd-nav-item item-9"><h3>Results</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Results" class="cd-nav-item item-results"><h3>
+                        Results</h3>
                         <p>Some more info goes here...</p></a></li>
                 </ul>
             </li>
@@ -201,15 +215,16 @@
                     href="http://2016.igem.org/Team:UCL/Parts">Parts</a>
                 <ul id="category-parts" class="cd-nav-icons is-hidden">
                     <li class="go-back"><a href="#">Menu</a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Parts" class="cd-nav-item item-1"><h3>Overview</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Parts" class="cd-nav-item item-parts-overview"><h3>
+                        Overview</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Basic_Part" class="cd-nav-item item-2"><h3>Basic
+                    <li><a href="http://2016.igem.org/Team:UCL/Basic_Part" class="cd-nav-item item-basic"><h3>Basic
                         Parts</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Composite_Part" class="cd-nav-item item-3"><h3>Composite
-                        Parts</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Composite_Part" class="cd-nav-item item-composite"><h3>
+                        Composite Parts</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Part_Collection" class="cd-nav-item item-4"><h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Part_Collection" class="cd-nav-item item-collection"><h3>
                         Collection</h3>
                         <p>Some more info goes here...</p></a></li>
                 </ul>
@@ -219,20 +234,21 @@
                     href="http://2016.igem.org/Team:UCL/Human_Practices">Human Practices</a>
                 <ul id="category-human-practices" class="cd-nav-icons is-hidden">
                     <li class="go-back"><a href="#">Menu</a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Human_Practices" class="cd-nav-item item-1"><h3>Our
-                        Story</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Human_Practices" class="cd-nav-item item-our-story"><h3>
+                        Our Story</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/HP/Gold" class="cd-nav-item item-2"><h3>Gold</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/HP/Silver" class="cd-nav-item item-silver"><h3>
+                        Silver</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/HP/Silver" class="cd-nav-item item-3"><h3>Silver</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/HP/Gold" class="cd-nav-item item-gold"><h3>Gold</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Integrated_Practices" class="cd-nav-item item-4"><h3>
-                        Integrated Practices</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Integrated_Practices"
+                           class="cd-nav-item item-integrated-practices"><h3>Integrated Practices</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Engagement" class="cd-nav-item item-5"><h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Engagement" class="cd-nav-item item-engagement"><h3>
                         Engagement</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/VLOG" class="cd-nav-item item-6"><h3>Vlog</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/VLOG" class="cd-nav-item item-vlog"><h3>Vlog</h3>
                         <p>Some more info goes here...</p></a></li>
                 </ul>
             </li>
@@ -240,15 +256,16 @@
                     href="http://2016.igem.org/Team:UCL/Entrepreneurship">Entrepreneurship</a>
                 <ul id="category-entrepreneurship" class="cd-nav-icons is-hidden">
                     <li class="go-back"><a href="#">Menu</a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Entrepreneurship" class="cd-nav-item item-1"><h3>
-                        Overview</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Entrepreneurship"
+                           class="cd-nav-item item-entrepreneurship-general"><h3>Overview</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Software" class="cd-nav-item item-2"><h3>Software</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Software" class="cd-nav-item item-software"><h3>
+                        Software</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Alphabrick" class="cd-nav-item item-3"><h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Alphabrick" class="cd-nav-item item-alphabrick"><h3>
                         AlphaBrick</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Xylitol" class="cd-nav-item item-4"><h3>Dental</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Xylitol" class="cd-nav-item item-dental"><h3>Dental</h3>
                         <p>Xylitol</p></a></li>
                 </ul>
             </li>
@@ -256,14 +273,15 @@
                     href="http://2016.igem.org/Team:UCL/Team">People</a>
                 <ul id="category-people" class="cd-nav-icons is-hidden">
                     <li class="go-back"><a href="#">Menu</a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Team" class="cd-nav-item item-1"><h3>Team</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Team" class="cd-nav-item item-team"><h3>Team</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Collaborations" class="cd-nav-item item-2"><h3>
-                        Collaborations</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Collaborations" class="cd-nav-item item-collaborations">
+                        <h3>Collaborations</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Sponsors" class="cd-nav-item item-3"><h3>Sponsors</h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Sponsors" class="cd-nav-item item-sponsors"><h3>
+                        Sponsors</h3>
                         <p>Some more info goes here...</p></a></li>
-                    <li><a href="http://2016.igem.org/Team:UCL/Attributions" class="cd-nav-item item-4"><h3>
+                    <li><a href="http://2016.igem.org/Team:UCL/Attributions" class="cd-nav-item item-attributions"><h3>
                         Attributions</h3>
                         <p>Some more info goes here...</p></a></li>
                 </ul>

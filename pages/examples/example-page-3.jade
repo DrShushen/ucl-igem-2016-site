@@ -6,52 +6,15 @@ html
     body
         block content
             block actual-content
-                #vertical-scroll-nav
-                    ul
-                        li
-                            a(href='#section-1') Section 1
-                        li
-                            a(href='#section-2') Section 2
-                        li
-                            a(href='#section-3') Section 3
-                        li
-                            a(href='#section-4') Section 4
-                main.cd-main-content
+                main.cd-main-content.ess-menu-bgd-prettify-blue
+                    #ess-landing-carousel-container
+                        #ess-landing-carousel.owl-carousel.owl-theme
+                            .ess-landing-carousel-slide
+                                img(src='http://2016.igem.org/wiki/images/4/4a/Ucligemaman.jpg', alt='Image 1')
+                            .ess-landing-carousel-slide
+                                img(src='http://2016.igem.org/wiki/images/3/3c/Ucligem_coverimage1.jpg', alt='Image 2')
+                            .ess-landing-carousel-slide
+                                img(src='http://2016.igem.org/wiki/images/a/ac/Ucligem_coverimage2.jpg', alt='Image 3')
                     #main-content-container
-                        // ACTUAL CONTENT
-                        h1 Sample title
-                        p Sample paragraph
-                        .vertical-scroll-section#section-1
-                            .content
-                                h2 Section 1
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                p
-                                    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                hr
-                        .vertical-scroll-section#section-2
-                            .content
-                                h2 Section 2
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                p
-                                    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                hr
-                        .vertical-scroll-section#section-3
-                            .content
-                                h2 Section 3
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                p
-                                    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                hr
-                        .vertical-scroll-section#section-4
-                            .content
-                                h2 Section 4
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                p
-                                    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                hr
 
 // {{UCL/TemplateAfter}}
