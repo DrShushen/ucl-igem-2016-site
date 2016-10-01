@@ -218,6 +218,8 @@ body
                                 p Some more info goes here...
         #cd-search.cd-search
             form#cd-search-form(method="GET" action="https://www.google.co.uk/search?q=site:http://2016.igem.org/Team:UCL")
+                button.btn.btn-primary(type='submit', form='cd-search-form', value='Submit')
+                    i.icon-search.icon-white
                 input(type='search', data-role="none", placeholder='Search...')
         // ---
 

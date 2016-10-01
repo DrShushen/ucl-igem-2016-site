@@ -1,5 +1,4 @@
 TODO:
-* Add search button to tap on mobiles only, within search form.
 * Bootstrap css error - fix.
 * See if possible to safely remove doctype declaration.
 * Rethink where to put the js links and which ones (head vs end of body).
