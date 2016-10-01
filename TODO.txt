@@ -1,5 +1,4 @@
 TODO:
-* Fix the looks and functionality of the iGem top bar's menus.
 * Make the vertical navigation side menu properly responsive!
 * Add search button to tap on mobiles only, within search form.
 * See if possible to safely remove doctype declaration.

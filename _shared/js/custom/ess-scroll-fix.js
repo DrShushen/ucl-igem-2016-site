@@ -1,0 +1,33 @@
+/*
+jQuery(document).ready(function($) {
+
+    var scrollFixWindow = $(window);
+    var timeLimit = 1000 * 3;
+
+    scrollFixWindow.disablescroll({
+        handleScrollbar: false
+    });
+
+    setTimeout(function() {
+        scrollFixWindow.disablescroll("undo");
+    }, timeLimit);
+
+});
+*/
+
+$(document).ready(function($) {
+
+    var scrollFixWindow = $(window);
+    var timeLimit = 21;
+    var scrollPos;
+
+    $(window).load(function () {
+
+        scrollPos = $(window).scrollTop();
+
+        setTimeout(function() {
+            $(window).scrollTop(scrollPos);
+        }, timeLimit);
+
+    });
+});

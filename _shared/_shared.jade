@@ -5,6 +5,9 @@ html.no-js(lang='en')
     head
         #head-holder
             #head-to-move
+                // ELEVATED ACTUAL HEAD SCRIPTS (HIGHEST PRIORITY):
+                // ESS Scroll fix.
+                script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-scroll-fix.js&action=raw&ctype=text/javascript')
                 // FAVICON:
                 link(rel='apple-touch-icon', sizes='57x57', href='http://2016.igem.org/wiki/images/a/a3/T--UCL--apple-icon-57x57.png')
                 link(rel='apple-touch-icon', sizes='60x60', href='http://2016.igem.org/wiki/images/f/f6/T--UCL--apple-icon-60x60.png')
@@ -42,9 +45,9 @@ html.no-js(lang='en')
             script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-head-setter.js&action=raw&ctype=text/javascript')
             // ESS link fixer.
             script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-link-fixer.js&action=raw&ctype=text/javascript')
-            // iGem style override.
+            // iGem override.
             link(rel='stylesheet', href='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/igem-override.css&action=raw&ctype=text/css')
-
+            script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/igem-override.js&action=raw&ctype=text/javascript')
 
 
             // FONTS:
@@ -102,6 +105,8 @@ html.no-js(lang='en')
             script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/owl.carousel.min.js&action=raw&ctype=text/javascript')
             // IE 9 support.
             script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/respond.min.js&action=raw&ctype=text/javascript')
+            // Disable scroll.
+            script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/jquery.disablescroll.min.js&action=raw&ctype=text/javascript')
             // --- CUSTOM ---
             // Search.
             script(src='http://2016.igem.org/wiki/index.php?title=Team:UCL/Dev/ess-search.js&action=raw&ctype=text/javascript')

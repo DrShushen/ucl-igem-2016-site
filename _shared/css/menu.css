@@ -759,7 +759,7 @@ Main components
       .cd-primary-nav > li > a:hover::before, .cd-primary-nav > li > a:hover::after {
         background: #c3c4c0; }
       .cd-primary-nav > li > a.selected {
-        color: #ff9c00;
+        color: #ff9c00 !important;
         box-shadow: inset 0 -2px 0 #ff9c00; }
         .cd-primary-nav > li > a.selected:hover {
           color: #ff9c00 !important; }
