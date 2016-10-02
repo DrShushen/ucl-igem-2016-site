@@ -57,9 +57,9 @@ up the vertical (auto) scroll structure on a page.
 * [Example 3](http://2016.igem.org/Team:UCL/Dev/ExamplePage3) - setting
 up the carousel.
 * [Example 4](http://2016.igem.org/Team:UCL/Dev/ExamplePage4) - using
-content templates, part 1.
+content theme templates, part 1.
 * [Example 5](http://2016.igem.org/Team:UCL/Dev/ExamplePage5) - using
-content templates, part 2.
+content theme templates, part 2.
 
 The wiki source code for the above pages can be viewed by selecting the 
 edit option on the iGEM menu on any of the pages.
