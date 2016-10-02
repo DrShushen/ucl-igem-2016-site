@@ -7,9 +7,9 @@ Guidance for the use of wiki templates is provided here.
 
 ### Standard format
 
-Two mediawiki templates are provided, ```{{UCL/TemplateBefore}}``` and 
-```{{UCL/TemplateAfter}}```.  The main page content is to be sandwiched 
-between these, and must follow the following format:
+Two MediaWiki templates are provided, ```{{UCL/TemplateBefore}}``` and 
+```{{UCL/TemplateAfter}}```.  The user's page content is to be
+sandwiched  between these, and must follow the following format:
 
 ```{HTML}
 
@@ -37,9 +37,9 @@ the navigation menu (this colour is briefly visible when the navigation
 menu shrinks).  This is done by adding one of the following three
 classes to the ```main``` tag:
 
-* ess-menu-bgd-prettify-blue
-* ess-menu-bgd-prettify-white
-* ess-menu-bgd-prettify-light-gray
+* ```ess-menu-bgd-prettify-blue```
+* ```ess-menu-bgd-prettify-white```
+* ```ess-menu-bgd-prettify-light-gray```
 
 In some cases (see examples below), additional content must to be
 placed outside the above structure, in order to achieve certain 
