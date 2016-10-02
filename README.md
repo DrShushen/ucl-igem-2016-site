@@ -64,7 +64,7 @@ content templates, part 2.
 The wiki source code for the above pages can be viewed by selecting the 
 edit option on the iGEM menu on any of the pages.
 
-## Advice for template users.
+## Advice for template users
 
 A good code editor (IDE) is essential for writing code easily and 
 efficiently.  I would recommend using IntelliJ Idea Ultimate (free for 
