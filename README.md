@@ -64,11 +64,6 @@ content templates, part 2.
 The wiki source code for the above pages can be viewed by selecting the 
 edit option on the iGEM menu on any of the pages.
 
-## Development Notes
-
-The wiki templates have been developed using SASS for CSS work and Jade 
-templates for HTML work (see project files).
-
 ## Advice for template users.
 
 A good code editor (IDE) is essential for writing code easily and 
@@ -264,6 +259,11 @@ commands themselves are also explained here):
 The above requires you to install **npm** first, which is found here:
 
 * [Download npm as part of Node.js](https://nodejs.org/en/)
+
+## Development Notes
+
+The wiki templates have been developed using SASS for CSS work and Jade 
+templates for HTML work (see project files).
 
 ## Deployment
 
