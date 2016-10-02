@@ -1,7 +1,4 @@
 TODO:
-* Bootstrap css error - fix.
-* See if possible to safely remove doctype declaration.
-* Rethink where to put the js links and which ones (head vs end of body).
-* Update README.md.
 * Add keyword metadata for SEO purposes.
-* Consider if that strange IE comment is needed in header, see e.g. fullPaje.js's demo htmls whare this is done.
+// UNNECESSARY: * See if possible to safely remove doctype declaration.
+// NOT FEASIBLE: * Consider if that strange IE comment is needed in header, see e.g. fullPaje.js's demo htmls whare this is done.

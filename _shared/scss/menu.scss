@@ -193,8 +193,12 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 
     li > a > h3 {
-      font-size: 1.1em;
+      font-size: 1em;
+      @include MQ(L) {
+        font-size: 1.1em;
+      }
       font-weight: 400;
+      line-height: 1.3em;
     }
 
     @include MQ(L) {
@@ -214,6 +218,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .cd-primary-nav .cd-nav-icons .cd-nav-item {
   padding: $nav-bar-links-padding-top-S 0 0 $nav-bar-links-padding-left;
+  padding-left: $nav-bar-links-padding-left!important;
 }
 
 // ---
@@ -520,14 +525,19 @@ Main components
 
   // iGem wiki fixes.
 
-  margin-top: 1em!important;
+  margin-top: 1.25em!important; // Re-fixed 1em to 1.25em.
   @include MQ(L) {
     margin-top: 0!important;
+  }
+
+  li.go-back > a {
+    padding-left: 45px!important;
   }
 
   li > ul {
 
     margin-top: 0!important;
+    padding-bottom: 20px;
     @include MQ(L) {
       margin-top: inherit;
     }
@@ -574,6 +584,22 @@ Main components
   }
   /* - end - */
 
+  // Fix.
+  > li > a {
+    padding-left: 25px!important;
+    @include MQ(L) {
+      padding-left: 2px!important;
+    }
+  }
+
+  li {
+    // Fix:
+    border-bottom: 1px solid lighten($color-grey-dark, 5%);
+    @include MQ(L) {
+      border-bottom: none;
+    }
+  }
+
   a {
     display: block;
     height: 50px;
@@ -585,7 +611,7 @@ Main components
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border-bottom: 1px solid lighten($color-grey-dark, 5%);
+    //border-bottom: 1px solid lighten($color-grey-dark, 5%);
     @include transform(translateZ(0));
     will-change: transform, opacity;
     @include transition(transform $menu-slideout-timing, opacity $menu-slideout-timing);
@@ -1212,11 +1238,13 @@ Main components
         h3 {
           color: $color-nav-panel-link;
           font-weight: 600; // Bootstrap fix. //font-weight: bold;
+          padding-left: 10px;
         }
 
         p {
           display: block;
           color: $color-nav-panel-description;
+          padding-left: 10px;
         }
 
         &:hover {
@@ -1245,7 +1273,7 @@ Main components
       .cd-nav-item {
 
         @include MQ(L) {
-          padding: $nav-bar-links-padding-top-L 0 0 $nav-bar-links-padding-left;
+          padding: ($nav-bar-links-padding-top-L - 3) 0 0 $nav-bar-links-padding-left;
         }
 
         &::before {
@@ -1348,6 +1376,9 @@ Main components
   .cd-primary-nav > .has-children > a {
     /* main navigation arrows on larger devices */
     padding-right: 30px !important;
+    @include MQ(L) {
+      padding-right: 28px!important;
+    }
 
     &::before, &::after {
       width: 9px;
@@ -1414,6 +1445,7 @@ Main components
 
   form {
 
+    margin-top: 4px;
     height: 100%;
     width: 100%;
     background: $color-white;
@@ -1439,6 +1471,7 @@ Main components
     float: right;
 
     width: 95%;
+    box-shadow: none;
     @media only screen and (max-width: 850px) {
       width: 90%;
     }
@@ -1454,7 +1487,7 @@ Main components
     background: $color-white;
     height: 100%;
     padding: 0 5%;
-    box-shadow: inset 0 1px 0 $color-grey-light, 0 3px 6px rgba(#000, .05);
+    //box-shadow: inset 0 1px 0 $color-grey-light, 0 3px 6px rgba(#000, .05);
     @include appearance(none);
 
     @include placeholder {
@@ -1482,6 +1515,7 @@ Main components
   @include MQ(L) {
 
     form {
+      margin-top: 0;
       background: transparent;
     }
 
