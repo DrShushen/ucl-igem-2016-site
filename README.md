@@ -52,14 +52,14 @@ page designs and functionality using the templates:
 
 * [Example 1](http://2016.igem.org/Team:UCL/Dev/ExamplePage1) - very
 basic template structure.
-* [Example 2](2016.igem.org/Team:UCL/Dev/ExamplePage2) - setting up the
-vertical (auto) scroll structure on a page.
+* [Example 2](http://2016.igem.org/Team:UCL/Dev/ExamplePage2) - setting 
+up the vertical (auto) scroll structure on a page.
 * [Example 3](http://2016.igem.org/Team:UCL/Dev/ExamplePage3) - setting
 up the carousel.
-* [Example 4](2016.igem.org/Team:UCL/Dev/ExamplePage4) - using content
-templates, part 1.
-* [Example 5](2016.igem.org/Team:UCL/Dev/ExamplePage4) - using content
-templates, part 2.
+* [Example 4](http://2016.igem.org/Team:UCL/Dev/ExamplePage4) - using
+content templates, part 1.
+* [Example 5](http://2016.igem.org/Team:UCL/Dev/ExamplePage5) - using
+content templates, part 2.
 
 The wiki source code for the above pages can be viewed by selecting the 
 edit option on the iGEM menu on any of the pages.
