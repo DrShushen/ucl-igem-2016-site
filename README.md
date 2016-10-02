@@ -263,7 +263,8 @@ The above requires you to install **npm** first, which is found here:
 ## Development Notes
 
 The wiki templates have been developed using SASS for CSS work and Jade 
-templates for HTML work (see project files).
+templates for HTML work (see project files). JavaScript work is mostly
+centered around the use of jQuery and its various plugins.
 
 ## Deployment
 
