@@ -1,7 +1,7 @@
 ## Synopsis
 
 This is the GitHub repository for the 2016 UCL iGEM team's wiki site.
-Guidance for the use of wiki templates is provided here.
+Guidance for the use of the wiki templates is provided here.
 
 ## Documentation
 
@@ -271,9 +271,9 @@ centered around the use of jQuery and its various plugins.
 All the files have been deployed on iGEM's website 
 [iGEM.org](http://2016.igem.org).
 
-Useful information on deployment on iGEM site can be found here: 
+Useful information about deployment on the iGEM site can be found here: 
 
-* [Wiki Editing](http://2015.igem.org/Wiki_Requirements#editing)
+* [Wiki editing](http://2015.igem.org/Wiki_Requirements#editing)
 * [Using HTML, CSS and JS](http://2015.igem.org/Wiki_Requirements/Using_HTML,_CSS,_and_Javascript)
 
 The file upload page is found here:
