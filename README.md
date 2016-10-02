@@ -2,7 +2,8 @@
 
 This is the GitHub repository for the 2016 UCL iGEM team's wiki site.
 Responsive wiki templates have been created for the use by the 2016 UCL 
-iGEM team members.  Guidance on the wiki template use is provided here.
+iGEM team members.  Guidance on the use of these wiki templates is 
+provided here.
 
 ## Documentation
 
