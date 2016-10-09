@@ -539,17 +539,6 @@ Main components
   Flat icons
 
   -------------------------------- */
-  /*
-  .cd-nav-icons#category-modelling .cd-nav-item {
-    &.item-1::before {
-      background-image: $icon-modelling-1;
-    }
-
-    &.item-2::before {
-      background-image: $icon-modelling-2;
-    }
-  }
-  */
   /* --------------------------------
 
   End (Flat Icons)
@@ -658,6 +647,12 @@ Main components
     background-image: url("http://2016.igem.org/wiki/images/8/83/UCL_ICON_COMPOSITE.png"); }
   .cd-primary-nav .cd-nav-icons#category-parts .cd-nav-item.item-collection::before {
     background-image: url("http://2016.igem.org/wiki/images/9/9d/UCL_ICON_COLLECTION.png"); }
+  .cd-primary-nav .cd-nav-icons#category-modelling .cd-nav-item.item-modelling-overview::before {
+    background-image: url("http://2016.igem.org/wiki/images/8/85/T--UCL--icon-modelling-overview.png"); }
+  .cd-primary-nav .cd-nav-icons#category-modelling .cd-nav-item.item-l-arginine::before {
+    background-image: url("http://2016.igem.org/wiki/images/a/a5/T--UCL--icon-l-arginine.png"); }
+  .cd-primary-nav .cd-nav-icons#category-modelling .cd-nav-item.item-xylitol::before {
+    background-image: url("http://2016.igem.org/wiki/images/9/9f/T--UCL--icon-xylitol.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-our-story::before {
     background-image: url("http://2016.igem.org/wiki/images/c/c3/T--UCL--icon-our-story.png"); }
   .cd-primary-nav .cd-nav-icons#category-human-practices .cd-nav-item.item-silver::before {

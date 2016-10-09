@@ -839,18 +839,21 @@ Main components
     }
   }
 
-  // * Modelling - no sub-pages.
-  /*
+  // * Modelling
   .cd-nav-icons#category-modelling .cd-nav-item {
-    &.item-1::before {
-      background-image: $icon-modelling-1;
+    &.item-modelling-overview::before {
+      background-image: $icon-modelling-overview;
     }
 
-    &.item-2::before {
-      background-image: $icon-modelling-2;
+    &.item-l-arginine::before {
+      background-image: $icon-l-arginine;
+    }
+
+    &.item-xylitol::before {
+      background-image: $icon-xylitol;
     }
   }
-  */
+
 
   // * Human Practices
   .cd-nav-icons#category-human-practices .cd-nav-item {

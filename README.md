@@ -42,6 +42,7 @@ classes to the ```main``` tag:
 * ```ess-menu-bgd-prettify-blue```
 * ```ess-menu-bgd-prettify-white```
 * ```ess-menu-bgd-prettify-light-gray```
+* ```ess-menu-bgd-prettify-light-blue```
 
 In some cases (see examples below), additional content must to be
 placed outside the above structure, in order to achieve certain 

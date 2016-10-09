@@ -21,17 +21,36 @@ $(document).ready(function(){
         autoHeight: true
     });
 
-    // Forced resize hacks - due to the fact that owl carousel's events aren't working properly.
+    // Forced resize hacks - due to the fact that owl carousel's events aren't working properly. -----------------------
+
+    // Set up variables:
     // Rely on certain image ratio.
-    var ratio = 0.35166666;
+    var essLandingCarouselRatio = 0.35166666;
+    var essLandingCarouselCssTarget = $('#ess-landing-carousel.owl-carousel .owl-stage-outer');
+    var essLandingCarouselData = $('.owl-carousel').data('owlCarousel');
+    var essLandingCarouselFixDelay = 60;
 
-    var essTarget = $('#ess-landing-carousel.owl-carousel .owl-stage-outer');
-    // Initial height - pre-set.
-    essTarget.css('height', (ratio * $(window).width()) + 'px');
+    // Initial run.
+    setTimeout(
+        function() { essLandingCarouselSizingFix(); },
+        essLandingCarouselFixDelay);
 
-    // Refresh height immediately on window resize.
+    // Window resize runs.
     $(window).resize(function() {
-        essTarget.css('height', (ratio * $(window).width()) + 'px');
+        essLandingCarouselSizingFix();
     });
+
+    function essLandingCarouselSizingFix() {
+        // Carousel data refresh.
+        if (essLandingCarouselData !== undefined) {
+            essLandingCarouselData.onThrottledResize();
+        }
+        // Physical size.
+        if (essLandingCarouselCssTarget !== undefined) {
+            essLandingCarouselCssTarget.css('height', (essLandingCarouselRatio * $(window).width()) + 'px');
+        }
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
 
 });

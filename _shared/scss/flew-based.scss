@@ -13,6 +13,7 @@ $loader-image: url(http://2016.igem.org/wiki/images/f/f6/T--UCL--ess-template-lo
 // HAVE COUNTERPARTS IN _variables.scss:
 $main-content-padding-tb: 6rem;
 $main-content-padding-rl: 8rem;
+$main-content-color-main-content-bgd-old: #e7f0f9;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -127,7 +128,7 @@ Owl Carousel
 
 ------------------------------------------------------------*/
 
-#ess-template-page {
+.ess-template-page, #ess-template-page {
   .owl-carousel .owl-controls .owl-dot {
     margin-top: 30px;
     span {
@@ -169,7 +170,7 @@ Owl Carousel
 // Template Base
 body {
   // Theme namespace.
-  #ess-template-page {
+  .ess-template-page, #ess-template-page {
     font-family: $font-primary;
     font-weight: 400;
     font-size: 16px;
@@ -182,7 +183,7 @@ body {
 }
 
 // Theme namespace.
-#ess-template-page {
+.ess-template-page, #ess-template-page {
 
   a {
     // Fix
@@ -208,7 +209,7 @@ body {
   // ---
 
   // Fix
-  margin-top: -$main-content-padding-tb;
+  margin-top: -$main-content-padding-tb!important;
   margin-right: -$main-content-padding-rl;
   margin-bottom: -$main-content-padding-tb;
   margin-left: -$main-content-padding-rl;
@@ -1596,19 +1597,19 @@ body {
     }
   }
 
-  #ess-template-page {
+  .ess-template-page, #ess-template-page {
     position: relative;
     z-index: 2;
     background: $brand-white;
   }
   // Offcanvas Menu
-  #ess-template-offcanvas, .ess-template-nav-toggle, #ess-template-page {
+  #ess-template-offcanvas, .ess-template-nav-toggle, .ess-template-page, #ess-template-page {
     @include transition(.5s);
   }
-  #ess-template-offcanvas, .ess-template-nav-toggle, #ess-template-page {
+  #ess-template-offcanvas, .ess-template-nav-toggle, .ess-template-page, #ess-template-page {
     position: relative;
   }
-  #ess-template-page {
+  .ess-template-page, #ess-template-page {
     z-index: 2;
     @include transition(.5s);
     .offcanvas-visible & {
@@ -1872,6 +1873,9 @@ body {
   }
   .ess-template-white-section {
     background: $brand-white;
+  }
+  .ess-template-light-blue-section {
+    background: $main-content-color-main-content-bgd-old;
   }
 
   // Animate Box

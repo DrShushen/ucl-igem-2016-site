@@ -11,11 +11,11 @@ High level settings.
 
 .cd-main-content {
   position: relative;
-  background: #e7f0f9;
+  background: #ffffff;
   z-index: 2;
   min-height: 80vh; }
   .cd-main-content #ess-landing-carousel .owl-controls {
-    background-color: #e7f0f9; }
+    background-color: #ffffff; }
 
 .ess-menu-bgd-prettify-blue {
   background-color: #004574; }
@@ -25,6 +25,9 @@ High level settings.
 
 .ess-menu-bgd-prettify-light-gray {
   background-color: rgba(0, 0, 0, 0.03); }
+
+.ess-menu-bgd-prettify-light-blue {
+  background-color: #e7f0f9; }
 
 /* --------------------------------
 
@@ -79,7 +82,7 @@ Main content style.
       margin-left: 2.8rem; }
   #HQ_page .cd-main-content #main-content-container, .cd-main-content #main-content-container {
     margin: 0;
-    background-color: #e7f0f9;
+    background-color: #ffffff;
     padding-top: 6rem;
     padding-bottom: 6rem;
     padding-right: 8rem;
