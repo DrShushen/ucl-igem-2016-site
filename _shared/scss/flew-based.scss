@@ -36,6 +36,9 @@ $brand-bg-color: $brand-white;
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
 
+// Custom responsive
+$MQ_S: 480px;
+$MQ_L: 1270px;
 
 
 //<editor-fold desc="Mixins">
@@ -851,6 +854,15 @@ body {
   }
 
   .ess-template-boxes-section {
+
+    // Custom height fix.
+    .height-fix {
+      @media screen and (max-width: $MQ_S) {
+        min-height: initial;
+      }
+      min-height:545px;
+    }
+
     .item-grid {
       width: 100%;
       float: left;
@@ -1517,8 +1529,9 @@ body {
       position: relative;
       z-index: 2;
     }
-    p, h3 {
+    p, h1, h3, h2 {
       color: $brand-white;
+      margin-bottom: 0!important;
     }
     p {
       &:last-child {
