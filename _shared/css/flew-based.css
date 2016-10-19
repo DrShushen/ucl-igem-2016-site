@@ -55,6 +55,7 @@ body .ess-template-page, body #ess-template-page {
   margin-right: -8rem;
   margin-bottom: -6rem;
   margin-left: -8rem;
+  min-height: 75vh;
   /* -----------------------
   Bootstrap extensions
   ------------------------*/ }
