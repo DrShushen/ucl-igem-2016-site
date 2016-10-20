@@ -1,0 +1,97 @@
+{{UCL/TemplateBefore}}
+<html>
+<body>
+<div id="vertical-scroll-nav">
+    <ul class="mobile">
+        <div class="vertical-scroll-nav-chevron"><i class="icon-chevron-down icon-white"></i></div>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#math">Math</a></li>
+        <li><a href="#behaviour">Behaviour</a></li>
+    </ul>
+</div>
+<main class="cd-main-content">
+    <div id="main-content-container">
+
+        <div id="ess-template-page">
+
+            <div class="ess-template-general-section" style="color: black; padding-bottom: 0">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 ess-template-general animate-box">
+
+                        <h1 style="text-align: center;">Xylitol</h1>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="ess-template-general-section" style="color: black; padding-top: 0;">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 ess-template-general animate-box">
+
+                        <div id="overview" class="vertical-scroll-section">
+                            <div class="content">
+
+                                <h2 style="text-align: center;">Why we chose to develop a model of the Xylitol pathway and overview of the model</h2>
+                                <p>We chose to model the Xylitol pathway as it is impossible to intuit the combination of parameters that will cause oscillation, but this can be done with modelling. For a more detailed description of how xylitol fits into our project, please visit our <a href ="http://2016.igem.org/Team:UCL/Xylitol">entrepreneurship page</a>.</p>
+                                <p>In the pathway, D-arabinose activates the pBAD/AraC promoter causing production of GRE and cl, these inhibit the T7/cl promoter under which are genes for the production of arabinose (Fig. 1A). We have modelled this as a cycle with one activation and one repression step (Fig. 1B). The activation step representing the activation of pBAD/AraC, the repression step encompasses the GRE/cl inhibiting T7/cl promoter and this effect of the production of arabinose through the genes under the promoter. Additionally, we included in our model production and degradation of arabinose and GRE. Using parameter scan function in Simbiology, we found that with certain parameter values the levels of arabinose started to oscillate.</p>
+                                <center> <img src = "http://2016.igem.org/wiki/images/e/ea/T--UCL--xylitolFig1.jpg" width="50%" height="50%"> </center>
+                                <center>Figure 1. Xylitol circuit and overview of our model. </center>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="ess-template-general-section" style="color: black">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 ess-template-general animate-box">
+
+                        <div id="math" class="vertical-scroll-section">
+                            <div class="content">
+
+                                <H2 style="text-align: center;">Mathematics behind our model</H2>
+                                <center> <img src = "http://2016.igem.org/wiki/images/5/55/T--UCL--xylitolTable1.jpg" width="70%" height="70%"></center>
+                                <center>Table 1. Reactions in the model.</center>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="ess-template-general-section" style="color: black">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 ess-template-general animate-box">
+
+                        <div id="behaviour" class="vertical-scroll-section">
+                            <div class="content">
+
+                                <H2 style="text-align: center;">Behaviour of our model</H2>
+                                <p>Using certain combinations of the parameters, we were able to develop a model which shows some oscillatory behaviour. Fig. 2 A and B illustrate the results of a scan through parameter values, with the initial concentration of Gre/Cl and D-Arabinose both varying between 12 arbitrary units (a.u). and 20. Increasing the concentrations beyond 20 leads to integration errors. It is possible that with a further refinement indefinite oscillations will occur.</p>
+                                <p>We found that having background levels of production and degradation for both D-Arabinose and Gre/Cl was necessary for oscillation. Without the background production and degradation the model quickly reached a steady state with little to no oscillations. Fig. 2C shows the same scan as above but with no background production or degradation present in the model.</p>
+
+                                <center> <img src = "http://2016.igem.org/wiki/images/4/43/T--UCL--xylitolFig2.jpg" width="50%" height="50%"></center>
+                                <center>Figure 2. Behaviour of the model. A, B) Model with synthesis and degradation, C) without synthesis and degradation.</center>
+
+                                <p>&nbsp;</p>
+
+                                <p> In this model we have found that oscillatory behaviour is possible with certain parameters. We have also shown that background levels of production and degradation have a dramatic effect on the amount of oscillation.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</main>
+</body>
+</html>
+{{UCL/TemplateAfter}}
